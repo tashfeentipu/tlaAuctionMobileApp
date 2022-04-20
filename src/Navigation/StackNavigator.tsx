@@ -25,7 +25,7 @@ class StackNavigator extends Component<IProps, IState> {
 
     render() {
         return (
-            <Stack.Navigator initialRouteName="SignIn" screenOptions={{ headerShown: false }}>
+            <Stack.Navigator initialRouteName="SignUpSuccess" screenOptions={{ headerShown: false }}>
                 <Stack.Screen name="Splash" component={SplashScreen} />
                 <Stack.Screen name="SignIn" component={SignIn} />
                 <Stack.Screen name="SignUp" component={SignUp} />
