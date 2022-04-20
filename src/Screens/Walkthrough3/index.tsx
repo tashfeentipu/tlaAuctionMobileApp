@@ -9,7 +9,7 @@ interface IState {
 
 }
 
-class SignIn extends Component<IProps, IState> {
+class Walkthrough3 extends Component<IProps, IState> {
     constructor(props: IProps) {
         super(props);
         this.state = {};
@@ -18,7 +18,7 @@ class SignIn extends Component<IProps, IState> {
     render() {
         return (
             <View style={styles.MainContainer} >
-                <Text>Sign In Component</Text>
+                <Text>Walkthorough 3</Text>
             </View>
         );
     }
@@ -31,4 +31,4 @@ const styles = StyleSheet.create({
     }
 });
 
-export default SignIn;
+export default Walkthrough3;

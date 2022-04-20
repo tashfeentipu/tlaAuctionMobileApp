@@ -25,7 +25,10 @@ class SignUpSuccess extends Component<IProps, IState> {
 }
 
 const styles = StyleSheet.create({
-    MainContainer: {}
+    MainContainer: {
+        backgroundColor: "#05020F",
+        flex: 1
+    }
 });
 
 export default SignUpSuccess;

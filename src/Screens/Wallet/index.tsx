@@ -17,7 +17,7 @@ class Wallet extends Component<IProps, IState> {
     render() {
         return (
             <View style={styles.MainContainer} >
-                <Text>React Native Class Component</Text>
+                <Text>Wallet</Text>
             </View>
         );
     }
