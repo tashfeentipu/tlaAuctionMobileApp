@@ -5,6 +5,7 @@ import Home from "../Screens/Home";
 import Wallet from "../Screens/Wallet";
 import Profile from "../Screens/Profile";
 import Rewards from "../Screens/Rewards";
+import Splash from "../Screens/Splash";
 
 const Tab = createBottomTabNavigator();
 
@@ -25,7 +26,7 @@ class BottomTabNavigator extends Component<IProps, IState> {
     render() {
         return (
             <Tab.Navigator>
-                <Tab.Screen name="Home" component={Home} />
+                <Tab.Screen name="Home" component={Splash} />
                 <Tab.Screen name="Wallet" component={Wallet} />
                 <Tab.Screen name="Rewards" component={Rewards} />
                 <Tab.Screen name="Profile" component={Profile} />
