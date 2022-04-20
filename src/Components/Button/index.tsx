@@ -1,9 +1,11 @@
-import React, { Component } from "react";
+import React, { Component, CSSProperties } from "react";
 import { StyleSheet, Text, TouchableOpacity } from "react-native";
+import { Metrics } from "../../Theme/Metrics";
 
 interface IProps {
     title: string
     onPress: Function
+    buttonContainerStyle?: any
 }
 
 interface IState {
@@ -18,7 +20,7 @@ class Button extends Component<IProps, IState> {
 
     render() {
         return (
-            <TouchableOpacity style={styles.MainContainer} onPress={() => this.props.onPress()} >
+            <TouchableOpacity style={{ ...styles.MainContainer, ...this.props.buttonContainerStyle }} onPress={() => this.props.onPress()} >
                 <Text style={styles.title}>{this.props.title}</Text>
             </TouchableOpacity>
         );
@@ -28,8 +30,8 @@ class Button extends Component<IProps, IState> {
 const styles = StyleSheet.create({
     MainContainer: {
         flex: 1,
-        height: "50%",
-        margin: "10%",
+        height: Metrics.HEIGHT * 0.5,
+        margin: Metrics.HEIGHT * 0.1,
         justifyContent: "center",
         alignItems: "center",
         backgroundColor: "purple",

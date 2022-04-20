@@ -1,5 +1,8 @@
 import React, { Component } from "react";
-import { View, Text, StyleSheet, Image } from "react-native";
+import { View, TouchableOpacity, Text, StyleSheet, Image } from "react-native";
+import Button from "../../Components/Button";
+import TextInputBox from "../../Components/TextInput";
+import { Metrics } from "../../Theme/Metrics";
 
 interface IProps {
 
@@ -21,7 +24,22 @@ class SignIn extends Component<IProps, IState> {
                 <View>
                     <Image source={require("../../Assets/Logo.png")} />
                 </View>
-                <Text>Sign In Component</Text>
+                <View>
+                    <Text style={styles.InputLabel}>Email</Text>
+                    <TextInputBox />
+                </View>
+                <View>
+                    <Text style={styles.InputLabel}>Password</Text>
+                    <TextInputBox />
+                </View>
+                <View style={styles.FPLabelContainer} >
+                    <Text style={styles.FPLabel} >Forgot Password?</Text>
+                    <TouchableOpacity style={styles.signInButtonContainer} >
+                        <Text style={styles.signInButtonText}  >
+                            Sign In
+                        </Text>
+                    </TouchableOpacity>
+                </View>
             </View>
         );
     }
@@ -30,9 +48,35 @@ class SignIn extends Component<IProps, IState> {
 const styles = StyleSheet.create({
     MainContainer: {
         backgroundColor: "#05020F",
-        flex: 1,
+        height: Metrics.HEIGHT,
         alignItems: "center",
         justifyContent: "center"
+    },
+    FPLabelContainer: {
+        flexDirection: "row",
+        justifyContent: "space-between",
+        alignItems: "center",
+        width: Metrics.WIDTH * 0.9,
+        height: Metrics.HEIGHT * 0.1,
+    },
+    InputLabel: {
+        fontSize: 14,
+        color: "white"
+    },
+    FPLabel: {
+        fontSize: 14,
+        color: "white"
+    },
+    signInButtonContainer: {
+        height: Metrics.HEIGHT * 0.06,
+        width: Metrics.WIDTH * 0.3,
+        borderRadius: Metrics.WIDTH * 0.2,
+        backgroundColor: "#2D0C33",
+        alignItems: "center",
+        justifyContent: 'center'
+    },
+    signInButtonText: {
+        color: "white"
     }
 });
 
