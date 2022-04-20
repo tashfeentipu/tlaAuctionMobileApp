@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet, Image } from "react-native";
 
 interface IProps {
-
+    navigation: any
 }
 
 interface IState {
@@ -15,10 +15,16 @@ class SplashScreen extends Component<IProps, IState> {
         this.state = {};
     }
 
+    componentDidMount() {
+        setTimeout(() => {
+            this.props.navigation.navigate("SignIn")
+        }, 4000)
+    }
+
     render() {
         return (
             <View style={styles.MainContainer} >
-                <Text>Splash</Text>
+                <Image source={require("../../Assets/Logo.png")} />
             </View>
         );
     }
@@ -27,8 +33,11 @@ class SplashScreen extends Component<IProps, IState> {
 const styles = StyleSheet.create({
     MainContainer: {
         backgroundColor: "#2D0C33",
-        flex: 1
-    }
+        flex: 1,
+        justifyContent: "center",
+        alignItems: "center"
+    },
+    LogoImage: { height: "140px", width: "210px" }
 });
 
 export default SplashScreen;

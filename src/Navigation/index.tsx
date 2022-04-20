@@ -1,7 +1,6 @@
 import { NavigationContainer } from '@react-navigation/native';
 import React, { Component } from "react";
-import { Text } from 'react-native';
-import BottomTabNavigator from './TabNavigator';
+import StackNavigator from './StackNavigator';
 
 interface IProps {
 
@@ -20,7 +19,7 @@ class HOCNavigationContainer extends Component<IProps, IState> {
     render() {
         return (
             <NavigationContainer>
-                <BottomTabNavigator />
+                <StackNavigator />
             </NavigationContainer>
 
         );

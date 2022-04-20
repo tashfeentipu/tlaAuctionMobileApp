@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet, Image } from "react-native";
 
 interface IProps {
 
@@ -18,6 +18,9 @@ class SignIn extends Component<IProps, IState> {
     render() {
         return (
             <View style={styles.MainContainer} >
+                <View>
+                    <Image source={require("../../Assets/Logo.png")} />
+                </View>
                 <Text>Sign In Component</Text>
             </View>
         );
@@ -27,7 +30,9 @@ class SignIn extends Component<IProps, IState> {
 const styles = StyleSheet.create({
     MainContainer: {
         backgroundColor: "#05020F",
-        flex: 1
+        flex: 1,
+        alignItems: "center",
+        justifyContent: "center"
     }
 });
 

@@ -27,7 +27,7 @@ class BottomTabNavigator extends Component<IProps, IState> {
     render() {
         return (
             <Tab.Navigator>
-                <Tab.Screen name="Home" component={SignIn} />
+                <Tab.Screen name="Home" component={Splash} />
                 <Tab.Screen name="Wallet" component={Wallet} />
                 <Tab.Screen name="Rewards" component={Rewards} />
                 <Tab.Screen name="Profile" component={Profile} />
