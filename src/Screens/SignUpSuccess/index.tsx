@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import { Colors } from "../../Theme/Colors";
 import { Metrics } from "../../Theme/Metrics";
 
 interface IProps {
@@ -19,8 +20,10 @@ class SignUpSuccess extends Component<IProps, IState> {
     render() {
         return (
             <View style={styles.MainContainer} >
-                <View>
-                    <Image source={require("../../Assets/SignUpSuccess.png")} />
+                <View style={styles.TickContainer2} >
+                    <View style={styles.TickContainer1} >
+                        <Image source={require("../../Assets/Tick.png")} />
+                    </View>
                 </View>
                 <View style={styles.LabelsContainer} >
                     <Text style={styles.Label1}>Sign Up Successful !!</Text>
@@ -28,7 +31,7 @@ class SignUpSuccess extends Component<IProps, IState> {
                 </View>
                 <TouchableOpacity style={styles.signInButtonContainer} >
                     <Text style={styles.signInButtonText}>
-                        SIGN IN
+                        Back To SIGN IN
                     </Text>
                 </TouchableOpacity>
             </View>
@@ -38,30 +41,47 @@ class SignUpSuccess extends Component<IProps, IState> {
 
 const styles = StyleSheet.create({
     MainContainer: {
-        backgroundColor: "#05020F",
+        backgroundColor: Colors.backgroundBlue,
         justifyContent: 'center',
         alignItems: "center",
         flex: 1
     },
+    TickContainer1: {
+        width: Metrics.WIDTH * 0.24,
+        height: Metrics.WIDTH * 0.24,
+        borderRadius: Metrics.WIDTH * 0.12,
+        alignItems: "center",
+        justifyContent: "center",
+        backgroundColor: Colors.indigo1
+    },
+    TickContainer2: {
+        width: Metrics.WIDTH * 0.32,
+        height: Metrics.WIDTH * 0.32,
+        borderRadius: Metrics.WIDTH * 0.16,
+        alignItems: "center",
+        justifyContent: "center",
+        backgroundColor: Colors.indigo2
+    },
     Label1: {
-        color: "#4C1C7D",
-        fontSize: 20
+        color: Colors.indigo1,
+        fontSize: Metrics.WIDTH * 0.07
     },
     Label2: {
-        color: "#FFFFFF",
-        fontSize: 14
+        color: Colors.white,
+        fontSize: Metrics.WIDTH * 0.04
     },
     signInButtonContainer: {
-        backgroundColor: "#2D0C33",
+        backgroundColor: Colors.indigo2,
         marginVertical: Metrics.HEIGHT * 0.1,
-        width: Metrics.WIDTH * 0.4,
-        height: Metrics.HEIGHT * 0.1,
+        paddingHorizontal: Metrics.WIDTH * 0.08,
+        height: Metrics.HEIGHT * 0.06,
         borderRadius: Metrics.HEIGHT * 0.05,
         justifyContent: "center",
         alignItems: "center"
     },
     signInButtonText: {
-        color: "#FFFFFF"
+        color: Colors.white,
+        fontSize: Metrics.WIDTH * 0.04
     },
     LabelsContainer: {
         height: Metrics.HEIGHT * 0.2,

@@ -1,12 +1,9 @@
-import React, { Component } from "react";
-import { View, Text, StyleSheet } from "react-native";
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import Home from "../Screens/Home";
-import Wallet from "../Screens/Wallet";
+import React, { Component } from "react";
 import Profile from "../Screens/Profile";
 import Rewards from "../Screens/Rewards";
 import Splash from "../Screens/Splash";
-import SignIn from "../Screens/SignIn";
+import Wallet from "../Screens/Wallet";
 
 const Tab = createBottomTabNavigator();
 
@@ -35,9 +32,5 @@ class BottomTabNavigator extends Component<IProps, IState> {
         );
     }
 }
-
-const styles = StyleSheet.create({
-    MainContainer: {}
-});
 
 export default BottomTabNavigator;

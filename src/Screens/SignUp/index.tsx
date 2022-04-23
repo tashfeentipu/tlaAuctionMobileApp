@@ -1,6 +1,8 @@
 import React, { Component } from "react";
-import { View, Text, StyleSheet, Image, TouchableOpacity } from "react-native";
+import { View, Text, StyleSheet, Image, TouchableOpacity, ScrollView } from "react-native";
 import TextInputBox from "../../Components/TextInput";
+import LogonToggle from "../../Containers/LogonToggle";
+import { Colors } from "../../Theme/Colors";
 import { Metrics } from "../../Theme/Metrics";
 
 interface IProps {
@@ -19,22 +21,15 @@ class SignUp extends Component<IProps, IState> {
 
     render() {
         return (
-            <View style={styles.MainContainer} >
+            <ScrollView contentContainerStyle={styles.MainContainer} >
+                <LogonToggle toggle={false} />
                 <View>
-                    <Image source={require("../../Assets/Logo.png")} />
+                    <Image source={require("../../Assets/Logo.png")} style={{ width: Metrics.WIDTH * 0.55, height: Metrics.HEIGHT * 0.185 }} />
                 </View>
-                <View>
-                    <Text style={styles.InputLabel}>Name</Text>
-                    <TextInputBox />
-                </View>
-                <View>
-                    <Text style={styles.InputLabel}>Email</Text>
-                    <TextInputBox />
-                </View>
-                <View>
-                    <Text style={styles.InputLabel}>Password</Text>
-                    <TextInputBox />
-                </View>
+                <TextInputBox inputLabel="Name" />
+                <TextInputBox inputLabel={"Email"} />
+                <TextInputBox inputLabel={"Password"} />
+                {/* <TextInputBox inputLabel={"Referrel"} /> */}
                 <View style={styles.FPLabelContainer} >
                     <Text style={styles.FPLabel} >Privacy Policy</Text>
                     <TouchableOpacity style={styles.signInButtonContainer} >
@@ -43,17 +38,18 @@ class SignUp extends Component<IProps, IState> {
                         </Text>
                     </TouchableOpacity>
                 </View>
-            </View>
+            </ScrollView>
         );
     }
 }
 
 const styles = StyleSheet.create({
     MainContainer: {
-        backgroundColor: "#05020F",
+        backgroundColor: Colors.backgroundBlue,
+        // flexGrow: 1,
         height: Metrics.HEIGHT,
         alignItems: "center",
-        justifyContent: "center"
+        justifyContent: "space-between"
     },
     FPLabelContainer: {
         flexDirection: "row",

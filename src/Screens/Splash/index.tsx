@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import { View, Text, StyleSheet, Image } from "react-native";
+import { Image, StyleSheet, View } from "react-native";
+import * as RouteNames from "../../Navigation/Routes";
 
 interface IProps {
     navigation: any
@@ -17,7 +18,7 @@ class SplashScreen extends Component<IProps, IState> {
 
     componentDidMount() {
         setTimeout(() => {
-            // this.props.navigation.navigate("SignIn")
+            this.props.navigation.navigate(RouteNames.SIGN_IN)
         }, 4000)
     }
 
