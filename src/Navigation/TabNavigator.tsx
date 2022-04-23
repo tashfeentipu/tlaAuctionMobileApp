@@ -1,6 +1,6 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import React, { Component } from "react";
-import { Image } from 'react-native';
+import { Image, Text } from 'react-native';
 import Home from '../Screens/Home';
 import Profile from "../Screens/Profile";
 import Rewards from "../Screens/Rewards";
@@ -34,13 +34,15 @@ class BottomTabNavigator extends Component<IProps, IState> {
 
     render() {
         return (
-            <Tab.Navigator screenOptions={{
+            <Tab.Navigator screenOptions={({ route }) => ({
                 tabBarStyle: {
                     backgroundColor: Colors.indigo2,
                     height: Metrics.HEIGHT * 0.08
                 },
-                tabBarActiveTintColor: Colors.white,
-            }} >
+                tabBarLabel: ({ focused }: any) => {
+                    return focused && <Text style={{ fontSize: 10, color: Colors.white }}>{route.name}</Text> || null
+                }
+            })} >
                 <Tab.Screen name={RouteNames.HOME} component={Home}
                     options={{
                         tabBarIcon: () => (<Image source={HomeIcon} style={{ width: 20, height: 20 }} />)
