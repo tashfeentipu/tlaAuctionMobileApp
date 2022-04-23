@@ -21,17 +21,11 @@ class SignIn extends Component<IProps, IState> {
     render() {
         return (
             <View style={styles.MainContainer} >
-                <View>
-                    <Image source={require("../../Assets/Logo.png")} />
+                <View >
+                    <Image source={require("../../Assets/Logo.png")} style={{ width: 210, height: 130 }} />
                 </View>
-                <View>
-                    <Text style={styles.InputLabel}>Email</Text>
-                    <TextInputBox />
-                </View>
-                <View>
-                    <Text style={styles.InputLabel}>Password</Text>
-                    <TextInputBox />
-                </View>
+                <TextInputBox inputLabel="Email" />
+                <TextInputBox inputLabel="Password" />
                 <View style={styles.FPLabelContainer} >
                     <Text style={styles.FPLabel} >Forgot Password?</Text>
                     <TouchableOpacity style={styles.signInButtonContainer} >
@@ -60,7 +54,7 @@ const styles = StyleSheet.create({
         height: Metrics.HEIGHT * 0.1,
     },
     InputLabel: {
-        fontSize: 14,
+        fontSize: Metrics.WIDTH * 0.04,
         color: "white"
     },
     FPLabel: {
@@ -76,7 +70,8 @@ const styles = StyleSheet.create({
         justifyContent: 'center'
     },
     signInButtonText: {
-        color: "white"
+        color: "white",
+        fontSize: Metrics.WIDTH * 0.04
     }
 });
 

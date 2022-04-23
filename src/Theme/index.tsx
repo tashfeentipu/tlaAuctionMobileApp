@@ -1,3 +1,4 @@
-import * as Metrics from "./Metrics";
+import { Metrics } from "./Metrics";
+import { Colors } from "./Colors";
 
-export default { Metrics }
+export default { Metrics, Colors }
