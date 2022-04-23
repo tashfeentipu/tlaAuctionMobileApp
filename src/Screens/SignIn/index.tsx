@@ -1,7 +1,8 @@
 import React, { Component } from "react";
-import { View, TouchableOpacity, Text, StyleSheet, Image } from "react-native";
-import Button from "../../Components/Button";
+import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import TextInputBox from "../../Components/TextInput";
+import LogonToggle from "../../Containers/LogonToggle";
+import { Colors } from "../../Theme/Colors";
 import { Metrics } from "../../Theme/Metrics";
 
 interface IProps {
@@ -21,11 +22,14 @@ class SignIn extends Component<IProps, IState> {
     render() {
         return (
             <View style={styles.MainContainer} >
+                <LogonToggle toggle={true} />
                 <View >
                     <Image source={require("../../Assets/Logo.png")} style={{ width: 210, height: 130 }} />
                 </View>
-                <TextInputBox inputLabel="Email" />
-                <TextInputBox inputLabel="Password" />
+                <View>
+                    <TextInputBox inputLabel="Email" />
+                    <TextInputBox inputLabel="Password" />
+                </View>
                 <View style={styles.FPLabelContainer} >
                     <Text style={styles.FPLabel} >Forgot Password?</Text>
                     <TouchableOpacity style={styles.signInButtonContainer} >
@@ -41,10 +45,10 @@ class SignIn extends Component<IProps, IState> {
 
 const styles = StyleSheet.create({
     MainContainer: {
-        backgroundColor: "#05020F",
+        backgroundColor: Colors.backgroundBlue,
         height: Metrics.HEIGHT,
         alignItems: "center",
-        justifyContent: "center"
+        justifyContent: "space-between"
     },
     FPLabelContainer: {
         flexDirection: "row",
@@ -52,14 +56,11 @@ const styles = StyleSheet.create({
         alignItems: "center",
         width: Metrics.WIDTH * 0.9,
         height: Metrics.HEIGHT * 0.1,
-    },
-    InputLabel: {
-        fontSize: Metrics.WIDTH * 0.04,
-        color: "white"
+        marginBottom: Metrics.HEIGHT * 0.1
     },
     FPLabel: {
         fontSize: 14,
-        color: "white"
+        color: Colors.white
     },
     signInButtonContainer: {
         height: Metrics.HEIGHT * 0.06,
@@ -70,7 +71,7 @@ const styles = StyleSheet.create({
         justifyContent: 'center'
     },
     signInButtonText: {
-        color: "white",
+        color: Colors.white,
         fontSize: Metrics.WIDTH * 0.04
     }
 });

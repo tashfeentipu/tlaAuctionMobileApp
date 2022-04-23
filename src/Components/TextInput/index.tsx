@@ -29,14 +29,12 @@ class TextInputBox extends Component<IProps, IState> {
 
 const styles = StyleSheet.create({
     MainContainer: {
-        marginVertical: Metrics.HEIGHT * 0.04
+        marginVertical: Metrics.HEIGHT * 0.03
     },
-
     TextInputStyle: {
         borderBottomColor: Colors.grey,
         borderBottomWidth: Metrics.WIDTH * 0.001,
         width: Metrics.WIDTH * 0.9,
-        marginVertical: Metrics.HEIGHT * 0.01
     },
 
     InputLabel: {
