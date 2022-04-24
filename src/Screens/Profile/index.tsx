@@ -1,6 +1,7 @@
 import React, { Component } from "react";
-import { View, Text, StyleSheet, Image } from "react-native";
+import { View, Text, StyleSheet, Image, ScrollView } from "react-native";
 import EditableInput from "../../Components/EditableInput";
+import GenderToggle from "../../Components/GenderToggle";
 import { Colors } from "../../Theme/Colors";
 import { Metrics } from "../../Theme/Metrics";
 
@@ -22,7 +23,7 @@ class Profile extends Component<IProps, IState> {
 
     render() {
         return (
-            <View style={styles.MainContainer} >
+            <ScrollView contentContainerStyle={styles.MainContainer} >
                 <View style={styles.ProfileContainer2} >
                     <View style={styles.ProfileContainer1}>
                         <Image source={ProfileImage} style={{ width: Metrics.WIDTH * 0.25, height: Metrics.WIDTH * 0.25 }} />
@@ -31,17 +32,16 @@ class Profile extends Component<IProps, IState> {
                 <EditableInput title={"Name"} />
                 <EditableInput title={"Email"} />
                 <EditableInput title={"Date Of Birth"} />
-                <EditableInput title={"Gender"} />
+                <GenderToggle />
                 <EditableInput title={"Id"} />
                 <EditableInput title={"Password"} />
-            </View>
+            </ScrollView>
         );
     }
 }
 
 const styles = StyleSheet.create({
     MainContainer: {
-        flex: 1,
         alignItems: "center",
         backgroundColor: Colors.backgroundBlue
     },
@@ -62,7 +62,8 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         borderRadius: Metrics.WIDTH * 0.23
 
-    }
+    },
+
 });
 
 export default Profile;
