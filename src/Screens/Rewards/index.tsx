@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { View, Text, StyleSheet } from "react-native";
 import Button from "../../Components/Button";
+import { Colors } from "../../Theme/Colors";
+
 interface IProps {
 
 }
@@ -31,7 +33,8 @@ class Rewards extends Component<IProps, IState> {
 
 const styles = StyleSheet.create({
     MainContainer: {
-        flex: 1
+        flex: 1,
+        backgroundColor: Colors.backgroundBlue
     }
 });
 

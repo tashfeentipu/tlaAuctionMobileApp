@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { StyleSheet, View } from "react-native";
 import Button from "../../Components/Button";
+import { Colors } from "../../Theme/Colors";
 
 interface IProps {
 
@@ -34,7 +35,8 @@ class Home extends Component<IProps, IState> {
 
 const styles = StyleSheet.create({
     MainContainer: {
-
+        flex: 1,
+        backgroundColor: Colors.backgroundBlue
     },
     BuyButton: {}
 });

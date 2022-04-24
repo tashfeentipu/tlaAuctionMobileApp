@@ -1,6 +1,7 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import React, { Component } from "react";
-import { Image, Text } from 'react-native';
+import { Image, ImageSourcePropType, Text } from 'react-native';
+import Header from '../Components/Header';
 import Home from '../Screens/Home';
 import Profile from "../Screens/Profile";
 import Rewards from "../Screens/Rewards";
@@ -32,9 +33,14 @@ class BottomTabNavigator extends Component<IProps, IState> {
         this.state = {};
     }
 
+    imageHandler = (source: ImageSourcePropType) => {
+        return <Image source={source} style={{ width: 20, height: 20 }} />
+    }
+
     render() {
         return (
             <Tab.Navigator screenOptions={({ route }) => ({
+                header: (props) => <Header {...props} />,
                 tabBarStyle: {
                     backgroundColor: Colors.indigo2,
                     height: Metrics.HEIGHT * 0.08
@@ -45,27 +51,28 @@ class BottomTabNavigator extends Component<IProps, IState> {
             })} >
                 <Tab.Screen name={RouteNames.HOME} component={Home}
                     options={{
-                        tabBarIcon: () => (<Image source={HomeIcon} style={{ width: 20, height: 20 }} />)
+                        tabBarIcon: () => this.imageHandler(HomeIcon)
                     }} />
                 <Tab.Screen name={RouteNames.WALLET} component={Wallet}
                     options={{
-                        tabBarIcon: () => (<Image source={WalletIcon} style={{ width: 20, height: 20 }} />)
+                        tabBarIcon: () => this.imageHandler(WalletIcon)
                     }} />
                 <Tab.Screen name={RouteNames.REWARDS} component={Rewards}
                     options={{
-                        tabBarIcon: () => (<Image source={RewardsIcon} style={{ width: 20, height: 20 }} />)
+                        tabBarIcon: () => this.imageHandler(RewardsIcon)
                     }} />
                 <Tab.Screen name={RouteNames.PROFILE} component={Profile}
                     options={{
-                        tabBarIcon: () => (<Image source={AccountIcon} style={{ width: 20, height: 20 }} />)
+                        tabBarIcon: () => this.imageHandler(AccountIcon)
                     }} />
                 <Tab.Screen name={RouteNames.SETTINGS} component={Settings}
                     options={{
-                        tabBarIcon: () => (<Image source={SettingsIcon} style={{ width: 20, height: 20 }} />)
+                        tabBarIcon: () => this.imageHandler(SettingsIcon)
                     }} />
-            </Tab.Navigator>
+            </Tab.Navigator >
         );
     }
 }
+
 
 export default BottomTabNavigator;

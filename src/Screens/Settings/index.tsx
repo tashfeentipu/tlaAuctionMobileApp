@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { View, Text, StyleSheet, Image } from "react-native";
+import { Colors } from "../../Theme/Colors";
 
 interface IProps {
 
@@ -28,7 +29,10 @@ class Settings extends Component<IProps, IState> {
 }
 
 const styles = StyleSheet.create({
-    MainContainer: {}
+    MainContainer: {
+        flex: 1,
+        backgroundColor: Colors.backgroundBlue
+    }
 });
 
 export default Settings;
