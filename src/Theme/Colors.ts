@@ -7,4 +7,5 @@ export const Colors = {
     indigo1: '#4C1C7D',
     indigo2: '#2D0C33',
     indigo3: '#230C3A',
+    backgroundGrey: "#353343",
 }

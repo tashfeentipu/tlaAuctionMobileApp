@@ -19,7 +19,7 @@ class Settings extends Component<IProps, IState> {
     render() {
         return (
             <View style={styles.MainContainer} >
-                <Image source={require("../../Assets/SettingsIcon.png")} />
+                <Image source={require("../../Assets/Settings.png")} />
                 <Text>
                     Shayan Shahid
                 </Text>
