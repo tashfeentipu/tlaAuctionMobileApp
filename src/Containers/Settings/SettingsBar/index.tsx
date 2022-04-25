@@ -45,7 +45,7 @@ const styles = StyleSheet.create({
     },
     TitleText: {
         color: Colors.white,
-        fontSize: Metrics.WIDTH * 0.05
+        fontSize: Metrics.WIDTH * 0.035
     }
 });
 
