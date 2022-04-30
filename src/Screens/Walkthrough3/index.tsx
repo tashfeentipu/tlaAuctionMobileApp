@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { View, Text, StyleSheet, Image, TouchableOpacity } from "react-native";
-import { Metrics } from "../../Theme/Metrics";
+import { Metrics, Colors } from "../../Theme";
 
 interface IProps {
 
@@ -36,7 +36,7 @@ class Walkthrough3 extends Component<IProps, IState> {
 
 const styles = StyleSheet.create({
     MainContainer: {
-        backgroundColor: "#05020F",
+        backgroundColor: Colors.white,
         flex: 1,
         justifyContent: "space-evenly",
         alignItems: "center",

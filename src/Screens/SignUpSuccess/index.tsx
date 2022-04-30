@@ -20,9 +20,11 @@ class SignUpSuccess extends Component<IProps, IState> {
     render() {
         return (
             <View style={styles.MainContainer} >
-                <View style={styles.TickContainer2} >
-                    <View style={styles.TickContainer1} >
-                        <Image source={require("../../Assets/Tick.png")} />
+                <View style={styles.TickContainer3} >
+                    <View style={styles.TickContainer2} >
+                        <View style={styles.TickContainer1} >
+                            <Image source={require("../../Assets/Tick.png")} />
+                        </View>
                     </View>
                 </View>
                 <View style={styles.LabelsContainer} >
@@ -41,7 +43,7 @@ class SignUpSuccess extends Component<IProps, IState> {
 
 const styles = StyleSheet.create({
     MainContainer: {
-        backgroundColor: Colors.backgroundBlue,
+        backgroundColor: Colors.white,
         justifyContent: 'center',
         alignItems: "center",
         flex: 1
@@ -62,16 +64,24 @@ const styles = StyleSheet.create({
         justifyContent: "center",
         backgroundColor: Colors.indigo2
     },
+    TickContainer3: {
+        width: Metrics.WIDTH * 0.4,
+        height: Metrics.WIDTH * 0.4,
+        borderRadius: Metrics.WIDTH * 0.2,
+        alignItems: "center",
+        justifyContent: "center",
+        backgroundColor: Colors.indigo3
+    },
     Label1: {
         color: Colors.indigo1,
         fontSize: Metrics.WIDTH * 0.07
     },
     Label2: {
-        color: Colors.white,
+        color: Colors.black,
         fontSize: Metrics.WIDTH * 0.04
     },
     signInButtonContainer: {
-        backgroundColor: Colors.indigo2,
+        backgroundColor: Colors.pink2,
         marginVertical: Metrics.HEIGHT * 0.1,
         paddingHorizontal: Metrics.WIDTH * 0.08,
         height: Metrics.HEIGHT * 0.06,

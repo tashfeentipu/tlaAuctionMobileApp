@@ -34,7 +34,7 @@ class Rewards extends Component<IProps, IState> {
 const styles = StyleSheet.create({
     MainContainer: {
         flex: 1,
-        backgroundColor: Colors.backgroundBlue
+        backgroundColor: Colors.white
     }
 });
 

@@ -44,7 +44,7 @@ const styles = StyleSheet.create({
         borderBottomColor: Colors.backgroundGrey,
     },
     TitleText: {
-        color: Colors.white,
+        color: Colors.black,
         fontSize: Metrics.WIDTH * 0.035
     }
 });

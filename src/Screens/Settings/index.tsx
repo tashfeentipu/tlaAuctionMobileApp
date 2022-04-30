@@ -43,9 +43,8 @@ class Settings extends Component<IProps, IState> {
                 <View style={styles.SubContainer2} >
                     <SettingsBar source={require("../../Assets/Region.png")} title="Region" />
                     <SettingsBar source={require("../../Assets/Language.png")} title="Language" />
-                    <SettingsBar source={require("../../Assets/Theme.png")} title="Theme" />
                     <SettingsBar source={require("../../Assets/AppVersion.png")} title="App Version" />
-                    <SettingsBar source={require("../../Assets/SignOut.png")} title="Sign Out" />
+                    <SettingsBar source={require("../../Assets/SignOut.png")} title="Sign Out" noBorder />
                 </View>
             </ScrollView>
         );
@@ -54,7 +53,7 @@ class Settings extends Component<IProps, IState> {
 
 const styles = StyleSheet.create({
     MainContainer: {
-        backgroundColor: Colors.backgroundBlue
+        backgroundColor: Colors.white,
     },
     MainContainer2: {
         alignItems: "center"
@@ -65,10 +64,11 @@ const styles = StyleSheet.create({
         height: Metrics.WIDTH * 0.42,
         alignItems: 'center',
         justifyContent: 'center',
+        marginTop: Metrics.HEIGHT * 0.02,
         borderRadius: Metrics.WIDTH * 0.21
     },
     ImageContainer2: {
-        backgroundColor: Colors.backgroundGrey,
+        backgroundColor: Colors.skyBlue,
         width: Metrics.WIDTH * 0.4,
         height: Metrics.WIDTH * 0.4,
         alignItems: 'center',
@@ -83,7 +83,7 @@ const styles = StyleSheet.create({
         justifyContent: "space-between"
     },
     TitleText: {
-        color: Colors.white,
+        color: Colors.indigo1,
         fontSize: Metrics.WIDTH * 0.04
     },
     LanguageTextContainer: {
@@ -92,8 +92,8 @@ const styles = StyleSheet.create({
         justifyContent: "center"
     },
     LanguageText: {
-        color: Colors.white,
-        fontSize: Metrics.WIDTH * 0.06
+        color: Colors.black,
+        fontSize: Metrics.WIDTH * 0.04
     },
     SubContainer1: {
         height: Metrics.HEIGHT * 0.27,
@@ -102,14 +102,19 @@ const styles = StyleSheet.create({
         justifyContent: "space-around",
         borderBottomColor: Colors.backgroundGrey,
         borderBottomWidth: Metrics.HEIGHT * 0.002,
+        backgroundColor: Colors.skyBlue,
         borderTopColor: Colors.backgroundGrey,
         borderTopWidth: Metrics.HEIGHT * 0.002,
     },
     SubContainer2: {
         borderTopColor: Colors.backgroundGrey,
+        borderTopWidth: Metrics.HEIGHT * 0.002,
+        borderBottomColor: Colors.backgroundGrey,
+        borderBottomWidth: Metrics.HEIGHT * 0.002,
+        backgroundColor: Colors.skyBlue,
+        marginBottom: Metrics.HEIGHT * 0.05,
         width: Metrics.WIDTH,
         alignItems: 'center',
-        borderTopWidth: Metrics.HEIGHT * 0.002,
     },
 });
 
