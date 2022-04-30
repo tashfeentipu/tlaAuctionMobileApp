@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import { Image, ScrollView, StyleSheet, View } from "react-native";
+import { Image, ScrollView, StyleSheet, View, Text } from "react-native";
+import SettingsBar from "../../Containers/Settings/SettingsBar";
 import { Colors } from "../../Theme/Colors";
 import { Metrics } from "../../Theme/Metrics";
 
@@ -24,6 +25,27 @@ class Settings extends Component<IProps, IState> {
                     <View style={styles.ImageContainer2} >
                         <Image source={require("../../Assets/Profile.png")} style={{ width: Metrics.WIDTH * 0.25, height: Metrics.WIDTH * 0.25 }} />
                     </View>
+                </View>
+                <View style={styles.TitleTextContainer} >
+                    <Text style={styles.TitleText} >Shayan Shahid</Text>
+                    <Image source={require("../../Assets/Pen.png")} />
+                </View>
+                <View style={styles.SubContainer1} >
+                    <SettingsBar source={require("../../Assets/Notifications.png")} title="Notifications" />
+                    <SettingsBar source={require("../../Assets/Community.png")} title="Community" />
+                    <SettingsBar source={require("../../Assets/Support.png")} title="Support" noBorder />
+                </View>
+
+                <View style={styles.LanguageTextContainer}>
+                    <Text style={styles.LanguageText} >LANGUAGE & REGION</Text>
+                </View>
+
+                <View style={styles.SubContainer2} >
+                    <SettingsBar source={require("../../Assets/Region.png")} title="Region" />
+                    <SettingsBar source={require("../../Assets/Language.png")} title="Language" />
+                    <SettingsBar source={require("../../Assets/Theme.png")} title="Theme" />
+                    <SettingsBar source={require("../../Assets/AppVersion.png")} title="App Version" />
+                    <SettingsBar source={require("../../Assets/SignOut.png")} title="Sign Out" />
                 </View>
             </ScrollView>
         );
@@ -52,7 +74,43 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
         borderRadius: Metrics.WIDTH * 0.2
-    }
+    },
+    TitleTextContainer: {
+        flexDirection: "row",
+        alignItems: "center",
+        width: Metrics.WIDTH * 0.35,
+        height: Metrics.HEIGHT * 0.05,
+        justifyContent: "space-between"
+    },
+    TitleText: {
+        color: Colors.white,
+        fontSize: Metrics.WIDTH * 0.04
+    },
+    LanguageTextContainer: {
+        height: Metrics.HEIGHT * 0.08,
+        width: Metrics.WIDTH * 0.9,
+        justifyContent: "center"
+    },
+    LanguageText: {
+        color: Colors.white,
+        fontSize: Metrics.WIDTH * 0.06
+    },
+    SubContainer1: {
+        height: Metrics.HEIGHT * 0.27,
+        width: Metrics.WIDTH,
+        alignItems: 'center',
+        justifyContent: "space-around",
+        borderBottomColor: Colors.backgroundGrey,
+        borderBottomWidth: Metrics.HEIGHT * 0.002,
+        borderTopColor: Colors.backgroundGrey,
+        borderTopWidth: Metrics.HEIGHT * 0.002,
+    },
+    SubContainer2: {
+        borderTopColor: Colors.backgroundGrey,
+        width: Metrics.WIDTH,
+        alignItems: 'center',
+        borderTopWidth: Metrics.HEIGHT * 0.002,
+    },
 });
 
 export default Settings;
