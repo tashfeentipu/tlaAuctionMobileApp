@@ -32,14 +32,14 @@ const styles = StyleSheet.create({
         marginVertical: Metrics.HEIGHT * 0.03
     },
     TextInputStyle: {
-        borderBottomColor: Colors.grey,
+        borderBottomColor: Colors.black,
         borderBottomWidth: Metrics.WIDTH * 0.001,
         width: Metrics.WIDTH * 0.9,
     },
 
     InputLabel: {
         fontSize: Metrics.WIDTH * 0.04,
-        color: Colors.grey
+        color: Colors.black
     },
 });
 

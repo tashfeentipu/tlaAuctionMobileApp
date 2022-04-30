@@ -1,6 +1,6 @@
 import React, { Component, CSSProperties } from "react";
 import { StyleSheet, Text, TouchableOpacity } from "react-native";
-import { Metrics } from "../../Theme/Metrics";
+import { Metrics } from "../../Theme";
 
 interface IProps {
     title: string

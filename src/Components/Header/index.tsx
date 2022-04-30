@@ -28,7 +28,7 @@ const Header = (props: IProps) => {
 
 const styles = StyleSheet.create({
     MainContainer: {
-        backgroundColor: Colors.backgroundBlue,
+        backgroundColor: Colors.white,
         flexDirection: "row",
         height: Metrics.HEIGHT * 0.1,
         justifyContent: "space-between",

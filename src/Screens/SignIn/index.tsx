@@ -24,7 +24,7 @@ class SignIn extends Component<IProps, IState> {
             <View style={styles.MainContainer} >
                 <LogonToggle toggle={true} />
                 <View >
-                    <Image source={require("../../Assets/Logo.png")} style={{ width: 210, height: 130 }} />
+                    <Image source={require("../../Assets/Logo2.png")} style={{ width: 210, height: 130 }} />
                 </View>
                 <View>
                     <TextInputBox inputLabel="Email" />
@@ -45,7 +45,7 @@ class SignIn extends Component<IProps, IState> {
 
 const styles = StyleSheet.create({
     MainContainer: {
-        backgroundColor: Colors.backgroundBlue,
+        backgroundColor: Colors.white,
         height: Metrics.HEIGHT,
         alignItems: "center",
         justifyContent: "space-between"
@@ -60,13 +60,13 @@ const styles = StyleSheet.create({
     },
     FPLabel: {
         fontSize: 14,
-        color: Colors.white
+        color: Colors.black
     },
     signInButtonContainer: {
         height: Metrics.HEIGHT * 0.06,
         width: Metrics.WIDTH * 0.3,
         borderRadius: Metrics.WIDTH * 0.2,
-        backgroundColor: "#2D0C33",
+        backgroundColor: Colors.pink2,
         alignItems: "center",
         justifyContent: 'center'
     },

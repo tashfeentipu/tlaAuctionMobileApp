@@ -42,11 +42,11 @@ class BottomTabNavigator extends Component<IProps, IState> {
             <Tab.Navigator screenOptions={({ route }) => ({
                 header: (props) => <Header {...props} />,
                 tabBarStyle: {
-                    backgroundColor: Colors.indigo2,
+                    backgroundColor: Colors.grey2,
                     height: Metrics.HEIGHT * 0.08
                 },
                 tabBarLabel: ({ focused }: any) => {
-                    return focused && <Text style={{ fontSize: 10, color: Colors.white }}>{route.name}</Text> || null
+                    return focused && <Text style={{ fontSize: 10, color: Colors.indigo1 }}>{route.name}</Text> || null
                 }
             })} >
                 <Tab.Screen name={RouteNames.HOME} component={Home}
