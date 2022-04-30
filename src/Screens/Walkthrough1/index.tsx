@@ -1,9 +1,10 @@
 import React, { Component } from "react";
 import { View, Text, StyleSheet, Image, TouchableOpacity } from "react-native";
 import { Metrics, Colors } from "../../Theme";
+import * as RouteNames from "../../Navigation/Routes";
 
 interface IProps {
-
+    navigation: any
 }
 
 interface IState {
@@ -25,7 +26,7 @@ class Walkthrough1 extends Component<IProps, IState> {
                     <Text style={styles.Label2}>PSPad will provide Secure transaction</Text>
                 </View>
                 <View style={styles.SubContainer2} >
-                    <TouchableOpacity onPress={() => { }} >
+                    <TouchableOpacity onPress={() => { this.props.navigation.navigate(RouteNames.WALKTHROUGH2) }} >
                         <Text style={styles.SkipText} >
                             SKIP
                         </Text>
@@ -59,7 +60,7 @@ const styles = StyleSheet.create({
     },
     Label2: {
         fontSize: 14,
-        color: Colors.white
+        color: Colors.black
     },
     SubContainer2: {
         flexDirection: "row",
@@ -67,10 +68,10 @@ const styles = StyleSheet.create({
         justifyContent: "space-between"
     },
     SkipText: {
-        color: Colors.white
+        color: Colors.grey
     },
     NextText: {
-        color: Colors.white
+        color: Colors.black
     }
 });
 

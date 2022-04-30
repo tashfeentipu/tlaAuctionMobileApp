@@ -4,9 +4,10 @@ import TextInputBox from "../../Components/TextInput";
 import LogonToggle from "../../Containers/LogonToggle";
 import { Colors } from "../../Theme/Colors";
 import { Metrics } from "../../Theme/Metrics";
+import * as RouteNames from "../../Navigation/Routes";
 
 interface IProps {
-
+    navigation: any
 }
 
 interface IState {
@@ -32,7 +33,7 @@ class SignIn extends Component<IProps, IState> {
                 </View>
                 <View style={styles.FPLabelContainer} >
                     <Text style={styles.FPLabel} >Forgot Password?</Text>
-                    <TouchableOpacity style={styles.signInButtonContainer} >
+                    <TouchableOpacity style={styles.signInButtonContainer} onPress={() => { this.props.navigation.navigate(RouteNames.WALKTHROUGH1) }} >
                         <Text style={styles.signInButtonText}  >
                             Sign In
                         </Text>

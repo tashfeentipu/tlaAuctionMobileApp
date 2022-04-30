@@ -19,7 +19,7 @@ class SplashScreen extends Component<IProps, IState> {
 
     componentDidMount() {
         setTimeout(() => {
-            // this.props.navigation.navigate(RouteNames.SIGN_IN)
+            this.props.navigation.navigate(RouteNames.SIGN_IN)
         }, 4000)
     }
 

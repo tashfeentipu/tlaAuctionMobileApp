@@ -1,9 +1,10 @@
 import React, { Component } from "react";
 import { View, Text, StyleSheet, Image, TouchableOpacity } from "react-native";
 import { Metrics, Colors } from "../../Theme";
+import * as RouteNames from "../../Navigation/Routes";
 
 interface IProps {
-
+    navigation: any
 }
 
 interface IState {
@@ -30,7 +31,7 @@ class Walkthrough2 extends Component<IProps, IState> {
                             SKIP
                         </Text>
                     </TouchableOpacity>
-                    <TouchableOpacity onPress={() => { }} >
+                    <TouchableOpacity onPress={() => { this.props.navigation.navigate(RouteNames.WALKTHROUGH3) }} >
                         <Text style={styles.NextText}>
                             NEXT
                         </Text>
@@ -55,11 +56,11 @@ const styles = StyleSheet.create({
     },
     Label1: {
         fontSize: 20,
-        color: "#4C1C7D"
+        color: Colors.indigo1
     },
     Label2: {
         fontSize: 14,
-        color: Colors.white
+        color: Colors.black
     },
     SubContainer2: {
         flexDirection: "row",
@@ -67,10 +68,10 @@ const styles = StyleSheet.create({
         justifyContent: "space-between"
     },
     SkipText: {
-        color: Colors.white
+        color: Colors.grey
     },
     NextText: {
-        color: Colors.white
+        color: Colors.black
     }
 });
 

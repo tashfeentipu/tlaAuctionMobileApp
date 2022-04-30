@@ -1,9 +1,10 @@
 import React, { Component } from "react";
 import { View, Text, StyleSheet, Image, TouchableOpacity } from "react-native";
 import { Metrics, Colors } from "../../Theme";
+import * as RouteNames from "../../Navigation/Routes";
 
 interface IProps {
-
+    navigation: any
 }
 
 interface IState {
@@ -24,7 +25,7 @@ class Walkthrough3 extends Component<IProps, IState> {
                     <Text style={styles.Label1}>PSPad Wallet</Text>
                     <Text style={styles.Label2}>PSPad will provide reliable wallet</Text>
                 </View>
-                <TouchableOpacity onPress={() => { }} style={styles.GotItButton} >
+                <TouchableOpacity onPress={() => { this.props.navigation.navigate(RouteNames.HOME_TAB_NAV) }} style={styles.GotItButton} >
                     <Text style={styles.GotItText}>
                         GOT IT
                     </Text>
@@ -48,11 +49,11 @@ const styles = StyleSheet.create({
     },
     Label1: {
         fontSize: 20,
-        color: "#4C1C7D"
+        color: Colors.indigo1
     },
     Label2: {
         fontSize: 14,
-        color: "#FFFFFF"
+        color: Colors.black
     },
     SubContainer2: {
         flexDirection: "row",
@@ -60,15 +61,15 @@ const styles = StyleSheet.create({
         justifyContent: "space-between"
     },
     GotItButton: {
-        backgroundColor: "#2D0C33",
+        backgroundColor: Colors.indigo1,
         width: Metrics.WIDTH * 0.4,
-        height: Metrics.HEIGHT * 0.1,
+        height: Metrics.HEIGHT * 0.07,
         justifyContent: "center",
         alignItems: "center",
         borderRadius: Metrics.HEIGHT * 0.05
     },
     GotItText: {
-        color: "#FFFFFF"
+        color: Colors.white
     },
 
 });
