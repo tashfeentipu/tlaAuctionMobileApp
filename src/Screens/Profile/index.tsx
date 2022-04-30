@@ -46,7 +46,7 @@ const styles = StyleSheet.create({
         backgroundColor: Colors.white
     },
     ProfileContainer1: {
-        backgroundColor: Colors.backgroundGrey,
+        backgroundColor: Colors.skyBlue,
         width: Metrics.WIDTH * 0.4,
         height: Metrics.WIDTH * 0.4,
         alignItems: 'center',
@@ -56,11 +56,11 @@ const styles = StyleSheet.create({
     },
     ProfileContainer2: {
         backgroundColor: Colors.indigo1,
-        width: Metrics.WIDTH * 0.46,
-        height: Metrics.WIDTH * 0.46,
+        width: Metrics.WIDTH * 0.44,
+        height: Metrics.WIDTH * 0.44,
         alignItems: 'center',
         justifyContent: 'center',
-        borderRadius: Metrics.WIDTH * 0.23
+        borderRadius: Metrics.WIDTH * 0.22
 
     },
 

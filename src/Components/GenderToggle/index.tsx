@@ -50,7 +50,7 @@ const styles = StyleSheet.create({
         paddingHorizontal: Metrics.WIDTH * 0.02,
         marginVertical: Metrics.HEIGHT * 0.02,
         flexDirection: "row",
-        backgroundColor: Colors.backgroundGrey
+        backgroundColor: Colors.skyBlue
     },
     TickContainer: {
         width: Metrics.WIDTH * 0.08,
@@ -65,7 +65,7 @@ const styles = StyleSheet.create({
         justifyContent: "space-between",
     },
     GenderText: {
-        color: Colors.white,
+        color: Colors.black,
         marginLeft: Metrics.WIDTH * 0.03
     }
 });

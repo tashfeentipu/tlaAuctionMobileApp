@@ -14,7 +14,7 @@ const EditableInput = (props: IProps) => {
     return <View style={styles.MainContainer} >
         <Text style={styles.Title}>{props.title}</Text>
         <View style={styles.InputContainer} >
-            <TextInput style={styles.TextInput} />
+            <TextInput style={styles.TextInput} placeholderTextColor={Colors.black} />
             <Image source={EditIcon} />
         </View>
     </View>
@@ -25,14 +25,14 @@ const styles = StyleSheet.create({
         width: Metrics.WIDTH * 0.9
     },
     Title: {
-        color: Colors.white,
+        color: Colors.black,
         fontSize: Metrics.WIDTH * 0.04,
         marginVertical: Metrics.HEIGHT * 0.02
     },
     InputContainer: {
         flexDirection: "row",
         alignItems: "center",
-        backgroundColor: Colors.backgroundGrey,
+        backgroundColor: Colors.skyBlue,
         borderRadius: Metrics.WIDTH * 0.1,
         paddingHorizontal: Metrics.WIDTH * 0.05
     },

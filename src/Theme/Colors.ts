@@ -11,5 +11,7 @@ export const Colors = {
     indigo3: '#D5CED6',
     backgroundGrey: "#353343",
     black: "#000000",
-    skyBlue: "#AAB9BF"
+    skyBlue: "#AAB9BF",
+    purple1: "#6D0093",
+    purple2: "#2C0054",
 }
