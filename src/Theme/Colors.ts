@@ -1,6 +1,7 @@
 export const Colors = {
     grey: "#5D5C71",
     grey2: "#E3E2E2",
+    grey3: "#5D6568",
     white: "#FFFFFF",
     valentino: "#2D0C33",
     pink: "#DB2FB1",
@@ -14,4 +15,5 @@ export const Colors = {
     skyBlue: "#AAB9BF",
     purple1: "#6D0093",
     purple2: "#2C0054",
+    green1: "#00BD13"
 }
