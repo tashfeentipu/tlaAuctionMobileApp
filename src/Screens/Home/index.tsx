@@ -36,7 +36,6 @@ class Home extends Component<IProps, IState> {
                 <View>
                     <TouchableOpacity style={styles.PackagesContainer} >
                         <Image source={AddonFeaturesBack} />
-
                         <Image source={NewsUpdate} />
                         <Text></Text>
                     </TouchableOpacity>
@@ -50,7 +49,6 @@ class Home extends Component<IProps, IState> {
 const styles = StyleSheet.create({
     MainContainer: {
         alignItems: 'center',
-        // justifyContent: "space-around",
         backgroundColor: Colors.white
     },
     BannerImage: {

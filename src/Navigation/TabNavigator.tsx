@@ -43,6 +43,13 @@ class BottomTabNavigator extends Component<IProps, IState> {
                 header: (props) => <Header {...props} />,
                 tabBarStyle: {
                     backgroundColor: Colors.grey2,
+                    borderTopLeftRadius: Metrics.WIDTH * 0.05,
+                    borderTopRightRadius: Metrics.WIDTH * 0.05,
+                    elevation: 1,
+                    backfaceVisibility: 'hidden',
+                    width: Metrics.WIDTH * 0.98,
+                    left: Metrics.WIDTH * 0.01,
+                    right: Metrics.WIDTH * 0.01,
                     height: Metrics.HEIGHT * 0.08
                 },
                 tabBarLabel: ({ focused }: any) => {

@@ -76,7 +76,9 @@ class Wallet extends Component<IProps, IState> {
 
 const styles = StyleSheet.create({
     MainContainerStyle: {
-        backgroundColor: Colors.white
+        backgroundColor: Colors.white,
+        height: Metrics.HEIGHT,
+        flex: 1
     },
     MainContainer: {
         alignItems: 'center',
