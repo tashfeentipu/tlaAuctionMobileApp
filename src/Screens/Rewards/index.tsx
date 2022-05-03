@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { View, Text, ScrollView, StyleSheet, Image } from "react-native";
 import LinearGradient from "react-native-linear-gradient";
 import Button from "../../Components/Button";
+import PSP_Button from "../../Containers/Rewards/PSP_Button";
 import { Metrics, Colors } from "../../Theme";
 
 interface IProps {
@@ -31,23 +32,23 @@ class Rewards extends Component<IProps, IState> {
                 </View>
                 <View style={styles.TasksMainContainer} >
                     <View style={styles.TasksContainer1} >
-                        <LinearGradient
+                        {/* <LinearGradient
                             start={{ x: 0, y: 0 }}
                             end={{ x: 1, y: 0 }}
                             colors={[Colors.purple1, Colors.purple2]}
                             style={styles.TasksContainer}>
                             <Text style={styles.TasksText}>TASKS TO DO</Text>
-                        </LinearGradient>
-
-                    </View>
-                    <View style={styles.TasksContainer2} >
-                        <LinearGradient
+                        </LinearGradient> */}
+                        {/* <LinearGradient
                             start={{ x: 0, y: 0 }}
                             end={{ x: 1, y: 0 }}
                             colors={[Colors.purple1, Colors.purple2]}
                             style={styles.ClaimContainer}>
                             <Text style={styles.TasksText}>CLAIM</Text>
-                        </LinearGradient>
+                        </LinearGradient> */}
+                    </View>
+                    <View style={styles.TasksContainer2} >
+                        <PSP_Button ButtonText="10" Text="Share the App with 5 Unique individuals by using your referrel link" />
                     </View>
                 </View>
 
@@ -97,15 +98,16 @@ const styles = StyleSheet.create({
         borderRadius: Metrics.WIDTH * 0.1
     },
     TasksContainer1: {
-        flex: 0.6,
+        // flex: 0.6,
         backgroundColor: "pink"
     },
     TasksContainer2: {
-        flex: 0.4,
-        backgroundColor: "purple"
+        // flex: 0.4,
+        alignItems: "center"
+        // backgroundColor: "purple"
     },
     TasksMainContainer: {
-        flexDirection: "row",
+        // flexDirection: "row",
     },
     TasksText: {
         color: Colors.white
