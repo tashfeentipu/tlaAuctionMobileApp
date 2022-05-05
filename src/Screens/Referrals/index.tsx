@@ -104,6 +104,7 @@ const styles = StyleSheet.create({
     SC1_Text1: {
         color: Colors.black,
         fontSize: Metrics.WIDTH * 0.04,
+        fontFamily: "Dubai",
         textAlign: "center"
     },
     SC1_Text2: {

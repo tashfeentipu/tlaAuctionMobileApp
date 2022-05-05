@@ -1,6 +1,6 @@
 import React from "react";
 import { TouchableOpacity, Image, StyleSheet, Text, View } from "react-native";
-import { Metrics, Colors } from "../../Theme";
+import { Metrics, Colors, Fonts } from "../../Theme";
 import * as RouteNames from "../../Navigation/Routes";
 
 interface IProps {
@@ -15,7 +15,7 @@ const AccountHeaderIcon = require("../../Assets/Account1.png")
 const Header = (props: IProps) => {
 
     return <View style={styles.MainContainer} >
-        <TouchableOpacity style={styles.AccountIconContainer} onPress={() => { props.navigation.navigate(RouteNames.PROFILE)}} >
+        <TouchableOpacity style={styles.AccountIconContainer} onPress={() => { props.navigation.navigate(RouteNames.PROFILE) }} >
             <Image source={AccountHeaderIcon} style={{ width: Metrics.WIDTH * 0.1, height: Metrics.WIDTH * 0.1 }} />
         </TouchableOpacity>
         <Text style={styles.Title} >{props.route.name}</Text>
@@ -35,6 +35,7 @@ const styles = StyleSheet.create({
     },
     Title: {
         fontSize: Metrics.HEIGHT * 0.03,
+        fontFamily: Fonts.DubaiBold,
         color: Colors.black
     },
     AccountIconContainer: {

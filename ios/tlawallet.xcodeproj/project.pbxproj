@@ -14,6 +14,10 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		7699B88040F8A987B510C191 /* libPods-tlawallet-tlawalletTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-tlawallet-tlawalletTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		AEF0F328AF2645278532E57E /* Dubai-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1FAA15F60FCB4F6793050C64 /* Dubai-Bold.ttf */; };
+		7717A8EF93D14886B1CDBD33 /* Dubai-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CC7EFFDCDB794A7280E36F47 /* Dubai-Light.ttf */; };
+		FAD7B15A216D4341B7EBBCE2 /* Dubai-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 132F505EB71E4CE1A5CFC94F /* Dubai-Medium.ttf */; };
+		4053C9605A1947AC98D6C8BA /* Dubai-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7991FC03F8E84F95976D6EF9 /* Dubai-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +48,10 @@
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = tlawallet/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-tlawallet-tlawalletTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tlawallet-tlawalletTests.release.xcconfig"; path = "Target Support Files/Pods-tlawallet-tlawalletTests/Pods-tlawallet-tlawalletTests.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		1FAA15F60FCB4F6793050C64 /* Dubai-Bold.ttf */ = {isa = PBXFileReference; name = "Dubai-Bold.ttf"; path = "../src/assets/Fonts/Dubai-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		CC7EFFDCDB794A7280E36F47 /* Dubai-Light.ttf */ = {isa = PBXFileReference; name = "Dubai-Light.ttf"; path = "../src/assets/Fonts/Dubai-Light.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		132F505EB71E4CE1A5CFC94F /* Dubai-Medium.ttf */ = {isa = PBXFileReference; name = "Dubai-Medium.ttf"; path = "../src/assets/Fonts/Dubai-Medium.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		7991FC03F8E84F95976D6EF9 /* Dubai-Regular.ttf */ = {isa = PBXFileReference; name = "Dubai-Regular.ttf"; path = "../src/assets/Fonts/Dubai-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +130,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
+				092200032CD04D6EAFEE8AF2 /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -147,6 +156,18 @@
 			);
 			path = Pods;
 			sourceTree = "<group>";
+		};
+		092200032CD04D6EAFEE8AF2 /* Resources */ = {
+			isa = "PBXGroup";
+			children = (
+				1FAA15F60FCB4F6793050C64 /* Dubai-Bold.ttf */,
+				CC7EFFDCDB794A7280E36F47 /* Dubai-Light.ttf */,
+				132F505EB71E4CE1A5CFC94F /* Dubai-Medium.ttf */,
+				7991FC03F8E84F95976D6EF9 /* Dubai-Regular.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+			path = "";
 		};
 /* End PBXGroup section */
 
@@ -244,6 +265,10 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				AEF0F328AF2645278532E57E /* Dubai-Bold.ttf in Resources */,
+				7717A8EF93D14886B1CDBD33 /* Dubai-Light.ttf in Resources */,
+				FAD7B15A216D4341B7EBBCE2 /* Dubai-Medium.ttf in Resources */,
+				4053C9605A1947AC98D6C8BA /* Dubai-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
