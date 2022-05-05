@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { View, Text, StyleSheet, Image, TouchableOpacity } from "react-native";
-import { Metrics, Colors } from "../../Theme";
+import { Metrics, Colors, Fonts } from "../../Theme";
 import * as RouteNames from "../../Navigation/Routes";
 
 const ActiveIcon = require("../../Assets/Active.png")
@@ -67,10 +67,12 @@ const styles = StyleSheet.create({
     },
     Text1: {
         fontSize: Metrics.WIDTH * 0.04,
+        fontFamily: Fonts.Exo2Regular,
         color: Colors.pink2
     },
     Text2: {
         fontSize: Metrics.WIDTH * 0.04,
+        fontFamily: Fonts.Exo2Regular,
         color: Colors.grey
     },
 });

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { View, Text, StyleSheet, Image, TouchableOpacity } from "react-native";
-import { Metrics, Colors } from "../../Theme";
+import { Metrics, Colors, Fonts } from "../../Theme";
 import * as RouteNames from "../../Navigation/Routes";
 
 interface IProps {
@@ -56,10 +56,12 @@ const styles = StyleSheet.create({
     },
     Label1: {
         fontSize: 20,
+        fontFamily: Fonts.Exo2Regular,
         color: Colors.indigo1
     },
     Label2: {
         fontSize: 14,
+        fontFamily: Fonts.Exo2Regular,
         color: Colors.black
     },
     SubContainer2: {
@@ -68,9 +70,11 @@ const styles = StyleSheet.create({
         justifyContent: "space-between"
     },
     SkipText: {
+        fontFamily: Fonts.Exo2Regular,
         color: Colors.grey
     },
     NextText: {
+        fontFamily: Fonts.Exo2Regular,
         color: Colors.black
     }
 });

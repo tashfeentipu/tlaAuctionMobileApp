@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { View, TextInput, Text, StyleSheet } from "react-native";
 import { Metrics } from "../../Theme/Metrics";
 import { Colors } from "../../Theme/Colors";
+import { Fonts } from "../../Theme";
 
 interface IProps {
     inputLabel: string
@@ -39,6 +40,7 @@ const styles = StyleSheet.create({
 
     InputLabel: {
         fontSize: Metrics.WIDTH * 0.04,
+        fontFamily: Fonts.Exo2Regular,
         color: Colors.black
     },
 });

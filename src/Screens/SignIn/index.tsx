@@ -5,6 +5,7 @@ import LogonToggle from "../../Containers/LogonToggle";
 import { Colors } from "../../Theme/Colors";
 import { Metrics } from "../../Theme/Metrics";
 import * as RouteNames from "../../Navigation/Routes";
+import { Fonts } from "../../Theme";
 
 interface IProps {
     navigation: any
@@ -61,6 +62,7 @@ const styles = StyleSheet.create({
     },
     FPLabel: {
         fontSize: 14,
+        fontFamily: Fonts.Exo2Regular,
         color: Colors.black
     },
     signInButtonContainer: {
@@ -73,6 +75,7 @@ const styles = StyleSheet.create({
     },
     signInButtonText: {
         color: Colors.white,
+        fontFamily: Fonts.Exo2Regular,
         fontSize: Metrics.WIDTH * 0.04
     }
 });

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
-import { Metrics, Colors } from "../../Theme";
+import { Metrics, Colors, Fonts } from "../../Theme";
 import * as RouteNames from "../../Navigation/Routes";
 
 interface IProps {
@@ -74,10 +74,12 @@ const styles = StyleSheet.create({
     },
     Label1: {
         color: Colors.indigo1,
-        fontSize: Metrics.WIDTH * 0.07
+        fontSize: Metrics.WIDTH * 0.07,
+        fontFamily: Fonts.Exo2Regular
     },
     Label2: {
         color: Colors.black,
+        fontFamily: Fonts.Exo2Regular,
         fontSize: Metrics.WIDTH * 0.04
     },
     signInButtonContainer: {
@@ -91,6 +93,7 @@ const styles = StyleSheet.create({
     },
     signInButtonText: {
         color: Colors.white,
+        fontFamily: Fonts.Exo2Regular,
         fontSize: Metrics.WIDTH * 0.04
     },
     LabelsContainer: {

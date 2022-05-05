@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { View, Text, StyleSheet, Image, TouchableOpacity, ScrollView } from "react-native";
 import TextInputBox from "../../Components/TextInput";
 import LogonToggle from "../../Containers/LogonToggle";
-import { Colors, Metrics } from "../../Theme";
+import { Colors, Fonts, Metrics } from "../../Theme";
 import * as RouteNames from "../../Navigation/Routes";
 
 interface IProps {
@@ -29,10 +29,9 @@ class SignUp extends Component<IProps, IState> {
                 <TextInputBox inputLabel="Name" />
                 <TextInputBox inputLabel={"Email"} />
                 <TextInputBox inputLabel={"Password"} />
-                {/* <TextInputBox inputLabel={"Referrel"} /> */}
                 <View style={styles.PPLabelContainer} >
                     <Text style={styles.PPLabel} >Privacy Policy</Text>
-                    <TouchableOpacity style={styles.SignInButtonContainer} onPress={()=> {this.props.navigation.navigate(RouteNames.SIGN_UP_SUCCESS)}} >
+                    <TouchableOpacity style={styles.SignInButtonContainer} onPress={() => { this.props.navigation.navigate(RouteNames.SIGN_UP_SUCCESS) }} >
                         <Text style={styles.SignInButtonText}  >
                             Sign Up
                         </Text>
@@ -59,6 +58,7 @@ const styles = StyleSheet.create({
     },
     PPLabel: {
         fontSize: 14,
+        fontFamily: Fonts.Exo2Regular,
         color: Colors.black
     },
     SignInButtonContainer: {
@@ -70,6 +70,7 @@ const styles = StyleSheet.create({
         justifyContent: 'center'
     },
     SignInButtonText: {
+        fontFamily: Fonts.Exo2Regular,
         color: Colors.white
     }
 });
