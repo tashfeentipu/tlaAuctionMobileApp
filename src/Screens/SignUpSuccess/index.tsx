@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
-import { Colors } from "../../Theme/Colors";
-import { Metrics } from "../../Theme/Metrics";
+import { Metrics, Colors } from "../../Theme";
+import * as RouteNames from "../../Navigation/Routes";
 
 interface IProps {
-
+    navigation: any
 }
 
 interface IState {
@@ -31,7 +31,7 @@ class SignUpSuccess extends Component<IProps, IState> {
                     <Text style={styles.Label1}>Sign Up Successful !!</Text>
                     <Text style={styles.Label2}>You are entering a new world of Blockchain</Text>
                 </View>
-                <TouchableOpacity style={styles.signInButtonContainer} >
+                <TouchableOpacity style={styles.signInButtonContainer} onPress={() => { this.props.navigation.navigate(RouteNames.SIGN_IN) }} >
                     <Text style={styles.signInButtonText}>
                         Back To SIGN IN
                     </Text>

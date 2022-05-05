@@ -23,7 +23,7 @@ class SignIn extends Component<IProps, IState> {
     render() {
         return (
             <View style={styles.MainContainer} >
-                <LogonToggle toggle={true} />
+                <LogonToggle toggle={true} navigation={this.props.navigation} />
                 <View >
                     <Image source={require("../../Assets/Logo2.png")} style={{ width: 210, height: 130 }} />
                 </View>

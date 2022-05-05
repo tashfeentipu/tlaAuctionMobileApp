@@ -1,13 +1,14 @@
 import React, { Component } from "react";
-import { View, Text, StyleSheet, Image } from "react-native";
-import { Colors } from "../../Theme/Colors";
-import { Metrics } from "../../Theme/Metrics";
+import { View, Text, StyleSheet, Image, TouchableOpacity } from "react-native";
+import { Metrics, Colors } from "../../Theme";
+import * as RouteNames from "../../Navigation/Routes";
 
 const ActiveIcon = require("../../Assets/Active.png")
 const DisabledIcon = require("../../Assets/Disabled.png")
 
 interface IProps {
-    toggle: boolean
+    toggle: boolean,
+    navigation: any
 }
 
 interface IState {
@@ -23,15 +24,17 @@ class LogonToggle extends Component<IProps, IState> {
     render() {
         return (
             <View style={styles.MainContainer} >
-                <View style={this.props.toggle && styles.Container1 || styles.Container2}  >
+                <TouchableOpacity style={this.props.toggle && styles.Container1 || styles.Container2}
+                    onPress={() => { this.props.navigation.navigate(RouteNames.SIGN_IN) }}  >
                     <Text style={this.props.toggle && styles.Text1 || styles.Text2} >SIGN IN</Text>
                     <Image source={this.props.toggle && ActiveIcon || DisabledIcon} />
-                </View>
+                </TouchableOpacity>
                 <View style={styles.Spacer} />
-                <View style={!this.props.toggle && styles.Container1 || styles.Container2}>
+                <TouchableOpacity style={!this.props.toggle && styles.Container1 || styles.Container2}
+                    onPress={() => { this.props.navigation.navigate(RouteNames.SIGN_UP) }} >
                     <Image source={!this.props.toggle && ActiveIcon || DisabledIcon} />
                     <Text style={!this.props.toggle && styles.Text1 || styles.Text2}>SIGN UP</Text>
-                </View>
+                </TouchableOpacity>
             </View >
         );
     }

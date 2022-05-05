@@ -46,7 +46,6 @@ class BottomTabNavigator extends Component<IProps, IState> {
                     borderTopLeftRadius: Metrics.WIDTH * 0.05,
                     borderTopRightRadius: Metrics.WIDTH * 0.05,
                     elevation: 1,
-                    backfaceVisibility: 'hidden',
                     width: Metrics.WIDTH * 0.98,
                     left: Metrics.WIDTH * 0.01,
                     right: Metrics.WIDTH * 0.01,

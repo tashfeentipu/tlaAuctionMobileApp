@@ -26,12 +26,12 @@ class Walkthrough1 extends Component<IProps, IState> {
                     <Text style={styles.Label2}>PSPad will provide Secure transaction</Text>
                 </View>
                 <View style={styles.SubContainer2} >
-                    <TouchableOpacity onPress={() => { this.props.navigation.navigate(RouteNames.WALKTHROUGH2) }} >
+                    <TouchableOpacity onPress={() => { }} >
                         <Text style={styles.SkipText} >
                             SKIP
                         </Text>
                     </TouchableOpacity>
-                    <TouchableOpacity onPress={() => { }} >
+                    <TouchableOpacity onPress={() => { this.props.navigation.navigate(RouteNames.WALKTHROUGH2) }} >
                         <Text style={styles.NextText}>
                             NEXT
                         </Text>

@@ -3,9 +3,10 @@ import { View, Text, StyleSheet, Image, TouchableOpacity, ScrollView } from "rea
 import TextInputBox from "../../Components/TextInput";
 import LogonToggle from "../../Containers/LogonToggle";
 import { Colors, Metrics } from "../../Theme";
+import * as RouteNames from "../../Navigation/Routes";
 
 interface IProps {
-
+    navigation: any
 }
 
 interface IState {
@@ -21,7 +22,7 @@ class SignUp extends Component<IProps, IState> {
     render() {
         return (
             <ScrollView contentContainerStyle={styles.MainContainer} >
-                <LogonToggle toggle={false} />
+                <LogonToggle toggle={false} navigation={this.props.navigation} />
                 <View>
                     <Image source={require("../../Assets/Logo2.png")} style={{ width: Metrics.WIDTH * 0.55, height: Metrics.HEIGHT * 0.185 }} />
                 </View>
@@ -31,7 +32,7 @@ class SignUp extends Component<IProps, IState> {
                 {/* <TextInputBox inputLabel={"Referrel"} /> */}
                 <View style={styles.PPLabelContainer} >
                     <Text style={styles.PPLabel} >Privacy Policy</Text>
-                    <TouchableOpacity style={styles.SignInButtonContainer} >
+                    <TouchableOpacity style={styles.SignInButtonContainer} onPress={()=> {this.props.navigation.navigate(RouteNames.SIGN_UP_SUCCESS)}} >
                         <Text style={styles.SignInButtonText}  >
                             Sign Up
                         </Text>
