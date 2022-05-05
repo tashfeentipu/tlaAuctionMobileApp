@@ -18,6 +18,12 @@
 		7717A8EF93D14886B1CDBD33 /* Dubai-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CC7EFFDCDB794A7280E36F47 /* Dubai-Light.ttf */; };
 		FAD7B15A216D4341B7EBBCE2 /* Dubai-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 132F505EB71E4CE1A5CFC94F /* Dubai-Medium.ttf */; };
 		4053C9605A1947AC98D6C8BA /* Dubai-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7991FC03F8E84F95976D6EF9 /* Dubai-Regular.ttf */; };
+		8A66F12B93A44980843B3BEE /* Exo2-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 18107419B52A47FC9072C6AB /* Exo2-Bold.ttf */; };
+		B056E5B4664E49F58FBD21B3 /* Exo2-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 49DD90AEFDDA4462BC749B46 /* Exo2-Light.ttf */; };
+		8EE331B21EDF4EF489E9ABE0 /* Exo2-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E5CEC431EBCF4327BD16303B /* Exo2-Regular.ttf */; };
+		9226548DD19E4FD895AA57B3 /* SegoeUIVariableStaticDisplay.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9535EBE79CB64CDFADF3F9E6 /* SegoeUIVariableStaticDisplay.ttf */; };
+		D6EBFCEAA6DA4829845E00A0 /* SegoeUIVariableStaticDisplayBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D291C0C002EC49818F280F00 /* SegoeUIVariableStaticDisplayBold.ttf */; };
+		E3A876EC0AAA4499BFCFB18E /* SegoeUIVariableStaticDisplayLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 11449A1C8B414F85A8F60DA3 /* SegoeUIVariableStaticDisplayLight.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +58,12 @@
 		CC7EFFDCDB794A7280E36F47 /* Dubai-Light.ttf */ = {isa = PBXFileReference; name = "Dubai-Light.ttf"; path = "../src/assets/Fonts/Dubai-Light.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		132F505EB71E4CE1A5CFC94F /* Dubai-Medium.ttf */ = {isa = PBXFileReference; name = "Dubai-Medium.ttf"; path = "../src/assets/Fonts/Dubai-Medium.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		7991FC03F8E84F95976D6EF9 /* Dubai-Regular.ttf */ = {isa = PBXFileReference; name = "Dubai-Regular.ttf"; path = "../src/assets/Fonts/Dubai-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		18107419B52A47FC9072C6AB /* Exo2-Bold.ttf */ = {isa = PBXFileReference; name = "Exo2-Bold.ttf"; path = "../src/assets/Fonts/Exo2-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		49DD90AEFDDA4462BC749B46 /* Exo2-Light.ttf */ = {isa = PBXFileReference; name = "Exo2-Light.ttf"; path = "../src/assets/Fonts/Exo2-Light.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		E5CEC431EBCF4327BD16303B /* Exo2-Regular.ttf */ = {isa = PBXFileReference; name = "Exo2-Regular.ttf"; path = "../src/assets/Fonts/Exo2-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		9535EBE79CB64CDFADF3F9E6 /* SegoeUIVariableStaticDisplay.ttf */ = {isa = PBXFileReference; name = "SegoeUIVariableStaticDisplay.ttf"; path = "../src/assets/Fonts/SegoeUIVariableStaticDisplay.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		D291C0C002EC49818F280F00 /* SegoeUIVariableStaticDisplayBold.ttf */ = {isa = PBXFileReference; name = "SegoeUIVariableStaticDisplayBold.ttf"; path = "../src/assets/Fonts/SegoeUIVariableStaticDisplayBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		11449A1C8B414F85A8F60DA3 /* SegoeUIVariableStaticDisplayLight.ttf */ = {isa = PBXFileReference; name = "SegoeUIVariableStaticDisplayLight.ttf"; path = "../src/assets/Fonts/SegoeUIVariableStaticDisplayLight.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +176,12 @@
 				CC7EFFDCDB794A7280E36F47 /* Dubai-Light.ttf */,
 				132F505EB71E4CE1A5CFC94F /* Dubai-Medium.ttf */,
 				7991FC03F8E84F95976D6EF9 /* Dubai-Regular.ttf */,
+				18107419B52A47FC9072C6AB /* Exo2-Bold.ttf */,
+				49DD90AEFDDA4462BC749B46 /* Exo2-Light.ttf */,
+				E5CEC431EBCF4327BD16303B /* Exo2-Regular.ttf */,
+				9535EBE79CB64CDFADF3F9E6 /* SegoeUIVariableStaticDisplay.ttf */,
+				D291C0C002EC49818F280F00 /* SegoeUIVariableStaticDisplayBold.ttf */,
+				11449A1C8B414F85A8F60DA3 /* SegoeUIVariableStaticDisplayLight.ttf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -269,6 +287,12 @@
 				7717A8EF93D14886B1CDBD33 /* Dubai-Light.ttf in Resources */,
 				FAD7B15A216D4341B7EBBCE2 /* Dubai-Medium.ttf in Resources */,
 				4053C9605A1947AC98D6C8BA /* Dubai-Regular.ttf in Resources */,
+				8A66F12B93A44980843B3BEE /* Exo2-Bold.ttf in Resources */,
+				B056E5B4664E49F58FBD21B3 /* Exo2-Light.ttf in Resources */,
+				8EE331B21EDF4EF489E9ABE0 /* Exo2-Regular.ttf in Resources */,
+				9226548DD19E4FD895AA57B3 /* SegoeUIVariableStaticDisplay.ttf in Resources */,
+				D6EBFCEAA6DA4829845E00A0 /* SegoeUIVariableStaticDisplayBold.ttf in Resources */,
+				E3A876EC0AAA4499BFCFB18E /* SegoeUIVariableStaticDisplayLight.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

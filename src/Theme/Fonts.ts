@@ -6,4 +6,7 @@ export const Fonts = {
     SeogeNormal: "SegoeUIVariableStaticDisplay",
     SeogeBold: "SegoeUIVariableStaticDisplayBold",
     SeogeLight: "SegoeUIVariableStaticDisplayLight",
+    Exo2Light: "Exo2-Light",
+    Exo2Bold: "Exo2-Bold",
+    Exo2Regular: "Exo2-Regular",
 }

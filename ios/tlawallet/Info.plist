@@ -57,6 +57,12 @@
 		<string>Dubai-Light.ttf</string>
 		<string>Dubai-Medium.ttf</string>
 		<string>Dubai-Regular.ttf</string>
+		<string>Exo2-Bold.ttf</string>
+		<string>Exo2-Light.ttf</string>
+		<string>Exo2-Regular.ttf</string>
+		<string>SegoeUIVariableStaticDisplay.ttf</string>
+		<string>SegoeUIVariableStaticDisplayBold.ttf</string>
+		<string>SegoeUIVariableStaticDisplayLight.ttf</string>
 	</array>
 </dict>
 </plist>
