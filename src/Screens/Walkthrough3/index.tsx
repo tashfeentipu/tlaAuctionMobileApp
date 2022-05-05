@@ -25,7 +25,7 @@ class Walkthrough3 extends Component<IProps, IState> {
                     <Text style={styles.Label1}>PSPad Wallet</Text>
                     <Text style={styles.Label2}>PSPad will provide reliable wallet</Text>
                 </View>
-                <TouchableOpacity onPress={() => { this.props.navigation.navigate(RouteNames.HOME_TAB_NAV) }} style={styles.GotItButton} >
+                <TouchableOpacity onPress={() => { this.props.navigation.navigate(RouteNames.HOME_TAB_NAV_MAIN) }} style={styles.GotItButton} >
                     <Text style={styles.GotItText}>
                         GOT IT
                     </Text>

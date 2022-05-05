@@ -1,8 +1,7 @@
-import React, { Component } from "react";
-import { View, Text, StyleSheet, Image } from "react-native";
-import { getHeaderTitle } from '@react-navigation/elements';
-import { Colors } from "../../Theme/Colors";
-import { Metrics } from "../../Theme/Metrics";
+import React from "react";
+import { TouchableOpacity, Image, StyleSheet, Text, View } from "react-native";
+import { Metrics, Colors } from "../../Theme";
+import * as RouteNames from "../../Navigation/Routes";
 
 interface IProps {
     navigation: any,
@@ -16,9 +15,9 @@ const AccountHeaderIcon = require("../../Assets/Account1.png")
 const Header = (props: IProps) => {
 
     return <View style={styles.MainContainer} >
-        <View style={styles.AccountIconContainer}>
+        <TouchableOpacity style={styles.AccountIconContainer} onPress={() => { props.navigation.navigate(RouteNames.PROFILE)}} >
             <Image source={AccountHeaderIcon} style={{ width: Metrics.WIDTH * 0.1, height: Metrics.WIDTH * 0.1 }} />
-        </View>
+        </TouchableOpacity>
         <Text style={styles.Title} >{props.route.name}</Text>
         <View style={styles.ConnectivityIconContainer}>
             <Image source={ConnectivityIcon} style={{ width: Metrics.WIDTH * 0.07, height: Metrics.WIDTH * 0.08 }} />

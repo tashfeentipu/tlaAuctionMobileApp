@@ -3,7 +3,7 @@ import React, { Component } from "react";
 import { Image, ImageSourcePropType, Text } from 'react-native';
 import Header from '../Components/Header';
 import Home from '../Screens/Home';
-import Profile from "../Screens/Profile";
+import Referrels from '../Screens/Referrals';
 import Rewards from "../Screens/Rewards";
 import Settings from '../Screens/Settings';
 import Wallet from "../Screens/Wallet";
@@ -67,7 +67,7 @@ class BottomTabNavigator extends Component<IProps, IState> {
                     options={{
                         tabBarIcon: () => this.imageHandler(RewardsIcon)
                     }} />
-                <Tab.Screen name={RouteNames.PROFILE} component={Profile}
+                <Tab.Screen name={RouteNames.REFERRELS} component={Referrels}
                     options={{
                         tabBarIcon: () => this.imageHandler(AccountIcon)
                     }} />
