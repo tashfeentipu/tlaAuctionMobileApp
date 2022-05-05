@@ -40,19 +40,19 @@ class Wallet extends Component<IProps, IState> {
                         </View>
                     </View>
                     <View style={styles.SubContainer4}>
-                        <TouchableOpacity style={styles.DepositContainer}>
+                        <TouchableOpacity style={styles.ImageContainer}>
                             <Image source={require("../../Assets/Deposit.png")} />
                             <Text style={styles.BottomContainerTextStyle}>Deposit</Text>
                         </TouchableOpacity>
-                        <TouchableOpacity style={styles.WithdrawContainer} >
+                        <TouchableOpacity style={styles.ImageContainer} >
                             <Image source={require("../../Assets/Withdraw.png")} />
                             <Text style={styles.BottomContainerTextStyle}>Withdraw</Text>
                         </TouchableOpacity>
-                        <TouchableOpacity style={styles.BuyContainer} >
+                        <TouchableOpacity style={styles.ImageContainer} >
                             <Image source={require("../../Assets/Buy.png")} />
                             <Text style={styles.BottomContainerTextStyle}>Buy</Text>
                         </TouchableOpacity>
-                        <TouchableOpacity style={styles.StakeContainer} >
+                        <TouchableOpacity style={styles.ImageContainer} >
                             <Image source={require("../../Assets/Stake.png")} />
                             <Text style={styles.BottomContainerTextStyle}>Stake</Text>
                         </TouchableOpacity>
@@ -133,19 +133,7 @@ const styles = StyleSheet.create({
         justifyContent: "space-between",
         marginVertical: Metrics.HEIGHT * 0.05,
     },
-    DepositContainer: {
-        flexDirection: "row",
-        alignItems: "center"
-    },
-    WithdrawContainer: {
-        flexDirection: "row",
-        alignItems: "center"
-    },
-    BuyContainer: {
-        flexDirection: "row",
-        alignItems: "center"
-    },
-    StakeContainer: {
+    ImageContainer: {
         flexDirection: "row",
         alignItems: "center"
     },
