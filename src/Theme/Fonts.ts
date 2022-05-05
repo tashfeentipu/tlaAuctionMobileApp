@@ -8,5 +8,6 @@ export const Fonts = {
     SeogeLight: "SegoeUIVariableStaticDisplayLight",
     Exo2Light: "Exo2-Light",
     Exo2Bold: "Exo2-Bold",
+    Exo2SemiBold: "Exo2-SemiBold",
     Exo2Regular: "Exo2-Regular",
 }

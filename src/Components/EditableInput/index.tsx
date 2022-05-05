@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { View, Text, TextInput, StyleSheet, Image } from "react-native";
-import { Colors } from "../../Theme/Colors";
-import { Metrics } from "../../Theme/Metrics";
+import { Fonts, Colors, Metrics } from "../../Theme";
 
 interface IProps {
     title: string
@@ -27,6 +26,7 @@ const styles = StyleSheet.create({
     Title: {
         color: Colors.black,
         fontSize: Metrics.WIDTH * 0.04,
+        fontFamily: Fonts.Exo2Regular,
         marginVertical: Metrics.HEIGHT * 0.02
     },
     InputContainer: {

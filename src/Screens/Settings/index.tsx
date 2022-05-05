@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Image, ScrollView, StyleSheet, View, Text } from "react-native";
 import SettingsBar from "../../Containers/Settings/SettingsBar";
+import { Fonts } from "../../Theme";
 import { Colors } from "../../Theme/Colors";
 import { Metrics } from "../../Theme/Metrics";
 
@@ -84,6 +85,7 @@ const styles = StyleSheet.create({
     },
     TitleText: {
         color: Colors.indigo1,
+        fontFamily: Fonts.Exo2Regular,
         fontSize: Metrics.WIDTH * 0.04
     },
     LanguageTextContainer: {
@@ -93,6 +95,7 @@ const styles = StyleSheet.create({
     },
     LanguageText: {
         color: Colors.black,
+        fontFamily: Fonts.Exo2Regular,
         fontSize: Metrics.WIDTH * 0.04
     },
     SubContainer1: {

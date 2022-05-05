@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { View, Text, StyleSheet, Image } from "react-native";
-import { Colors } from "../../Theme/Colors";
-import { Metrics } from "../../Theme/Metrics";
+import { Fonts, Colors, Metrics } from "../../Theme";
 
 interface IProps {
 
@@ -66,6 +65,7 @@ const styles = StyleSheet.create({
     },
     GenderText: {
         color: Colors.black,
+        fontFamily: Fonts.Exo2Regular,
         marginLeft: Metrics.WIDTH * 0.03
     }
 });

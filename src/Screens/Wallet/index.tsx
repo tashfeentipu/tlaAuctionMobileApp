@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { View, Text, StyleSheet, ScrollView, Image, TouchableOpacity } from "react-native";
 import LinearGradient from "react-native-linear-gradient";
 import WalletItem from "../../Containers/Wallet/WalletItem";
-import { Metrics, Colors } from "../../Theme";
+import { Metrics, Colors, Fonts } from "../../Theme";
 
 interface IProps {
 
@@ -25,14 +25,14 @@ class Wallet extends Component<IProps, IState> {
                     <View style={styles.SubContainer1} >
                         <View style={styles.SubContainer2}>
                             <View style={styles.AddressContainer} >
-                                <Text style={{ color: Colors.white, marginRight: Metrics.WIDTH * 0.02 }}>0x2f321n321ns113</Text>
+                                <Text style={styles.AddressText}>0x2f321n321ns113</Text>
                                 <TouchableOpacity>
                                     <Image source={require("../../Assets/Copy_Icon.png")} />
                                 </TouchableOpacity>
                             </View>
                             <View style={styles.BalanceContainer} >
-                                <Text style={{ color: Colors.white }}>Your Current Balance</Text>
-                                <Text style={{ color: Colors.white, fontSize: Metrics.WIDTH * 0.08 }}>$ 0.000</Text>
+                                <Text style={styles.BalanceText1}>Your Current Balance</Text>
+                                <Text style={styles.BalanceText2}>$ 0.000</Text>
                             </View>
                         </View>
                         <View style={styles.SubContainer3}>
@@ -44,15 +44,15 @@ class Wallet extends Component<IProps, IState> {
                             <Image source={require("../../Assets/Deposit.png")} />
                             <Text style={styles.BottomContainerTextStyle}>Deposit</Text>
                         </TouchableOpacity>
-                        <TouchableOpacity style={styles.ImageContainer} >
+                        <TouchableOpacity style={styles.ImageContainer}>
                             <Image source={require("../../Assets/Withdraw.png")} />
                             <Text style={styles.BottomContainerTextStyle}>Withdraw</Text>
                         </TouchableOpacity>
-                        <TouchableOpacity style={styles.ImageContainer} >
+                        <TouchableOpacity style={styles.ImageContainer}>
                             <Image source={require("../../Assets/Buy.png")} />
                             <Text style={styles.BottomContainerTextStyle}>Buy</Text>
                         </TouchableOpacity>
-                        <TouchableOpacity style={styles.ImageContainer} >
+                        <TouchableOpacity style={styles.ImageContainer}>
                             <Image source={require("../../Assets/Stake.png")} />
                             <Text style={styles.BottomContainerTextStyle}>Stake</Text>
                         </TouchableOpacity>
@@ -106,7 +106,7 @@ const styles = StyleSheet.create({
     },
     MarketHeading: {
         fontSize: Metrics.WIDTH * 0.06,
-        fontWeight: "bold"
+        fontFamily: Fonts.DubaiBold,
     },
     SubContainer1: {
         flexDirection: "row",
@@ -116,7 +116,21 @@ const styles = StyleSheet.create({
         alignItems: "center",
         flexDirection: "row"
     },
+    AddressText: {
+        color: Colors.white,
+        fontFamily: Fonts.Exo2Regular,
+        marginRight: Metrics.WIDTH * 0.02
+    },
     BalanceContainer: {
+    },
+    BalanceText1: {
+        color: Colors.white,
+        fontFamily: Fonts.Exo2Regular
+    },
+    BalanceText2: {
+        color: Colors.white,
+        fontFamily: Fonts.Exo2Regular,
+        fontSize: Metrics.WIDTH * 0.08
     },
     SubContainer2: {
         height: Metrics.HEIGHT * 0.15,
@@ -125,6 +139,7 @@ const styles = StyleSheet.create({
     SubContainer3: {
     },
     BottomContainerTextStyle: {
+        fontFamily: Fonts.Exo2Regular,
         color: Colors.white,
         marginLeft: Metrics.WIDTH * 0.015
     },

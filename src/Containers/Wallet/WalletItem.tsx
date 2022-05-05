@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Image, ImageSourcePropType, StyleSheet, Text, View } from "react-native";
-import { Colors, Metrics } from "../../Theme";
+import { Colors, Fonts, Metrics } from "../../Theme";
 
 interface IProps {
     source: ImageSourcePropType,
@@ -66,13 +66,15 @@ const styles = StyleSheet.create({
     },
     symbolText: {
         fontSize: Metrics.HEIGHT * 0.025,
+        fontFamily: Fonts.Exo2Regular,
         color: Colors.black,
-        fontWeight: "bold"
     },
     nameText: {
-        color: Colors.grey3
+        color: Colors.grey3,
+        fontFamily: Fonts.Exo2Regular,
     },
     percentageText: {
+        fontFamily: Fonts.Exo2Regular,
         fontSize: Metrics.HEIGHT * 0.018,
         color: Colors.green1
     },

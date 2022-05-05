@@ -43,7 +43,8 @@ class Profile extends Component<IProps, IState> {
 const styles = StyleSheet.create({
     MainContainer: {
         alignItems: "center",
-        backgroundColor: Colors.white
+        backgroundColor: Colors.white,
+        paddingVertical: Metrics.HEIGHT * 0.05
     },
     ProfileContainer1: {
         backgroundColor: Colors.skyBlue,

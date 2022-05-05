@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { View, Text, StyleSheet, Image, ImageSourcePropType, TouchableOpacity } from "react-native";
-import { Colors } from "../../../Theme/Colors";
-import { Metrics } from "../../../Theme/Metrics";
+import { Fonts, Colors, Metrics } from "../../../Theme";
 
 interface IProps {
     source: ImageSourcePropType
@@ -26,7 +25,7 @@ class SettingsBar extends Component<IProps, IState> {
                     <Image source={this.props.source} />
                 </View>
                 <View style={{ flex: 0.8 }}>
-                    <Text style={styles.TitleText}  >{this.props.title}</Text>
+                    <Text style={styles.TitleText}>{this.props.title}</Text>
                 </View>
                 <Image source={require("../../../Assets/RightIcon.png")} />
             </TouchableOpacity>
@@ -45,6 +44,7 @@ const styles = StyleSheet.create({
     },
     TitleText: {
         color: Colors.black,
+        fontFamily: Fonts.Exo2SemiBold,
         fontSize: Metrics.WIDTH * 0.035
     }
 });

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Image, TouchableOpacity, StyleSheet, Text, View } from "react-native";
 import LinearGradient from "react-native-linear-gradient";
-import { Colors, Metrics } from "../../Theme";
+import { Colors, Fonts, Metrics } from "../../Theme";
 
 interface IProps {
 
@@ -104,16 +104,18 @@ const styles = StyleSheet.create({
     SC1_Text1: {
         color: Colors.black,
         fontSize: Metrics.WIDTH * 0.04,
-        fontFamily: "Dubai",
+        fontFamily: Fonts.DubaiMedium,
         textAlign: "center"
     },
     SC1_Text2: {
         color: Colors.black,
+        fontFamily: Fonts.DubaiMedium,
         fontSize: Metrics.WIDTH * 0.035,
         textAlign: "center"
     },
     SC1_Text3: {
         color: Colors.black,
+        fontFamily: Fonts.DubaiMedium,
         fontSize: Metrics.WIDTH * 0.035,
         textAlign: "center"
     },
@@ -133,6 +135,7 @@ const styles = StyleSheet.create({
     },
     ShareText: {
         color: Colors.black,
+        fontFamily: Fonts.DubaiMedium,
         fontSize: Metrics.WIDTH * 0.04,
     }
 });

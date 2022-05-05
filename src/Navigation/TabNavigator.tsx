@@ -7,8 +7,7 @@ import Referrels from '../Screens/Referrals';
 import Rewards from "../Screens/Rewards";
 import Settings from '../Screens/Settings';
 import Wallet from "../Screens/Wallet";
-import { Colors } from '../Theme/Colors';
-import { Metrics } from '../Theme/Metrics';
+import { Metrics, Fonts, Colors } from '../Theme';
 import * as RouteNames from "./Routes";
 
 const Tab = createBottomTabNavigator();
@@ -52,7 +51,7 @@ class BottomTabNavigator extends Component<IProps, IState> {
                     height: Metrics.HEIGHT * 0.08
                 },
                 tabBarLabel: ({ focused }: any) => {
-                    return focused && <Text style={{ fontSize: 10, color: Colors.indigo1 }}>{route.name}</Text> || null
+                    return focused && <Text style={{ fontSize: 10, color: Colors.indigo1, fontFamily: Fonts.Exo2Bold }}>{route.name}</Text> || null
                 }
             })} >
                 <Tab.Screen name={RouteNames.HOME} component={Home}
