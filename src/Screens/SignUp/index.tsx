@@ -36,7 +36,7 @@ class SignUp extends Component<IProps, IState> {
                 <Formik
                     initialValues={{ [NAME]: "", [EMAIL]: "", [PASSWORD]: "" }}
                     validationSchema={SIGN_UP_SCHEMA}
-                    onSubmit={(props) => {
+                    onSubmit={() => {
                         this.props.navigation.navigate(SIGN_UP_SUCCESS)
                     }}>
                     {formikProps => <>
@@ -56,6 +56,7 @@ class SignUp extends Component<IProps, IState> {
                         <ErrorText errorText={formikProps.errors[EMAIL]} enable={formikProps.touched[EMAIL]} />
                         <TextInputBox
                             inputLabel="Password"
+                            secureTextEntry={true}
                             value={formikProps.values[PASSWORD]}
                             onBlur={formikProps.handleBlur(PASSWORD)}
                             onChangeText={formikProps.handleChange(PASSWORD)}
@@ -64,7 +65,7 @@ class SignUp extends Component<IProps, IState> {
                         <View style={styles.PPLabelContainer} >
                             <Text style={styles.PPLabel} >Privacy Policy</Text>
                             <TouchableOpacity style={styles.SignInButtonContainer} onPress={formikProps.handleSubmit} >
-                                <Text style={styles.SignInButtonText}  >
+                                <Text style={styles.SignInButtonText}>
                                     Sign Up
                                 </Text>
                             </TouchableOpacity>

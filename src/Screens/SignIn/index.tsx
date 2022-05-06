@@ -48,6 +48,7 @@ class SignIn extends Component<IProps, IState> {
                             <ErrorText errorText={formikProps.errors[EMAIL]} enable={formikProps.touched[EMAIL]} />
                             <TextInputBox
                                 inputLabel="Password"
+                                secureTextEntry={true}
                                 value={formikProps.values[PASSWORD]}
                                 onBlur={formikProps.handleBlur(PASSWORD)}
                                 onChangeText={formikProps.handleChange(PASSWORD)}

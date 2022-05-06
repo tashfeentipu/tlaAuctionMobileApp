@@ -1,10 +1,11 @@
 import React, { Component } from "react";
-import { View, TextInput, Text, StyleSheet, NativeSyntheticEvent, TextInputFocusEventData } from "react-native";
+import { View, TextInput, Text, StyleSheet, NativeSyntheticEvent, TextInputFocusEventData, KeyboardTypeOptions } from "react-native";
 import { Fonts, Colors, Metrics } from "../../Theme";
 
 interface IProps {
     inputLabel: string
     value: string
+    secureTextEntry?: boolean
     onBlur?: (event: NativeSyntheticEvent<TextInputFocusEventData>) => void
     onChangeText: (text: string) => void
 }
@@ -23,6 +24,7 @@ const TextInputBox = (props: IProps) => {
                 value={props.value}
                 onChangeText={props.onChangeText}
                 onBlur={props.onBlur}
+                secureTextEntry={props.secureTextEntry}
             />
         </View>
     );
