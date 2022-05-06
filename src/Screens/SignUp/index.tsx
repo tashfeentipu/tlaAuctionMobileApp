@@ -3,7 +3,10 @@ import { View, Text, StyleSheet, Image, TouchableOpacity, ScrollView } from "rea
 import TextInputBox from "../../Components/TextInput";
 import LogonToggle from "../../Containers/LogonToggle";
 import { Colors, Fonts, Metrics } from "../../Theme";
-import * as RouteNames from "../../Navigation/Routes";
+import { SIGN_UP_SUCCESS } from "../../Navigation/Routes";
+import { Formik } from "formik";
+import ErrorText from "../../Components/ErrorText";
+import { SIGN_UP_SCHEMA } from "../../Validations/SignUp";
 
 interface IProps {
     navigation: any
@@ -12,6 +15,10 @@ interface IProps {
 interface IState {
 
 }
+
+const NAME = "name"
+const EMAIL = "email"
+const PASSWORD = "password"
 
 class SignUp extends Component<IProps, IState> {
     constructor(props: IProps) {
@@ -26,18 +33,45 @@ class SignUp extends Component<IProps, IState> {
                 <View>
                     <Image source={require("../../Assets/Logo2.png")} style={{ width: Metrics.WIDTH * 0.55, height: Metrics.HEIGHT * 0.185 }} />
                 </View>
-                <TextInputBox inputLabel="Name" />
-                <TextInputBox inputLabel={"Email"} />
-                <TextInputBox inputLabel={"Password"} />
-                <View style={styles.PPLabelContainer} >
-                    <Text style={styles.PPLabel} >Privacy Policy</Text>
-                    <TouchableOpacity style={styles.SignInButtonContainer} onPress={() => { this.props.navigation.navigate(RouteNames.SIGN_UP_SUCCESS) }} >
-                        <Text style={styles.SignInButtonText}  >
-                            Sign Up
-                        </Text>
-                    </TouchableOpacity>
-                </View>
-            </ScrollView>
+                <Formik
+                    initialValues={{ [NAME]: "", [EMAIL]: "", [PASSWORD]: "" }}
+                    validationSchema={SIGN_UP_SCHEMA}
+                    onSubmit={(props) => {
+                        this.props.navigation.navigate(SIGN_UP_SUCCESS)
+                    }}>
+                    {formikProps => <>
+                        <TextInputBox
+                            inputLabel="Name"
+                            value={formikProps.values[NAME]}
+                            onBlur={formikProps.handleBlur(NAME)}
+                            onChangeText={formikProps.handleChange(NAME)}
+                        />
+                        <ErrorText errorText={formikProps.errors[NAME]} enable={formikProps.touched[NAME]} />
+                        <TextInputBox
+                            inputLabel="Email"
+                            value={formikProps.values[EMAIL]}
+                            onBlur={formikProps.handleBlur(EMAIL)}
+                            onChangeText={formikProps.handleChange(EMAIL)}
+                        />
+                        <ErrorText errorText={formikProps.errors[EMAIL]} enable={formikProps.touched[EMAIL]} />
+                        <TextInputBox
+                            inputLabel="Password"
+                            value={formikProps.values[PASSWORD]}
+                            onBlur={formikProps.handleBlur(PASSWORD)}
+                            onChangeText={formikProps.handleChange(PASSWORD)}
+                        />
+                        <ErrorText errorText={formikProps.errors[PASSWORD]} enable={formikProps.touched[PASSWORD]} />
+                        <View style={styles.PPLabelContainer} >
+                            <Text style={styles.PPLabel} >Privacy Policy</Text>
+                            <TouchableOpacity style={styles.SignInButtonContainer} onPress={formikProps.handleSubmit} >
+                                <Text style={styles.SignInButtonText}  >
+                                    Sign Up
+                                </Text>
+                            </TouchableOpacity>
+                        </View>
+                    </>}
+                </Formik>
+            </ScrollView >
         );
     }
 }

@@ -29,9 +29,11 @@ class SignIn extends Component<IProps, IState> {
             <View style={styles.MainContainer} >
                 <LogonToggle toggle={true} navigation={this.props.navigation} />
                 <Formik
-                    initialValues={{ [EMAIL]: "", [PASSWORD]: "" }}
+                    initialValues={{ [EMAIL]: "placeholder", [PASSWORD]: "placeholder" }}
                     validationSchema={SIGN_IN_SCHEMA}
-                    onSubmit={() => { }}>
+                    onSubmit={() => {
+                        this.props.navigation.navigate(WALKTHROUGH1);
+                    }}>
                     {formikProps => <>
                         <View>
                             <Image source={require("../../Assets/Logo2.png")} style={{ width: 210, height: 130 }} />
@@ -54,10 +56,7 @@ class SignIn extends Component<IProps, IState> {
                         </View>
                         <View style={styles.FPLabelContainer}>
                             <Text style={styles.FPLabel}>Forgot Password?</Text>
-                            <TouchableOpacity style={styles.signInButtonContainer} onPress={() => {
-                                this.props.navigation.navigate(WALKTHROUGH1);
-                                formikProps.handleSubmit()
-                            }}>
+                            <TouchableOpacity style={styles.signInButtonContainer} onPress={formikProps.handleSubmit}>
                                 <Text style={styles.signInButtonText}>
                                     Sign In
                                 </Text>
