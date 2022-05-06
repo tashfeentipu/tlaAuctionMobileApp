@@ -15,5 +15,6 @@ export const Colors = {
     skyBlue: "#AAB9BF",
     purple1: "#6D0093",
     purple2: "#2C0054",
-    green1: "#00BD13"
+    green1: "#00BD13",
+    red: "#FF0000"
 }

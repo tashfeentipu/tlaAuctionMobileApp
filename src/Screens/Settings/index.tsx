@@ -1,9 +1,7 @@
 import React, { Component } from "react";
 import { Image, ScrollView, StyleSheet, View, Text } from "react-native";
 import SettingsBar from "../../Containers/Settings/SettingsBar";
-import { Fonts } from "../../Theme";
-import { Colors } from "../../Theme/Colors";
-import { Metrics } from "../../Theme/Metrics";
+import { Fonts, Metrics, Colors } from "../../Theme";
 
 interface IProps {
 

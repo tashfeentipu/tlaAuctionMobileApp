@@ -1,31 +1,31 @@
 import React, { Component } from "react";
-import { View, TextInput, Text, StyleSheet } from "react-native";
-import { Metrics } from "../../Theme/Metrics";
-import { Colors } from "../../Theme/Colors";
-import { Fonts } from "../../Theme";
+import { View, TextInput, Text, StyleSheet, NativeSyntheticEvent, TextInputFocusEventData } from "react-native";
+import { Fonts, Colors, Metrics } from "../../Theme";
 
 interface IProps {
     inputLabel: string
+    value: string
+    onBlur?: (event: NativeSyntheticEvent<TextInputFocusEventData>) => void
+    onChangeText: (text: string) => void
 }
 
 interface IState {
 
 }
 
-class TextInputBox extends Component<IProps, IState> {
-    constructor(props: IProps) {
-        super(props);
-        this.state = {};
-    }
+const TextInputBox = (props: IProps) => {
 
-    render() {
-        return (
-            <View style={styles.MainContainer} >
-                <Text style={styles.InputLabel}>{this.props.inputLabel}</Text>
-                <TextInput style={styles.TextInputStyle} />
-            </View>
-        );
-    }
+    return (
+        <View style={styles.MainContainer} >
+            <Text style={styles.InputLabel}>{props.inputLabel}</Text>
+            <TextInput
+                style={styles.TextInputStyle}
+                value={props.value}
+                onChangeText={props.onChangeText}
+                onBlur={props.onBlur}
+            />
+        </View>
+    );
 }
 
 const styles = StyleSheet.create({

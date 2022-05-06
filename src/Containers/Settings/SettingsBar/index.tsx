@@ -45,7 +45,7 @@ const styles = StyleSheet.create({
     TitleText: {
         color: Colors.black,
         fontFamily: Fonts.Exo2SemiBold,
-        fontSize: Metrics.WIDTH * 0.035
+        fontSize: Metrics.WIDTH * 0.04
     }
 });
 

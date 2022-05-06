@@ -1,11 +1,12 @@
 import React, { Component } from "react";
 import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import { WALKTHROUGH1 } from "../../Navigation/Routes";
+import { Formik } from "formik";
+import ErrorText from "../../Components/ErrorText";
+import { Fonts, Colors, Metrics } from "../../Theme";
 import TextInputBox from "../../Components/TextInput";
 import LogonToggle from "../../Containers/LogonToggle";
-import { Colors } from "../../Theme/Colors";
-import { Metrics } from "../../Theme/Metrics";
-import * as RouteNames from "../../Navigation/Routes";
-import { Fonts } from "../../Theme";
+import { SIGN_IN_SCHEMA } from "../../Validations/SignIn";
 
 interface IProps {
     navigation: any
@@ -15,31 +16,55 @@ interface IState {
 
 }
 
+const EMAIL = "email"
+const PASSWORD = "password"
+
 class SignIn extends Component<IProps, IState> {
     constructor(props: IProps) {
         super(props);
-        this.state = {};
     }
 
     render() {
         return (
             <View style={styles.MainContainer} >
                 <LogonToggle toggle={true} navigation={this.props.navigation} />
-                <View >
-                    <Image source={require("../../Assets/Logo2.png")} style={{ width: 210, height: 130 }} />
-                </View>
-                <View>
-                    <TextInputBox inputLabel="Email" />
-                    <TextInputBox inputLabel="Password" />
-                </View>
-                <View style={styles.FPLabelContainer} >
-                    <Text style={styles.FPLabel} >Forgot Password?</Text>
-                    <TouchableOpacity style={styles.signInButtonContainer} onPress={() => { this.props.navigation.navigate(RouteNames.WALKTHROUGH1) }} >
-                        <Text style={styles.signInButtonText}  >
-                            Sign In
-                        </Text>
-                    </TouchableOpacity>
-                </View>
+                <Formik
+                    initialValues={{ [EMAIL]: "", [PASSWORD]: "" }}
+                    validationSchema={SIGN_IN_SCHEMA}
+                    onSubmit={() => { }}>
+                    {formikProps => <>
+                        <View>
+                            <Image source={require("../../Assets/Logo2.png")} style={{ width: 210, height: 130 }} />
+                        </View>
+                        <View>
+                            <TextInputBox
+                                inputLabel="Email"
+                                value={formikProps.values[EMAIL]}
+                                onBlur={formikProps.handleBlur(EMAIL)}
+                                onChangeText={formikProps.handleChange(EMAIL)}
+                            />
+                            <ErrorText errorText={formikProps.errors[EMAIL]} enable={formikProps.touched[EMAIL]} />
+                            <TextInputBox
+                                inputLabel="Password"
+                                value={formikProps.values[PASSWORD]}
+                                onBlur={formikProps.handleBlur(PASSWORD)}
+                                onChangeText={formikProps.handleChange(PASSWORD)}
+                            />
+                            <ErrorText errorText={formikProps.errors[PASSWORD]} enable={formikProps.touched[PASSWORD]} />
+                        </View>
+                        <View style={styles.FPLabelContainer}>
+                            <Text style={styles.FPLabel}>Forgot Password?</Text>
+                            <TouchableOpacity style={styles.signInButtonContainer} onPress={() => {
+                                this.props.navigation.navigate(WALKTHROUGH1);
+                                formikProps.handleSubmit()
+                            }}>
+                                <Text style={styles.signInButtonText}>
+                                    Sign In
+                                </Text>
+                            </TouchableOpacity>
+                        </View>
+                    </>}
+                </Formik>
             </View>
         );
     }
