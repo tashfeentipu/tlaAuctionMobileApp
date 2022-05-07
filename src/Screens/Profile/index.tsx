@@ -1,11 +1,10 @@
 import React, { Component } from "react";
-import { TouchableOpacity, Image, ScrollView, StyleSheet, View, ImageSourcePropType } from "react-native";
-import { launchCamera, launchImageLibrary } from 'react-native-image-picker';
+import { Image, ScrollView, StyleSheet, TouchableOpacity, View } from "react-native";
 import LinearGradient from "react-native-linear-gradient";
 import EditableInput from "../../Components/EditableInput";
 import GenderToggle from "../../Components/GenderToggle";
 import ImagePickerModal from "../../Handlers/ImagePickerModal";
-import { Metrics, Colors } from "../../Theme";
+import { Colors, Metrics } from "../../Theme";
 
 interface IProps {
 
@@ -13,6 +12,7 @@ interface IProps {
 
 interface IState {
     fileName: string
+    modalVisible: boolean
 }
 
 const ProfileImage = require("../../Assets/Profile.png")
@@ -21,17 +21,9 @@ class Profile extends Component<IProps, IState> {
     constructor(props: IProps) {
         super(props);
         this.state = {
+            modalVisible: false,
             fileName: "file:///data/user/0/com.tlawallet/cache/rn_image_picker_lib_temp_2aade65e-c830-4882-94ad-fb6399546154.jpg"
         };
-    }
-
-    cameraHandler = async () => {
-        const response: any = await launchImageLibrary({ mediaType: "photo" })
-        console.log((response?.assets[0].uri));
-
-        this.setState({ fileName: response && (response?.assets[0].uri) || "" })
-        // this.setState({ fileName: "file:///data/user/0/com.tlawallet/cache/rn_image_picker_lib_temp_2aade65e-c830-4882-94ad-fb6399546154.jpg" })
-
     }
 
     render() {
@@ -48,7 +40,7 @@ class Profile extends Component<IProps, IState> {
                         end={{ x: 1, y: 0 }}
                         colors={[Colors.purple1, Colors.purple2]}
                         style={styles.AddImageContainer}>
-                        <TouchableOpacity onPress={this.cameraHandler} >
+                        <TouchableOpacity onPress={() => this.setState({ modalVisible: true })} >
                             <Image source={require("../../Assets/Plus.png")} />
                         </TouchableOpacity>
                     </LinearGradient>
@@ -59,7 +51,11 @@ class Profile extends Component<IProps, IState> {
                 <GenderToggle />
                 <EditableInput title={"Id"} />
                 <EditableInput title={"Password"} />
-                <ImagePickerModal />
+                <ImagePickerModal
+                    modalVisible={this.state.modalVisible}
+                    setModalVisible={(modalVisible: boolean) => this.setState({ modalVisible })}
+                    cameraHandler={(image: string): void => { this.setState({ fileName: image }) }}
+                    ImageLibraryHandler={(image: string): void => { this.setState({ fileName: image }) }} />
             </ScrollView>
         );
     }
