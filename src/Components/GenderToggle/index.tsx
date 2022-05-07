@@ -50,7 +50,7 @@ const styles = StyleSheet.create({
     },
     GenderContainer: {
         width: Metrics.WIDTH * 0.4,
-        height: Metrics.HEIGHT * 0.08,
+        height: Metrics.HEIGHT * 0.06,
         alignItems: "center",
         borderRadius: Metrics.WIDTH * 0.1,
         paddingHorizontal: Metrics.WIDTH * 0.02,
