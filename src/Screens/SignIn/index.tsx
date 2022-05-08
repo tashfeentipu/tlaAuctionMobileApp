@@ -16,7 +16,7 @@ interface IState {
 
 }
 
-const EMAIL = "email"
+const EMAIL = "email_01"
 const PASSWORD = "password"
 
 class SignIn extends Component<IProps, IState> {
