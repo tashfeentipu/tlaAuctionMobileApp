@@ -22,7 +22,7 @@ class Profile extends Component<IProps, IState> {
         super(props);
         this.state = {
             modalVisible: false,
-            fileName: "file:///data/user/0/com.tlawallet/cache/rn_image_picker_lib_temp_2aade65e-c830-4882-94ad-fb6399546154.jpg"
+            fileName: ""
         };
     }
 
@@ -32,7 +32,12 @@ class Profile extends Component<IProps, IState> {
                 <View style={styles.ProfileWrapperContainer} >
                     <View style={styles.ProfileContainer2} >
                         <View style={styles.ProfileContainer1}>
-                            <Image source={{ uri: this.state.fileName }} style={{ width: Metrics.WIDTH * 0.25, height: Metrics.WIDTH * 0.25 }} />
+                            {
+                                this.state.fileName !== "" &&
+                                <Image source={{ uri: this.state.fileName }} style={{ width: Metrics.WIDTH * 0.45, height: Metrics.WIDTH * 0.45 }} />
+                                ||
+                                <Image source={ProfileImage} style={{ width: Metrics.WIDTH * 0.25, height: Metrics.WIDTH * 0.25 }} />
+                            }
                         </View>
                     </View>
                     <LinearGradient
@@ -73,8 +78,8 @@ const styles = StyleSheet.create({
         height: Metrics.WIDTH * 0.4,
         alignItems: 'center',
         justifyContent: 'center',
-        borderRadius: Metrics.WIDTH * 0.2
-
+        borderRadius: Metrics.WIDTH * 0.2,
+        overflow: "hidden"
     },
     ProfileContainer2: {
         backgroundColor: Colors.indigo1,

@@ -82,7 +82,7 @@ const styles = StyleSheet.create({
         height: Metrics.HEIGHT * 0.3,
         width: Metrics.WIDTH * 0.883,
         borderRadius: Metrics.WIDTH * 0.08,
-        backgroundColor: Colors.skyBlue,
+        // backgroundColor: Colors.skyBlue,
         alignItems: "center",
         justifyContent: "space-around"
     },

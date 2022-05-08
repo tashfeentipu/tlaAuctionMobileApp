@@ -97,7 +97,8 @@ const styles = StyleSheet.create({
         borderTopLeftRadius: Metrics.HEIGHT * 0.05,
         borderTopRightRadius: Metrics.HEIGHT * 0.05,
         width: Metrics.WIDTH,
-        backgroundColor: Colors.skyBlue
+        backgroundColor: Colors.white
+
     },
     LogoImageStyle: {
         width: Metrics.WIDTH * 0.4,

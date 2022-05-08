@@ -10,12 +10,15 @@
 
 import React from 'react';
 import HOCNavigationContainer from './src/Navigation';
-
+import { Provider } from "react-redux";
+import store from "./src/Redux/Store";
 
 const App = () => {
- 
+
   return (
-    <HOCNavigationContainer />
+    <Provider store={store}>
+      <HOCNavigationContainer />
+    </Provider>
   );
 };
 

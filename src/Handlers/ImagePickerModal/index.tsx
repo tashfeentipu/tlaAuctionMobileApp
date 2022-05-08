@@ -32,20 +32,20 @@ const ImagePicker = (props: IProps) => {
         try {
             const response: any = await launchCamera({ mediaType: "photo" })
             props.cameraHandler(response && (response?.assets[0].uri) || "")
-            props.setModalVisible(false)
         } catch (error) {
             console.log(error);
         }
+        props.setModalVisible(false)
     }
 
     const ImageLibraryHandler = async () => {
         try {
             const response: any = await launchImageLibrary({ mediaType: "photo" })
             props.ImageLibraryHandler(response && (response?.assets[0].uri) || "")
-            props.setModalVisible(false)
         } catch (error) {
             console.log(error);
         }
+        props.setModalVisible(false)
     }
 
     return <View  >

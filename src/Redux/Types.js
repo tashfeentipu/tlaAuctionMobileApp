@@ -1,0 +1,2 @@
+export const SET_DRIVER_STATUS = "SET_DRIVER_STATUS"
+export const SET_ORDERS_LIST = "SET_ORDERS_LIST"

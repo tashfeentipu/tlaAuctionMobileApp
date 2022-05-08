@@ -27,7 +27,7 @@ class Settings extends Component<IProps, IState> {
                 </View>
                 <View style={styles.TitleTextContainer} >
                     <Text style={styles.TitleText} >Shayan Shahid</Text>
-                    <Image source={require("../../Assets/Pen.png")} />
+                    {/* <Image source={require("../../Assets/Pen.png")} /> */}
                 </View>
                 <View style={styles.SubContainer1} >
                     <SettingsBar source={require("../../Assets/Notifications.png")} title="Notifications" />
@@ -79,7 +79,7 @@ const styles = StyleSheet.create({
         alignItems: "center",
         width: Metrics.WIDTH * 0.35,
         height: Metrics.HEIGHT * 0.05,
-        justifyContent: "space-between"
+        justifyContent: "center",
     },
     TitleText: {
         color: Colors.indigo1,
@@ -93,7 +93,7 @@ const styles = StyleSheet.create({
     },
     LanguageText: {
         color: Colors.black,
-        fontFamily: Fonts.Exo2Regular,
+        fontFamily: Fonts.Exo2Bold,
         fontSize: Metrics.WIDTH * 0.04
     },
     SubContainer1: {
