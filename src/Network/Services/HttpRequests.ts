@@ -11,11 +11,17 @@ export const GetAsync = async (baseURL: string, authorization = false) => {
     headers["Authorization"] = `Bearer ${accessToken}`;
   }
 
-  const response = await fetch(baseURL, {
-    headers: headers,
-    method: "GET",
-  });
-  return response.json();
+  try {
+    const response = await fetch(baseURL, {
+      headers: headers,
+      method: "GET",
+    });
+    return response.json();
+  } catch (error) {
+    console.log(error);
+
+  }
+
 };
 
 export const PostAsync = async (baseURL: string, body: any, authorization = false) => {

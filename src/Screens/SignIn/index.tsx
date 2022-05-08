@@ -6,17 +6,22 @@ import ErrorText from "../../Components/ErrorText";
 import { Fonts, Colors, Metrics } from "../../Theme";
 import TextInputBox from "../../Components/TextInput";
 import LogonToggle from "../../Containers/LogonToggle";
+import { connect } from "react-redux";
 import { SIGN_IN_SCHEMA } from "../../Validations/SignIn";
+import { LoginController } from "../../Network/Controllers/LoginController";
+import { mapDispatchToProps, mapStateToProps } from "../../Redux/Dispatchers";
 
 interface IProps {
     navigation: any
+    loginToken: string
+    setLoginToken: Function
 }
 
 interface IState {
 
 }
 
-const EMAIL = "email_01"
+const EMAIL = "email"
 const PASSWORD = "password"
 
 class SignIn extends Component<IProps, IState> {
@@ -32,7 +37,8 @@ class SignIn extends Component<IProps, IState> {
                     initialValues={{ [EMAIL]: "placeholder", [PASSWORD]: "placeholder" }}
                     validationSchema={SIGN_IN_SCHEMA}
                     onSubmit={() => {
-                        this.props.navigation.navigate(WALKTHROUGH1);
+                        // this.props.navigation.navigate(WALKTHROUGH1);
+                        this.props.setLoginToken()
                     }}>
                     {formikProps => <>
                         <View>
@@ -105,4 +111,4 @@ const styles = StyleSheet.create({
     }
 });
 
-export default SignIn;
+export default connect(mapStateToProps, mapDispatchToProps)(SignIn);

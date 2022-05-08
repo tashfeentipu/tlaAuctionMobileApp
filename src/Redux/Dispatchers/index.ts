@@ -1,8 +1,8 @@
-import { setToken } from "../Actions/auth";
+import { setToken } from "../Middleware/auth";
 
 export const mapDispatchToProps = (dispatch: any) => {
   return {
-    setLoginToken: (token: any) => dispatch(setToken(token)),
+    setLoginToken: () => dispatch(setToken()),
   };
 };
 
