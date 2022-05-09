@@ -44,6 +44,7 @@ const styles = StyleSheet.create({
         paddingHorizontal: Metrics.WIDTH * 0.05
     },
     TextInput: {
+        height: Metrics.HEIGHT * 0.06,
         flex: 1
     }
 });

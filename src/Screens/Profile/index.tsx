@@ -55,7 +55,13 @@ class Profile extends Component<IProps, IState> {
                 </View>
                 <EditableInput title={"Name"} />
                 <EditableInput title={"Email"} />
-                <EditableInput title={"Date Of Birth"} onPressEdit={() => this.setState({ dateModalVisible: true })} />
+                <DatePickerModal
+                    modalVisible={this.state.dateModalVisible}
+                    setModalVisible={(dateModalVisible: boolean) => this.setState({ dateModalVisible })}
+                    title={"Date of Birth"}
+                    dateValue={""}
+                    onPressEdit={() => { this.setState({ dateModalVisible: true }) }}
+                />
                 <GenderToggle />
                 <EditableInput title={"Id"} />
                 <EditableInput title={"Password"} />
@@ -64,9 +70,6 @@ class Profile extends Component<IProps, IState> {
                     setModalVisible={(imageModalVisible: boolean) => this.setState({ imageModalVisible })}
                     cameraHandler={(image: string): void => { this.setState({ fileName: image }) }}
                     ImageLibraryHandler={(image: string): void => { this.setState({ fileName: image }) }} />
-                <DatePickerModal
-                    modalVisible={this.state.dateModalVisible}
-                    setModalVisible={(dateModalVisible: boolean) => this.setState({ dateModalVisible })} />
             </ScrollView>
         );
     }
