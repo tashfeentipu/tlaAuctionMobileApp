@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { StyleSheet, Text, View, Modal, TouchableOpacity } from "react-native";
+import { StyleSheet, Text, View, Modal, TouchableOpacity, TouchableWithoutFeedback } from "react-native";
 import { launchCamera, launchImageLibrary } from 'react-native-image-picker';
 import LinearGradient from "react-native-linear-gradient";
 import { Colors, Fonts, Metrics } from "../../Theme";
@@ -55,16 +55,21 @@ const ImagePicker = (props: IProps) => {
             visible={props.modalVisible}
             onRequestClose={() => props.setModalVisible(false)}
         >
-            <View style={styles.MainContainer}>
-                <View style={styles.SubContainer} >
-                    <Text style={styles.ModalTitle} >Upload Photo</Text>
-                    <Button title="Take Photo" onPress={cameraHandler} />
-                    <Button title="Choose From Library" onPress={ImageLibraryHandler} />
-                    <Button title="Cancel" onPress={() => {
-                        props.setModalVisible(false)
-                    }} />
+            <TouchableWithoutFeedback onPress={() => {
+                props.setModalVisible(false)
+            }} >
+                <View style={styles.MainContainer}>
+
+                    <View style={styles.SubContainer} >
+                        <Text style={styles.ModalTitle} >Upload Photo</Text>
+                        <Button title="Take Photo" onPress={cameraHandler} />
+                        <Button title="Choose From Library" onPress={ImageLibraryHandler} />
+                        <Button title="Cancel" onPress={() => {
+                            props.setModalVisible(false)
+                        }} />
+                    </View>
                 </View>
-            </View>
+            </TouchableWithoutFeedback>
         </Modal>
     </View>
 }

@@ -1,17 +1,9 @@
-import React, { Component } from "react";
-import { View, TextInput, Text, StyleSheet, NativeSyntheticEvent, TextInputFocusEventData, KeyboardTypeOptions } from "react-native";
-import { Fonts, Colors, Metrics } from "../../Theme";
+import React from "react";
+import { NativeSyntheticEvent, StyleSheet, Text, TextInput, TextInputFocusEventData, TextInputProps, View } from "react-native";
+import { Colors, Fonts, Metrics } from "../../Theme";
 
-interface IProps {
+interface IProps extends TextInputProps {
     inputLabel: string
-    value: string
-    secureTextEntry?: boolean
-    onBlur?: (event: NativeSyntheticEvent<TextInputFocusEventData>) => void
-    onChangeText: (text: string) => void
-}
-
-interface IState {
-
 }
 
 const TextInputBox = (props: IProps) => {

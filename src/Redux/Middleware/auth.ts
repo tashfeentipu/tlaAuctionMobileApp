@@ -10,9 +10,9 @@ import { tokenAction } from "../Actions/auth";
 export const setToken = () => {
     return async (dispatch: Function) => {
         try {
-            const response = await LoginController("tashfeen", "tipu")
+            // const response = await LoginController("tashfeen", "tipu")
 
-            dispatch(tokenAction(response.token))
+            dispatch(tokenAction("response.token"))
 
             // navigation.navigate({ key: WALKTHROUGH1 });
 

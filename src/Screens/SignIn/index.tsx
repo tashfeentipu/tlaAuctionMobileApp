@@ -37,7 +37,7 @@ class SignIn extends Component<IProps, IState> {
                     initialValues={{ [EMAIL]: "placeholder", [PASSWORD]: "placeholder" }}
                     validationSchema={SIGN_IN_SCHEMA}
                     onSubmit={() => {
-                        // this.props.navigation.navigate(WALKTHROUGH1);
+                        this.props.navigation.navigate(WALKTHROUGH1);
                         this.props.setLoginToken()
                     }}>
                     {formikProps => <>

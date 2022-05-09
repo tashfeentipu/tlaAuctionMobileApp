@@ -3,7 +3,8 @@ import { Image, ScrollView, StyleSheet, TouchableOpacity, View } from "react-nat
 import LinearGradient from "react-native-linear-gradient";
 import EditableInput from "../../Components/EditableInput";
 import GenderToggle from "../../Components/GenderToggle";
-import ImagePickerModal from "../../Handlers/ImagePickerModal";
+import ImagePickerModal from "../../Components/ImagePickerModal";
+import DatePickerModal from "../../Components/DatePickerModal";
 import { Colors, Metrics } from "../../Theme";
 
 interface IProps {
@@ -12,7 +13,8 @@ interface IProps {
 
 interface IState {
     fileName: string
-    modalVisible: boolean
+    imageModalVisible: boolean
+    dateModalVisible: boolean
 }
 
 const ProfileImage = require("../../Assets/Profile.png")
@@ -21,7 +23,8 @@ class Profile extends Component<IProps, IState> {
     constructor(props: IProps) {
         super(props);
         this.state = {
-            modalVisible: false,
+            imageModalVisible: false,
+            dateModalVisible: false,
             fileName: ""
         };
     }
@@ -45,22 +48,25 @@ class Profile extends Component<IProps, IState> {
                         end={{ x: 1, y: 0 }}
                         colors={[Colors.purple1, Colors.purple2]}
                         style={styles.AddImageContainer}>
-                        <TouchableOpacity onPress={() => this.setState({ modalVisible: true })} >
+                        <TouchableOpacity onPress={() => this.setState({ imageModalVisible: true })} >
                             <Image source={require("../../Assets/Plus.png")} />
                         </TouchableOpacity>
                     </LinearGradient>
                 </View>
                 <EditableInput title={"Name"} />
                 <EditableInput title={"Email"} />
-                <EditableInput title={"Date Of Birth"} />
+                <EditableInput title={"Date Of Birth"} onPressEdit={() => this.setState({ dateModalVisible: true })} />
                 <GenderToggle />
                 <EditableInput title={"Id"} />
                 <EditableInput title={"Password"} />
                 <ImagePickerModal
-                    modalVisible={this.state.modalVisible}
-                    setModalVisible={(modalVisible: boolean) => this.setState({ modalVisible })}
+                    modalVisible={this.state.imageModalVisible}
+                    setModalVisible={(imageModalVisible: boolean) => this.setState({ imageModalVisible })}
                     cameraHandler={(image: string): void => { this.setState({ fileName: image }) }}
                     ImageLibraryHandler={(image: string): void => { this.setState({ fileName: image }) }} />
+                <DatePickerModal
+                    modalVisible={this.state.dateModalVisible}
+                    setModalVisible={(dateModalVisible: boolean) => this.setState({ dateModalVisible })} />
             </ScrollView>
         );
     }

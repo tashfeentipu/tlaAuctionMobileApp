@@ -1,20 +1,27 @@
-import React, { Component } from "react";
-import { View, Text, TextInput, StyleSheet, Image } from "react-native";
-import { Fonts, Colors, Metrics } from "../../Theme";
+import React from "react";
+import { Image, StyleSheet, Text, TextInput, TextInputProps, TouchableOpacity, View } from "react-native";
+import { Colors, Fonts, Metrics } from "../../Theme";
 
-interface IProps {
+interface IProps extends TextInputProps {
     title: string
+    onPressEdit?: () => void
 }
 
 const EditIcon = require("../../Assets/Pen.png")
-
 
 const EditableInput = (props: IProps) => {
     return <View style={styles.MainContainer} >
         <Text style={styles.Title}>{props.title}</Text>
         <View style={styles.InputContainer} >
-            <TextInput style={styles.TextInput} placeholderTextColor={Colors.black} />
-            <Image source={EditIcon} />
+            <TextInput
+                style={styles.TextInput}
+                placeholderTextColor={Colors.black}
+                value={props.value}
+                onChangeText={props.onChangeText}
+            />
+            <TouchableOpacity onPress={props.onPressEdit} >
+                <Image source={EditIcon} />
+            </TouchableOpacity>
         </View>
     </View>
 }
