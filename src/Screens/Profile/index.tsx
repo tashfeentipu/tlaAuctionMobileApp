@@ -25,6 +25,7 @@ interface IState {
 const NAME = "name"
 const EMAIL = "email"
 const PASSWORD = "password"
+const DATE = "date"
 
 class Profile extends Component<IProps, IState> {
     constructor(props: IProps) {
@@ -40,10 +41,10 @@ class Profile extends Component<IProps, IState> {
         return (
             <ScrollView contentContainerStyle={styles.MainContainer} >
                 <Formik
-                    initialValues={{ [NAME]: "", [EMAIL]: "", [PASSWORD]: "" }}
+                    initialValues={{ [NAME]: "asdasdsa", [EMAIL]: "asdfasdfasdf", [PASSWORD]: "asdfasfasd", [DATE]: "" }}
                     validationSchema={PROFILE_SCHEMA}
-                    onSubmit={() => {
-
+                    onSubmit={(values) => {
+                        console.log(values);
                     }}>
                     {formikProps => <>
                         <View style={styles.ProfileWrapperContainer} >
@@ -92,7 +93,8 @@ class Profile extends Component<IProps, IState> {
                             modalVisible={this.state.dateModalVisible}
                             setModalVisible={(dateModalVisible: boolean) => this.setState({ dateModalVisible })}
                             title={"Date of Birth"}
-                            dateValue={""}
+                            dateValue={formikProps.values[DATE]}
+                            setDateValue={formikProps.handleChange(DATE)}
                             onPressEdit={() => { this.setState({ dateModalVisible: true }) }}
                         />
                         <GenderToggle />

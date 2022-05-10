@@ -9,6 +9,7 @@ interface IProps {
     title: string
     onPressEdit?: () => void
     dateValue: string
+    setDateValue: (dateValue: string) => void
 }
 
 const DatePickerModal = (props: IProps) => {
@@ -34,9 +35,8 @@ const DatePickerModal = (props: IProps) => {
                             mode="calendar"
                             selectorStartingYear={1970}
                             onSelectedChange={(selectedDate: any) => {
-                                console.log(selectedDate);
                                 props.setModalVisible(false)
-
+                                props.setDateValue(selectedDate)
                             }}
                         />
                     </View>
@@ -49,7 +49,6 @@ const DatePickerModal = (props: IProps) => {
 const styles = StyleSheet.create({
     MainContainer: {
         width: Metrics.WIDTH * 0.9,
-        // flex: 1
     },
     Title: {
         color: Colors.black,
