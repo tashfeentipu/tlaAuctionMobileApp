@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import { Image, StyleSheet, Text, TextInput, TextInputProps, TouchableOpacity, View } from "react-native";
+import EditIcon from "../../Assets/Pen.png";
 import { Colors, Fonts, Metrics } from "../../Theme";
 
 interface IProps extends TextInputProps {
@@ -7,9 +8,10 @@ interface IProps extends TextInputProps {
     onPressEdit?: () => void
 }
 
-const EditIcon = require("../../Assets/Pen.png")
-
 const EditableInput = (props: IProps) => {
+
+    const [edit, setEdit] = useState<boolean>(false)
+
     return <View style={styles.MainContainer} >
         <Text style={styles.Title}>{props.title}</Text>
         <View style={styles.InputContainer} >
@@ -18,8 +20,9 @@ const EditableInput = (props: IProps) => {
                 placeholderTextColor={Colors.black}
                 value={props.value}
                 onChangeText={props.onChangeText}
+                editable={edit}
             />
-            <TouchableOpacity onPress={props.onPressEdit} >
+            <TouchableOpacity onPress={() => { setEdit(prevState => !prevState) }} >
                 <Image source={EditIcon} />
             </TouchableOpacity>
         </View>

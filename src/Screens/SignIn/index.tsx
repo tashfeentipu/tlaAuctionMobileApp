@@ -33,6 +33,9 @@ class SignIn extends Component<IProps, IState> {
         return (
             <View style={styles.MainContainer} >
                 <LogonToggle toggle={true} navigation={this.props.navigation} />
+                <View>
+                    <Image source={require("../../Assets/Logo2.png")} style={{ width: 210, height: 130 }} />
+                </View>
                 <Formik
                     initialValues={{ [EMAIL]: "placeholder", [PASSWORD]: "placeholder" }}
                     validationSchema={SIGN_IN_SCHEMA}
@@ -41,9 +44,6 @@ class SignIn extends Component<IProps, IState> {
                         this.props.setLoginToken()
                     }}>
                     {formikProps => <>
-                        <View>
-                            <Image source={require("../../Assets/Logo2.png")} style={{ width: 210, height: 130 }} />
-                        </View>
                         <View>
                             <TextInputBox
                                 inputLabel="Email"

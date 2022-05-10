@@ -20,7 +20,6 @@ const DatePickerModal = (props: IProps) => {
                 style={styles.InputContainer}
                 onPress={props.onPressEdit} >
                 <Text>{props.dateValue}</Text>
-                {/* <Image source={EditIcon} /> */}
             </TouchableOpacity>
         </View>
         <Modal

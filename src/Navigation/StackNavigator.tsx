@@ -14,9 +14,9 @@ import BottomTabNavigator from "./TabNavigator";
 const Stack = createStackNavigator();
 
 const HomeStackNav = () => {
-    return <Stack.Navigator initialRouteName={RouteNames.HOME_TAB_NAV}>
+    return <Stack.Navigator initialRouteName={RouteNames.HOME_TAB_NAV} screenOptions={{ headerShown: false }}>
         <Stack.Screen name={RouteNames.PROFILE} component={Profile} />
-        <Stack.Screen name={RouteNames.HOME_TAB_NAV} component={BottomTabNavigator} options={{ headerShown: false }} />
+        <Stack.Screen name={RouteNames.HOME_TAB_NAV} component={BottomTabNavigator} />
     </Stack.Navigator>
 }
 
