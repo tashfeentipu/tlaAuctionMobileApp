@@ -6,11 +6,10 @@ import EditableInput from "../../Components/EditableInput";
 import GenderToggle from "../../Components/GenderToggle";
 import ImagePickerModal from "../../Components/ImagePickerModal";
 import LinearGradientComponent from "../../Components/LinearGradient";
-import { Colors, Metrics } from "../../Theme";
-import ProfileImage from "../../Assets/Profile.png";
+import { Colors, Fonts, Metrics } from "../../Theme";
 import { PROFILE_SCHEMA } from "../../Validations/Profile";
 import Header from "../../Components/Header";
-import { BackArrow } from "../../Assets";
+import { BackArrow, ProfileImage } from "../../Assets";
 
 interface IProps {
 
@@ -50,14 +49,11 @@ class Profile extends Component<IProps, IState> {
                             <Header
                                 leftIcon={
                                     <View style={styles.BackIconContainer}>
-                                        <Image
-                                            source={BackArrow}
-                                            style={{ width: Metrics.WIDTH * 0.07, height: Metrics.WIDTH * 0.08 }}
-                                        />
+                                        <Image source={BackArrow} style={{ width: Metrics.WIDTH * 0.06, height: Metrics.WIDTH * 0.06 }} />
                                     </View>
                                 }
                                 {...this.props}
-                                rightIcon={<TouchableOpacity style={styles.SaveTextContainer} onPress={() => { }}>
+                                rightIcon={<TouchableOpacity style={styles.SaveTextContainer} onPress={() => { formikProps.handleSubmit }}>
                                     <Text style={styles.SaveText}>Save</Text>
                                 </TouchableOpacity>}
                             />
@@ -121,7 +117,7 @@ const styles = StyleSheet.create({
     MainContainer: {
         alignItems: "center",
         backgroundColor: Colors.white,
-        paddingVertical: Metrics.HEIGHT * 0.05
+        paddingBottom: Metrics.HEIGHT * 0.1
     },
     ProfileContainer1: {
         backgroundColor: Colors.skyBlue,
@@ -141,11 +137,12 @@ const styles = StyleSheet.create({
         borderRadius: Metrics.WIDTH * 0.22
     },
     ProfileWrapperContainer: {
+        alignItems: "center",
     },
     AddImageContainer: {
         position: "absolute",
-        top: Metrics.WIDTH * 0.33,
-        left: Metrics.WIDTH * 0.3,
+        top: Metrics.WIDTH * 0.47,
+        left: Metrics.WIDTH * 0.62,
         width: Metrics.WIDTH * 0.1,
         height: Metrics.WIDTH * 0.1,
         borderRadius: Metrics.WIDTH * 0.05,
@@ -153,15 +150,17 @@ const styles = StyleSheet.create({
         justifyContent: "center"
     },
     BackIconContainer: {
-        flex: 0.15,
+        flex: 0.2,
         alignItems: "center"
     },
     SaveTextContainer: {
-        flex: 0.15,
+        flex: 0.2,
         alignItems: "center"
     },
     SaveText: {
-        fontSize: Metrics.WIDTH * 0.05
+        fontSize: Metrics.WIDTH * 0.05,
+        fontFamily: Fonts.Exo2Regular,
+        color: Colors.black
     }
 
 });

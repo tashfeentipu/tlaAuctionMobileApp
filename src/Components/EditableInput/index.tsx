@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Image, StyleSheet, Text, TextInput, TextInputProps, TouchableOpacity, View } from "react-native";
-import EditIcon from "../../Assets/Pen.png";
+import { EditIcon } from "../../Assets";
 import { Colors, Fonts, Metrics } from "../../Theme";
 
 interface IProps extends TextInputProps {

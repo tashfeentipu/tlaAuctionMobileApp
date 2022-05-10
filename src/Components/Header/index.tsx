@@ -20,12 +20,12 @@ const Header = (props: IProps) => {
 
 const styles = StyleSheet.create({
     MainContainer: {
-        // backgroundColor: Colors.white,
+        backgroundColor: Colors.white,
         flexDirection: "row",
+        width: Metrics.WIDTH,
         height: Metrics.HEIGHT * 0.1,
         justifyContent: "space-between",
         alignItems: "center",
-        backgroundColor: "pink"
     },
     Title: {
         fontSize: Metrics.HEIGHT * 0.03,
