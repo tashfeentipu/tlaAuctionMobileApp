@@ -10,9 +10,10 @@ import { Colors, Fonts, Metrics } from "../../Theme";
 import { PROFILE_SCHEMA } from "../../Validations/Profile";
 import Header from "../../Components/Header";
 import { BackArrow, ProfileImage } from "../../Assets";
+import ErrorText from "../../Components/ErrorText";
 
 interface IProps {
-
+    navigation: any
 }
 
 interface IState {
@@ -48,12 +49,12 @@ class Profile extends Component<IProps, IState> {
                         <View style={styles.ProfileWrapperContainer} >
                             <Header
                                 leftIcon={
-                                    <View style={styles.BackIconContainer}>
+                                    <TouchableOpacity style={styles.BackIconContainer} onPress={() => { this.props.navigation.goBack() }} >
                                         <Image source={BackArrow} style={{ width: Metrics.WIDTH * 0.06, height: Metrics.WIDTH * 0.06 }} />
-                                    </View>
+                                    </TouchableOpacity>
                                 }
                                 {...this.props}
-                                rightIcon={<TouchableOpacity style={styles.SaveTextContainer} onPress={() => { formikProps.handleSubmit }}>
+                                rightIcon={<TouchableOpacity style={styles.SaveTextContainer} onPress={formikProps.handleSubmit}>
                                     <Text style={styles.SaveText}>Save</Text>
                                 </TouchableOpacity>}
                             />
@@ -79,12 +80,14 @@ class Profile extends Component<IProps, IState> {
                             onBlur={formikProps.handleBlur(NAME)}
                             onChangeText={formikProps.handleChange(NAME)}
                         />
+                        <ErrorText errorText={formikProps.errors[NAME]} enable={formikProps.touched[NAME]} />
                         <EditableInput
                             title={"Email"}
                             value={formikProps.values[EMAIL]}
                             onBlur={formikProps.handleBlur(EMAIL)}
                             onChangeText={formikProps.handleChange(EMAIL)}
                         />
+                        <ErrorText errorText={formikProps.errors[EMAIL]} enable={formikProps.touched[EMAIL]} />
                         <DatePickerModal
                             modalVisible={this.state.dateModalVisible}
                             setModalVisible={(dateModalVisible: boolean) => this.setState({ dateModalVisible })}
@@ -100,6 +103,7 @@ class Profile extends Component<IProps, IState> {
                             onBlur={formikProps.handleBlur(PASSWORD)}
                             onChangeText={formikProps.handleChange(PASSWORD)}
                         />
+                        <ErrorText errorText={formikProps.errors[PASSWORD]} enable={formikProps.touched[PASSWORD]} />
                         <ImagePickerModal
                             modalVisible={this.state.imageModalVisible}
                             setModalVisible={(imageModalVisible: boolean) => this.setState({ imageModalVisible })}
