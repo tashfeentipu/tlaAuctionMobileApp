@@ -1,6 +1,5 @@
 import { createStackNavigator } from '@react-navigation/stack';
-import React, { Component } from "react";
-import { StyleSheet } from "react-native";
+import React from "react";
 import Profile from '../Screens/Profile';
 import SignIn from "../Screens/SignIn";
 import SignUp from "../Screens/SignUp";
@@ -23,10 +22,11 @@ const HomeStackNav = () => {
 
 const StackNavigator = () => {
     return (
-        <Stack.Navigator initialRouteName={RouteNames.HOME_TAB_NAV_MAIN} screenOptions={{ headerShown: false }}>
+        <Stack.Navigator initialRouteName={RouteNames.SPLASH} screenOptions={{ headerShown: false }}>
             <Stack.Screen name={RouteNames.SPLASH} component={SplashScreen} />
             <Stack.Screen name={RouteNames.SIGN_IN} component={SignIn} />
             <Stack.Screen name={RouteNames.SIGN_UP} component={SignUp} />
+            <Stack.Screen name={RouteNames.PROFILE} component={Profile} />
             <Stack.Screen name={RouteNames.SIGN_UP_SUCCESS} component={SignUpSuccess} />
             <Stack.Screen name={RouteNames.WALKTHROUGH1} component={Walkthrough1} />
             <Stack.Screen name={RouteNames.WALKTHROUGH2} component={Walkthrough2} />
@@ -35,9 +35,5 @@ const StackNavigator = () => {
         </Stack.Navigator>
     );
 }
-
-const styles = StyleSheet.create({
-    MainContainer: {}
-});
 
 export default StackNavigator;

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { View, Text, StyleSheet, Image, TouchableOpacity } from "react-native";
 import { Metrics, Colors, Fonts } from "../../Theme";
-import * as RouteNames from "../../Navigation/Routes";
+import { WALKTHROUGH3, HOME_TAB_NAV_MAIN } from "../../Navigation/Routes";
 
 interface IProps {
     navigation: any
@@ -26,12 +26,12 @@ class Walkthrough2 extends Component<IProps, IState> {
                     <Text style={styles.Label2}>PSPad will provide Secure transaction</Text>
                 </View>
                 <View style={styles.SubContainer2} >
-                    <TouchableOpacity onPress={() => { }} >
+                    <TouchableOpacity onPress={() => { this.props.navigation.navigate(HOME_TAB_NAV_MAIN) }} >
                         <Text style={styles.SkipText} >
                             SKIP
                         </Text>
                     </TouchableOpacity>
-                    <TouchableOpacity onPress={() => { this.props.navigation.navigate(RouteNames.WALKTHROUGH3) }} >
+                    <TouchableOpacity onPress={() => { this.props.navigation.navigate(WALKTHROUGH3) }} >
                         <Text style={styles.NextText}>
                             NEXT
                         </Text>
