@@ -9,7 +9,7 @@ import LinearGradientComponent from "../../Components/LinearGradient";
 import { Colors, Fonts, Metrics } from "../../Theme";
 import { PROFILE_SCHEMA } from "../../Validations/Profile";
 import Header from "../../Components/Header";
-import { BackArrow, ProfileImage } from "../../Assets";
+import { BackArrow, Plus, ProfileImage } from "../../Assets";
 import ErrorText from "../../Components/ErrorText";
 
 interface IProps {
@@ -71,7 +71,7 @@ class Profile extends Component<IProps, IState> {
                             </View>
                             <LinearGradientComponent gradientStyle={styles.AddImageContainer} >
                                 <TouchableOpacity onPress={() => this.setState({ imageModalVisible: true })} >
-                                    <Image source={require("../../Assets/Plus.png")} />
+                                    <Image source={Plus} />
                                 </TouchableOpacity>
                             </LinearGradientComponent>
                         </View>

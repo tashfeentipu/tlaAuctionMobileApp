@@ -1,17 +1,17 @@
 import React, { useState } from "react";
 import { Image, StyleSheet, Text, View, TouchableOpacity } from "react-native";
 import LinearGradient from "react-native-linear-gradient";
+import { Tick } from "../../Assets";
 import { Colors, Fonts, Metrics } from "../../Theme";
 
 interface IProps {
 
 }
 
-const TickIcon = require("../../Assets/Tick.png")
 
 const TickLinearGradient = () => {
     return <LinearGradient start={{ x: 0, y: 0 }} end={{ x: 1, y: 0 }} colors={[Colors.purple1, Colors.purple2]} style={styles.TickContainer} >
-        <Image source={TickIcon} style={{ width: Metrics.WIDTH * 0.06, height: Metrics.WIDTH * 0.06 }} />
+        <Image source={Tick} style={{ width: Metrics.WIDTH * 0.06, height: Metrics.WIDTH * 0.06 }} />
     </LinearGradient>
 }
 

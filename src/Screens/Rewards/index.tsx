@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Image, ScrollView, StyleSheet, Text, View } from "react-native";
 import LinearGradient from "react-native-linear-gradient";
+import { Rewards_Icon } from "../../Assets";
 import PSP_Button from "../../Containers/Rewards/PSP_Button";
 import { Colors, Fonts, Metrics } from "../../Theme";
 
@@ -22,7 +23,7 @@ class Rewards extends Component<IProps, IState> {
         return (
             <ScrollView contentContainerStyle={styles.MainContentContainer} style={styles.MainContainer} >
                 <View style={styles.ImageContainer} >
-                    <Image source={require("../../Assets/Rewards_Icon.png")} />
+                    <Image source={Rewards_Icon} />
                 </View>
                 <View>
                     <Text style={styles.Heading1}>COMPLETE THE TASK TO EARN</Text>

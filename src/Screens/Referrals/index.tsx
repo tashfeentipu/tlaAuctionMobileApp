@@ -2,6 +2,10 @@ import React, { Component } from "react";
 import { Image, TouchableOpacity, StyleSheet, Text, View } from "react-native";
 import LinearGradient from "react-native-linear-gradient";
 import { Colors, Fonts, Metrics } from "../../Theme";
+import {
+    Referrels_1, Referrels_2, Share, GooglePlus_Icon,
+    Facebook_Icon, Twitter_Icon, WhatsApp_Icon, SnapChat_Icon, Message_Icon
+} from "../../Assets";
 
 interface IProps {
 
@@ -21,7 +25,7 @@ class Referrels extends Component<IProps, IState> {
         return (
             <View style={styles.MainContainer} >
                 <View style={styles.SubContainer1}  >
-                    <Image source={require("../../Assets/Referrels_1.png")} style={{ width: Metrics.WIDTH * 0.161, height: Metrics.WIDTH * 0.161 }} />
+                    <Image source={Referrels_1} style={{ width: Metrics.WIDTH * 0.161, height: Metrics.WIDTH * 0.161 }} />
                     <Text style={styles.SC1_Text1} >5% bonus coins on your referral purchases.</Text>
                     <LinearGradient start={{ x: 0, y: 0 }} end={{ x: 1, y: 0 }} colors={[Colors.purple1, Colors.purple2]} style={styles.GradientContainer}>
                         <View style={styles.GradientSubContainer} >
@@ -30,7 +34,7 @@ class Referrels extends Component<IProps, IState> {
                                 <Text style={styles.SC1_Text2}>0xcde4563fc</Text>
                             </View>
                             <View style={{ flex: 0.1 }} >
-                                <Image source={require("../../Assets/Share.png")} />
+                                <Image source={Share} />
                             </View>
                         </View>
                     </LinearGradient>
@@ -38,31 +42,31 @@ class Referrels extends Component<IProps, IState> {
                 </View>
                 <View style={styles.SubContainer2}>
                     <View>
-                        <Image source={require("../../Assets/Referrels_2.png")} style={{ width: Metrics.WIDTH * 0.145, height: Metrics.WIDTH * 0.145 }} />
+                        <Image source={Referrels_2} style={{ width: Metrics.WIDTH * 0.145, height: Metrics.WIDTH * 0.145 }} />
                     </View>
                     <View>
                         <Text style={styles.ShareText} >Share and Get referrals using these</Text>
                     </View>
                     <View style={styles.ImageContainer} >
                         <TouchableOpacity>
-                            <Image source={require("../../Assets/GooglePlus_Icon.png")} style={{ width: Metrics.WIDTH * 0.11, height: Metrics.WIDTH * 0.11 }} />
+                            <Image source={GooglePlus_Icon} style={{ width: Metrics.WIDTH * 0.11, height: Metrics.WIDTH * 0.11 }} />
                         </TouchableOpacity>
                         <TouchableOpacity>
-                            <Image source={require("../../Assets/Facebook_Icon.png")} style={{ width: Metrics.WIDTH * 0.11, height: Metrics.WIDTH * 0.11 }} />
+                            <Image source={Facebook_Icon} style={{ width: Metrics.WIDTH * 0.11, height: Metrics.WIDTH * 0.11 }} />
                         </TouchableOpacity>
                         <TouchableOpacity>
-                            <Image source={require("../../Assets/Twitter_Icon.png")} style={{ width: Metrics.WIDTH * 0.11, height: Metrics.WIDTH * 0.11 }} />
+                            <Image source={Twitter_Icon} style={{ width: Metrics.WIDTH * 0.11, height: Metrics.WIDTH * 0.11 }} />
                         </TouchableOpacity>
                     </View>
                     <View style={styles.ImageContainer} >
                         <TouchableOpacity>
-                            <Image source={require("../../Assets/WhatsApp_Icon.png")} style={{ width: Metrics.WIDTH * 0.11, height: Metrics.WIDTH * 0.11 }} />
+                            <Image source={WhatsApp_Icon} style={{ width: Metrics.WIDTH * 0.11, height: Metrics.WIDTH * 0.11 }} />
                         </TouchableOpacity>
                         <TouchableOpacity>
-                            <Image source={require("../../Assets/SnapChat_Icon.png")} style={{ width: Metrics.WIDTH * 0.11, height: Metrics.WIDTH * 0.11 }} />
+                            <Image source={SnapChat_Icon} style={{ width: Metrics.WIDTH * 0.11, height: Metrics.WIDTH * 0.11 }} />
                         </TouchableOpacity>
                         <TouchableOpacity>
-                            <Image source={require("../../Assets/Message_Icon.png")} style={{ width: Metrics.WIDTH * 0.11, height: Metrics.WIDTH * 0.11 }} />
+                            <Image source={Message_Icon} style={{ width: Metrics.WIDTH * 0.11, height: Metrics.WIDTH * 0.11 }} />
                         </TouchableOpacity>
                     </View>
                 </View>

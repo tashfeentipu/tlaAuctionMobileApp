@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Image, ScrollView, StyleSheet, View, Text } from "react-native";
+import { AppVersion, Community, Language, Notifications, ProfileImage, Region, SignOut, Support } from "../../Assets";
 import SettingsBar from "../../Containers/Settings/SettingsBar";
 import { Fonts, Metrics, Colors } from "../../Theme";
 
@@ -22,17 +23,16 @@ class Settings extends Component<IProps, IState> {
             <ScrollView style={styles.MainContainer} contentContainerStyle={styles.MainContainer2} >
                 <View style={styles.ImageContainer1}  >
                     <View style={styles.ImageContainer2} >
-                        <Image source={require("../../Assets/Profile.png")} style={{ width: Metrics.WIDTH * 0.25, height: Metrics.WIDTH * 0.25 }} />
+                        <Image source={ProfileImage} style={{ width: Metrics.WIDTH * 0.25, height: Metrics.WIDTH * 0.25 }} />
                     </View>
                 </View>
                 <View style={styles.TitleTextContainer} >
                     <Text style={styles.TitleText} >Shayan Shahid</Text>
-                    {/* <Image source={require("../../Assets/Pen.png")} /> */}
                 </View>
                 <View style={styles.SubContainer1} >
-                    <SettingsBar source={require("../../Assets/Notifications.png")} title="Notifications" />
-                    <SettingsBar source={require("../../Assets/Community.png")} title="Community" />
-                    <SettingsBar source={require("../../Assets/Support.png")} title="Support" noBorder />
+                    <SettingsBar source={Notifications} title="Notifications" />
+                    <SettingsBar source={Community} title="Community" />
+                    <SettingsBar source={Support} title="Support" noBorder />
                 </View>
 
                 <View style={styles.LanguageTextContainer}>
@@ -40,10 +40,10 @@ class Settings extends Component<IProps, IState> {
                 </View>
 
                 <View style={styles.SubContainer2} >
-                    <SettingsBar source={require("../../Assets/Region.png")} title="Region" />
-                    <SettingsBar source={require("../../Assets/Language.png")} title="Language" />
-                    <SettingsBar source={require("../../Assets/AppVersion.png")} title="App Version" />
-                    <SettingsBar source={require("../../Assets/SignOut.png")} title="Sign Out" noBorder />
+                    <SettingsBar source={Region} title="Region" />
+                    <SettingsBar source={Language} title="Language" />
+                    <SettingsBar source={AppVersion} title="App Version" />
+                    <SettingsBar source={SignOut} title="Sign Out" noBorder />
                 </View>
             </ScrollView>
         );

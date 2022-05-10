@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { View, Text, StyleSheet, Image, TouchableOpacity } from "react-native";
 import { Metrics, Colors, Fonts } from "../../Theme";
 import { WALKTHROUGH2, HOME_TAB_NAV_MAIN } from "../../Navigation/Routes";
+import { Walkthrough1_Image } from "../../Assets";
 
 interface IProps {
     navigation: any
@@ -20,7 +21,7 @@ class Walkthrough1 extends Component<IProps, IState> {
     render() {
         return (
             <View style={styles.MainContainer} >
-                <Image source={require("../../Assets/Walkthrough1.png")} />
+                <Image source={Walkthrough1_Image} />
                 <View style={styles.SubContainer1}>
                     <Text style={styles.Label1}>Safe account</Text>
                     <Text style={styles.Label2}>PSPad will provide Secure transaction</Text>

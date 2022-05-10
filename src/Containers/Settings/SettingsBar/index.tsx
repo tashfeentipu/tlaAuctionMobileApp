@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { View, Text, StyleSheet, Image, ImageSourcePropType, TouchableOpacity } from "react-native";
+import { RightIcon } from "../../../Assets";
 import { Fonts, Colors, Metrics } from "../../../Theme";
 
 interface IProps {
@@ -27,7 +28,7 @@ class SettingsBar extends Component<IProps, IState> {
                 <View style={{ flex: 0.8 }}>
                     <Text style={styles.TitleText}>{this.props.title}</Text>
                 </View>
-                <Image source={require("../../../Assets/RightIcon.png")} />
+                <Image source={RightIcon} />
             </TouchableOpacity>
         );
     }

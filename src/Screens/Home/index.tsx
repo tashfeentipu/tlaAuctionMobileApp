@@ -2,13 +2,7 @@ import React, { Component } from "react";
 import { Image, ImageBackground, ImageSourcePropType, ScrollView, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import LinearGradient from "react-native-linear-gradient";
 import { Colors, Fonts, Metrics } from "../../Theme";
-
-const HomeBannerImage = require("../../Assets/HomeBanner.png")
-const Logo = require("../../Assets/Logo.png")
-const AddonFeaturesBack = require("../../Assets/AddonFeaturesBack.png")
-const NewsUpdate = require("../../Assets/NewsUpdate.png")
-const AirDrop = require("../../Assets/AirDrop.png")
-const Packages = require("../../Assets/Packages.png")
+import { HomeBannerImage, Logo, AddonFeaturesBack, NewsUpdate, AirDrop, Packages, Deposit, Withdraw, Stake, Buy } from "../../Assets";
 
 interface IProps {
 
@@ -61,10 +55,10 @@ class Home extends Component<IProps, IState> {
                             </Text>
                         </View>
                         <View style={styles.HomeImagesContainer}>
-                            {this.actionButtons(require("../../Assets/Deposit.png"), "Deposit")}
-                            {this.actionButtons(require("../../Assets/Withdraw.png"), "Withdraw")}
-                            {this.actionButtons(require("../../Assets/Buy.png"), "Buy")}
-                            {this.actionButtons(require("../../Assets/Stake.png"), "Stake")}
+                            {this.actionButtons(Deposit, "Deposit")}
+                            {this.actionButtons(Withdraw, "Withdraw")}
+                            {this.actionButtons(Buy, "Buy")}
+                            {this.actionButtons(Stake, "Stake")}
                         </View>
                     </View>
                     <View style={styles.GradientSubContainer2} >

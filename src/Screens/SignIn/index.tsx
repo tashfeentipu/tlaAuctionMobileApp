@@ -10,6 +10,7 @@ import { connect } from "react-redux";
 import { SIGN_IN_SCHEMA } from "../../Validations/SignIn";
 import { LoginController } from "../../Network/Controllers/LoginController";
 import { mapDispatchToProps, mapStateToProps } from "../../Redux/Dispatchers";
+import { Logo2 } from "../../Assets";
 
 interface IProps {
     navigation: any
@@ -34,7 +35,7 @@ class SignIn extends Component<IProps, IState> {
             <View style={styles.MainContainer} >
                 <LogonToggle toggle={true} navigation={this.props.navigation} />
                 <View>
-                    <Image source={require("../../Assets/Logo2.png")} style={{ width: 210, height: 130 }} />
+                    <Image source={Logo2} style={{ width: 210, height: 130 }} />
                 </View>
                 <Formik
                     initialValues={{ [EMAIL]: "placeholder", [PASSWORD]: "placeholder" }}

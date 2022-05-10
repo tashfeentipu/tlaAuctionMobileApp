@@ -1,6 +1,7 @@
 import React, { Component } from "react";
-import { Image, SafeAreaView, StyleSheet, View } from "react-native";
-import * as RouteNames from "../../Navigation/Routes";
+import { Image, SafeAreaView, StyleSheet } from "react-native";
+import { Logo } from "../../Assets";
+import { SIGN_IN } from "../../Navigation/Routes";
 import { Metrics } from "../../Theme";
 
 interface IProps {
@@ -19,14 +20,14 @@ class SplashScreen extends Component<IProps, IState> {
 
     componentDidMount() {
         setTimeout(() => {
-            this.props.navigation.navigate(RouteNames.SIGN_IN)
+            this.props.navigation.navigate(SIGN_IN)
         }, 4000)
     }
 
     render() {
         return (
             <SafeAreaView style={styles.MainContainer} >
-                <Image source={require("../../Assets/Logo.png")} style={styles.LogoImage} />
+                <Image source={Logo} style={styles.LogoImage} />
             </SafeAreaView>
         );
     }

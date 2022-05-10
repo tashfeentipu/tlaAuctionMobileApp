@@ -2,9 +2,7 @@ import React, { Component } from "react";
 import { View, Text, StyleSheet, Image, TouchableOpacity } from "react-native";
 import { Metrics, Colors, Fonts } from "../../Theme";
 import * as RouteNames from "../../Navigation/Routes";
-
-const ActiveIcon = require("../../Assets/Active.png")
-const DisabledIcon = require("../../Assets/Disabled.png")
+import { ActiveIcon, DisabledIcon } from "../../Assets";
 
 interface IProps {
     toggle: boolean,

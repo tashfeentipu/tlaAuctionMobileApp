@@ -1,6 +1,10 @@
 import React, { Component } from "react";
 import { View, Text, StyleSheet, ScrollView, Image, TouchableOpacity } from "react-native";
 import LinearGradient from "react-native-linear-gradient";
+import {
+    Bitcoin, Buy, Copy_Icon, Deposit, Dogecoin, Eth_Classic,
+    Litecoin, Logo, Stake, Stellar, Tether, Withdraw
+} from "../../Assets";
 import WalletItem from "../../Containers/Wallet/WalletItem";
 import { Metrics, Colors, Fonts } from "../../Theme";
 
@@ -27,7 +31,7 @@ class Wallet extends Component<IProps, IState> {
                             <View style={styles.AddressContainer} >
                                 <Text style={styles.AddressText}>0x2f321n321ns113</Text>
                                 <TouchableOpacity>
-                                    <Image source={require("../../Assets/Copy_Icon.png")} />
+                                    <Image source={Copy_Icon} />
                                 </TouchableOpacity>
                             </View>
                             <View style={styles.BalanceContainer} >
@@ -36,24 +40,24 @@ class Wallet extends Component<IProps, IState> {
                             </View>
                         </View>
                         <View style={styles.SubContainer3}>
-                            <Image source={require("../../Assets/Logo.png")} style={styles.LogoImageStyle} />
+                            <Image source={Logo} style={styles.LogoImageStyle} />
                         </View>
                     </View>
                     <View style={styles.SubContainer4}>
                         <TouchableOpacity style={styles.ImageContainer}>
-                            <Image source={require("../../Assets/Deposit.png")} />
+                            <Image source={Deposit} />
                             <Text style={styles.BottomContainerTextStyle}>Deposit</Text>
                         </TouchableOpacity>
                         <TouchableOpacity style={styles.ImageContainer}>
-                            <Image source={require("../../Assets/Withdraw.png")} />
+                            <Image source={Withdraw} />
                             <Text style={styles.BottomContainerTextStyle}>Withdraw</Text>
                         </TouchableOpacity>
                         <TouchableOpacity style={styles.ImageContainer}>
-                            <Image source={require("../../Assets/Buy.png")} />
+                            <Image source={Buy} />
                             <Text style={styles.BottomContainerTextStyle}>Buy</Text>
                         </TouchableOpacity>
                         <TouchableOpacity style={styles.ImageContainer}>
-                            <Image source={require("../../Assets/Stake.png")} />
+                            <Image source={Stake} />
                             <Text style={styles.BottomContainerTextStyle}>Stake</Text>
                         </TouchableOpacity>
                     </View>
@@ -62,12 +66,12 @@ class Wallet extends Component<IProps, IState> {
                     <Text style={styles.MarketHeading} >
                         Market
                     </Text>
-                    <WalletItem source={require("../../Assets/Bitcoin.png")} symbol={"BTC"} name={"Bitcoin"} balance={"$ 100"} percentage={"+2.75%"} />
-                    <WalletItem source={require("../../Assets/Eth_Classic.png")} symbol={"ETH"} name={"Ehtereum"} balance={"$ 100"} percentage={"-2.78%"} />
-                    <WalletItem source={require("../../Assets/Stellar.png")} symbol={"XLM"} name={"Stellar"} />
-                    <WalletItem source={require("../../Assets/Dogecoin.png")} symbol={"DOGE"} name={"Dogecoin"} />
-                    <WalletItem source={require("../../Assets/Litecoin.png")} symbol={"LTC"} name={"Litecoin"} />
-                    <WalletItem source={require("../../Assets/Tether.png")} symbol={"USDT"} name={"Tether"} />
+                    <WalletItem source={Bitcoin} symbol={"BTC"} name={"Bitcoin"} balance={"$ 100"} percentage={"+2.75%"} />
+                    <WalletItem source={Eth_Classic} symbol={"ETH"} name={"Ehtereum"} balance={"$ 100"} percentage={"-2.78%"} />
+                    <WalletItem source={Stellar} symbol={"XLM"} name={"Stellar"} />
+                    <WalletItem source={Dogecoin} symbol={"DOGE"} name={"Dogecoin"} />
+                    <WalletItem source={Litecoin} symbol={"LTC"} name={"Litecoin"} />
+                    <WalletItem source={Tether} symbol={"USDT"} name={"Tether"} />
                 </View>
             </ScrollView>
         );

@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import { View, Text, StyleSheet, Image, TouchableOpacity } from "react-native";
 import { Metrics, Colors, Fonts } from "../../Theme";
-import * as RouteNames from "../../Navigation/Routes";
+import { HOME_TAB_NAV_MAIN } from "../../Navigation/Routes";
+import { Walkthrough3_Image } from "../../Assets";
 
 interface IProps {
     navigation: any
@@ -20,12 +21,12 @@ class Walkthrough3 extends Component<IProps, IState> {
     render() {
         return (
             <View style={styles.MainContainer} >
-                <Image source={require("../../Assets/Walkthrough3.png")} />
+                <Image source={Walkthrough3_Image} />
                 <View style={styles.SubContainer1}>
                     <Text style={styles.Label1}>PSPad Wallet</Text>
                     <Text style={styles.Label2}>PSPad will provide reliable wallet</Text>
                 </View>
-                <TouchableOpacity onPress={() => { this.props.navigation.navigate(RouteNames.HOME_TAB_NAV_MAIN) }} style={styles.GotItButton} >
+                <TouchableOpacity onPress={() => { this.props.navigation.navigate(HOME_TAB_NAV_MAIN) }} style={styles.GotItButton} >
                     <Text style={styles.GotItText}>
                         GOT IT
                     </Text>

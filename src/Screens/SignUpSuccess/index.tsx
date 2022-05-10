@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import { Metrics, Colors, Fonts } from "../../Theme";
-import * as RouteNames from "../../Navigation/Routes";
+import { SIGN_IN } from "../../Navigation/Routes";
+import { Tick } from "../../Assets";
 
 interface IProps {
     navigation: any
@@ -23,7 +24,7 @@ class SignUpSuccess extends Component<IProps, IState> {
                 <View style={styles.TickContainer3} >
                     <View style={styles.TickContainer2} >
                         <View style={styles.TickContainer1} >
-                            <Image source={require("../../Assets/Tick.png")} />
+                            <Image source={Tick} />
                         </View>
                     </View>
                 </View>
@@ -31,7 +32,7 @@ class SignUpSuccess extends Component<IProps, IState> {
                     <Text style={styles.Label1}>Sign Up Successful !!</Text>
                     <Text style={styles.Label2}>You are entering a new world of Blockchain</Text>
                 </View>
-                <TouchableOpacity style={styles.signInButtonContainer} onPress={() => { this.props.navigation.navigate(RouteNames.SIGN_IN) }} >
+                <TouchableOpacity style={styles.signInButtonContainer} onPress={() => { this.props.navigation.navigate(SIGN_IN) }} >
                     <Text style={styles.signInButtonText}>
                         Back To SIGN IN
                     </Text>
