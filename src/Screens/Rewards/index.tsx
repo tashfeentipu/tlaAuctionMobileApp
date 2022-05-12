@@ -22,6 +22,7 @@ class Rewards extends Component<IProps, IState> {
     render() {
         return (
             <ScrollView contentContainerStyle={styles.MainContentContainer} style={styles.MainContainer} >
+                {/* Tashfeen Is testing */}
                 <View style={styles.ImageContainer} >
                     <Image source={Rewards_Icon} />
                 </View>
