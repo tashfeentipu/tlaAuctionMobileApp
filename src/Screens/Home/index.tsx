@@ -1,11 +1,18 @@
 import React, { Component } from "react";
-import { Image, ImageBackground, ImageSourcePropType, ScrollView, StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import {
+    Image, ImageBackground, ImageSourcePropType, ScrollView,
+    StyleSheet, Text, TouchableOpacity, View
+} from "react-native";
 import LinearGradient from "react-native-linear-gradient";
+import {
+    AddonFeaturesBack, AirDrop, Buy, Deposit, HomeBannerImage,
+    Logo, NewsUpdate, Packages, Stake, Withdraw
+} from "../../Assets";
+import { VIDEOS } from "../../Navigation/Routes";
 import { Colors, Fonts, Metrics } from "../../Theme";
-import { HomeBannerImage, Logo, AddonFeaturesBack, NewsUpdate, AirDrop, Packages, Deposit, Withdraw, Stake, Buy } from "../../Assets";
 
 interface IProps {
-
+    navigation: any
 }
 
 interface IState {
@@ -29,9 +36,9 @@ class Home extends Component<IProps, IState> {
         </TouchableOpacity>
     }
 
-    statusButtons = (source: ImageSourcePropType, text: string) => {
+    statusButtons = (source: ImageSourcePropType, text: string, onPress?: () => void) => {
         return <ImageBackground source={AddonFeaturesBack} style={{ height: Metrics.WIDTH * 0.35, width: Metrics.WIDTH * 0.3 }} >
-            <TouchableOpacity style={styles.PackagesContainer} >
+            <TouchableOpacity style={styles.PackagesContainer} onPress={onPress} >
                 <Image source={source} />
                 <Text style={styles.PackagesContainerText}>{text}</Text>
             </TouchableOpacity >
@@ -66,7 +73,7 @@ class Home extends Component<IProps, IState> {
                     </View>
                 </LinearGradient>
                 <View style={styles.StatusButtonsContainer} >
-                    {this.statusButtons(NewsUpdate, "News Update")}
+                    {this.statusButtons(NewsUpdate, "News Update", () => { this.props.navigation.navigate(VIDEOS) })}
                     {this.statusButtons(AirDrop, "Air Drop")}
                     {this.statusButtons(Packages, "Packages")}
                 </View>
