@@ -59,6 +59,7 @@ const styles = StyleSheet.create({
     },
     ButtonTextStyle: {
         fontFamily: Fonts.DubaiMedium,
+        color: Colors.black,
         fontSize: Metrics.WIDTH * 0.04
     }
 });

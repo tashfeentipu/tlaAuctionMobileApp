@@ -22,7 +22,6 @@ class Rewards extends Component<IProps, IState> {
     render() {
         return (
             <ScrollView contentContainerStyle={styles.MainContentContainer} style={styles.MainContainer} >
-                {/* Tashfeen Is testing */}
                 <View style={styles.ImageContainer} >
                     <Image source={Rewards_Icon} />
                 </View>
@@ -69,9 +68,6 @@ const styles = StyleSheet.create({
         backgroundColor: Colors.white
     },
     MainContentContainer: {
-        borderTopLeftRadius: Metrics.WIDTH * 0.1,
-        borderTopRightRadius: Metrics.WIDTH * 0.1,
-        backgroundColor: Colors.skyBlue,
         alignItems: "center"
     },
     ImageContainer: {
