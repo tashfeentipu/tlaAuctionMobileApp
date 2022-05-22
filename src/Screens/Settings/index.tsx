@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { Image, ScrollView, StyleSheet, View, Text } from "react-native";
 import { AppVersion, Community, Language, Notifications, ProfileImage, Region, SignOut, Support } from "../../Assets";
+import LanguagesModal from "../../Containers/Settings/LanguagesModal";
+import RegionModal from "../../Containers/Settings/RegionModal";
 import SettingsBar from "../../Containers/Settings/SettingsBar";
 import { Fonts, Metrics, Colors } from "../../Theme";
 
@@ -9,13 +11,22 @@ interface IProps {
 }
 
 interface IState {
+    languageModalVisible: boolean
+    regionModalVisible: boolean
+    languageValue: string
+    regionValue: string
 
 }
 
 class Settings extends Component<IProps, IState> {
     constructor(props: IProps) {
         super(props);
-        this.state = {};
+        this.state = {
+            languageModalVisible: false,
+            languageValue: "",
+            regionValue: "",
+            regionModalVisible: false
+        };
     }
 
     render() {
@@ -40,11 +51,19 @@ class Settings extends Component<IProps, IState> {
                 </View>
 
                 <View style={styles.SubContainer2} >
-                    <SettingsBar source={Region} title="Region" />
-                    <SettingsBar source={Language} title="Language" />
+                    <SettingsBar source={Region} title="Region" onPress={() => this.setState({ regionModalVisible: true })} content={this.state.regionValue} />
+                    <SettingsBar source={Language} title="Language" onPress={() => this.setState({ languageModalVisible: true })} content={this.state.languageValue} />
                     <SettingsBar source={AppVersion} title="App Version" />
                     <SettingsBar source={SignOut} title="Sign Out" noBorder />
                 </View>
+                <RegionModal
+                    modalVisible={this.state.regionModalVisible}
+                    setContent={(regionValue) => this.setState({ regionValue })}
+                    setModalVisible={(modalState: boolean) => this.setState({ regionModalVisible: modalState })} />
+                <LanguagesModal
+                    modalVisible={this.state.languageModalVisible}
+                    setContent={(languageValue) => this.setState({ languageValue })}
+                    setModalVisible={(modalState: boolean) => this.setState({ languageModalVisible: modalState })} />
             </ScrollView>
         );
     }
