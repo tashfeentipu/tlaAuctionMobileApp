@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { View, Text, StyleSheet, Image, ImageSourcePropType, TouchableOpacity } from "react-native";
+import { View, Text, StyleSheet, Image, ImageSourcePropType, TouchableOpacity, Switch } from "react-native";
 import { RightIcon } from "../../../Assets";
 import { Fonts, Colors, Metrics } from "../../../Theme";
 
@@ -9,6 +9,10 @@ interface IProps {
     noBorder?: boolean
     content?: string
     onPress?: () => void
+    rightArrow?: boolean
+    switch?: boolean
+    swichValue?: boolean
+    switchToggle?: () => void
 }
 
 interface IState {
@@ -30,16 +34,25 @@ class SettingsBar extends Component<IProps, IState> {
                 }}
                 onPress={this.props.onPress}
             >
-                <View style={{ flex: 0.1 }}  >
+                <View style={{ flex: 0.15 }}  >
                     <Image source={this.props.source} />
                 </View>
-                <View style={{ flex: 0.6 }}>
+                <View style={{ flex: 0.55 }}>
                     <Text style={styles.TitleText}>{this.props.title}</Text>
                 </View>
                 <View style={{ flex: 0.2, alignItems: "center" }} >
                     {!!this.props.content && <Text style={styles.ContentText} >{this.props.content}</Text>}
                 </View>
-                <Image source={RightIcon} />
+                <View style={{ flex: 0.1, alignItems: "center" }} >
+                    {this.props.rightArrow && <Image source={RightIcon} />}
+                    {this.props.switch && <Switch
+                        trackColor={{ false: "#767577", true: "#81b0ff" }}
+                        thumbColor={this.props.swichValue ? "#f5dd4b" : "#f4f3f4"}
+                        ios_backgroundColor="#3e3e3e"
+                        onValueChange={this.props.switchToggle}
+                        value={this.props.swichValue}
+                    />}
+                </View>
             </TouchableOpacity>
         );
     }

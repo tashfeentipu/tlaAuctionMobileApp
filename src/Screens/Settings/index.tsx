@@ -1,6 +1,9 @@
 import React, { Component } from "react";
 import { Image, ScrollView, StyleSheet, View, Text } from "react-native";
-import { AppVersion, Community, Language, Notifications, ProfileImage, Region, SignOut, Support } from "../../Assets";
+import {
+    AppVersion, Community, Language, Notifications,
+    ProfileImage, Region, SignOut, Support
+} from "../../Assets";
 import LanguagesModal from "../../Containers/Settings/LanguagesModal";
 import RegionModal from "../../Containers/Settings/RegionModal";
 import SettingsBar from "../../Containers/Settings/SettingsBar";
@@ -15,6 +18,8 @@ interface IState {
     regionModalVisible: boolean
     languageValue: string
     regionValue: string
+    notificationsEnabled: boolean
+    darkModeEnabled: boolean
 
 }
 
@@ -25,7 +30,9 @@ class Settings extends Component<IProps, IState> {
             languageModalVisible: false,
             languageValue: "",
             regionValue: "",
-            regionModalVisible: false
+            regionModalVisible: false,
+            darkModeEnabled: false,
+            notificationsEnabled: false
         };
     }
 
@@ -41,9 +48,20 @@ class Settings extends Component<IProps, IState> {
                     <Text style={styles.TitleText} >Shayan Shahid</Text>
                 </View>
                 <View style={styles.SubContainer1} >
-                    <SettingsBar source={Notifications} title="Notifications" />
-                    <SettingsBar source={Community} title="Community" />
-                    <SettingsBar source={Support} title="Support" noBorder />
+                    <SettingsBar source={Notifications} title="Notifications"
+                        switch
+                        swichValue={this.state.notificationsEnabled}
+                        switchToggle={() => this.setState(prevState => ({
+                            notificationsEnabled: !prevState.notificationsEnabled
+                        }))} />
+                    <SettingsBar source={Notifications} title="Dark Mode"
+                        switch
+                        swichValue={this.state.darkModeEnabled}
+                        switchToggle={() => this.setState(prevState => ({
+                            darkModeEnabled: !prevState.darkModeEnabled
+                        }))} />
+                    <SettingsBar source={Community} title="Community" rightArrow />
+                    <SettingsBar source={Support} title="Support" noBorder rightArrow />
                 </View>
 
                 <View style={styles.LanguageTextContainer}>
@@ -51,10 +69,10 @@ class Settings extends Component<IProps, IState> {
                 </View>
 
                 <View style={styles.SubContainer2} >
-                    <SettingsBar source={Region} title="Region" onPress={() => this.setState({ regionModalVisible: true })} content={this.state.regionValue} />
-                    <SettingsBar source={Language} title="Language" onPress={() => this.setState({ languageModalVisible: true })} content={this.state.languageValue} />
-                    <SettingsBar source={AppVersion} title="App Version" />
-                    <SettingsBar source={SignOut} title="Sign Out" noBorder />
+                    <SettingsBar source={Region} rightArrow title="Region" onPress={() => this.setState({ regionModalVisible: true })} content={this.state.regionValue} />
+                    <SettingsBar source={Language} rightArrow title="Language" onPress={() => this.setState({ languageModalVisible: true })} content={this.state.languageValue} />
+                    <SettingsBar source={AppVersion} rightArrow title="App Version" />
+                    <SettingsBar source={SignOut} rightArrow title="Sign Out" noBorder />
                 </View>
                 <RegionModal
                     modalVisible={this.state.regionModalVisible}
@@ -116,7 +134,6 @@ const styles = StyleSheet.create({
         fontSize: Metrics.WIDTH * 0.04
     },
     SubContainer1: {
-        height: Metrics.HEIGHT * 0.27,
         width: Metrics.WIDTH,
         alignItems: 'center',
         justifyContent: "space-around",
