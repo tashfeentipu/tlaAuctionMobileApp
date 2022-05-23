@@ -66,15 +66,15 @@ const styles = StyleSheet.create({
     },
     symbolText: {
         fontSize: Metrics.HEIGHT * 0.025,
-        fontFamily: Fonts.Exo2Regular,
+        fontFamily: Fonts.Regular,
         color: Colors.black,
     },
     nameText: {
         color: Colors.grey3,
-        fontFamily: Fonts.Exo2Regular,
+        fontFamily: Fonts.Regular,
     },
     percentageText: {
-        fontFamily: Fonts.Exo2Regular,
+        fontFamily: Fonts.Regular,
         fontSize: Metrics.HEIGHT * 0.018,
         color: Colors.green1
     },

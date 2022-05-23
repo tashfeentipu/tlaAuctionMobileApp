@@ -90,7 +90,7 @@ const styles = StyleSheet.create({
     },
     ModalTitle: {
         fontSize: Metrics.WIDTH * 0.06,
-        fontFamily: Fonts.DubaiBold,
+        fontFamily: Fonts.Bold,
         color: Colors.grey,
         textAlign: "center"
     },
@@ -102,7 +102,7 @@ const styles = StyleSheet.create({
     },
     ButtonText: {
         fontSize: Metrics.WIDTH * 0.05,
-        fontFamily: Fonts.DubaiRegular,
+        fontFamily: Fonts.Regular,
         color: Colors.white
     },
 

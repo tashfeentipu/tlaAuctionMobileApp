@@ -20,7 +20,7 @@ const styles = StyleSheet.create({
     },
     Title: {
         color: Colors.red,
-        fontFamily: Fonts.DubaiMedium
+        fontFamily: Fonts.Medium
     },
 });
 

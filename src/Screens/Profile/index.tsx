@@ -165,7 +165,7 @@ const styles = StyleSheet.create({
     },
     SaveText: {
         fontSize: Metrics.WIDTH * 0.05,
-        fontFamily: Fonts.Exo2Regular,
+        fontFamily: Fonts.Regular,
         color: Colors.black
     }
 

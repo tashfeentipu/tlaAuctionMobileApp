@@ -50,7 +50,7 @@ const styles = StyleSheet.create({
     },
     InputLabel: {
         fontSize: Metrics.WIDTH * 0.04,
-        fontFamily: Fonts.Exo2Regular,
+        fontFamily: Fonts.Regular,
         color: Colors.black
     },
 });

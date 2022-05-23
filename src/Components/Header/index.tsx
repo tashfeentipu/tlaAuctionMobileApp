@@ -29,7 +29,7 @@ const styles = StyleSheet.create({
     },
     Title: {
         fontSize: Metrics.HEIGHT * 0.03,
-        fontFamily: Fonts.DubaiBold,
+        fontFamily: Fonts.Bold,
         color: Colors.black
     },
     AccountIconContainer: {

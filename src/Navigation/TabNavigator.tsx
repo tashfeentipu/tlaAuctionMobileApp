@@ -98,7 +98,7 @@ const styles = StyleSheet.create({
     tabBarLabel: {
         fontSize: 10,
         color: Colors.indigo1,
-        fontFamily: Fonts.Exo2Bold
+        fontFamily: Fonts.Bold
     }
 });
 

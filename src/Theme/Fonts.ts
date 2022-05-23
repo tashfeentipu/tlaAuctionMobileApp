@@ -12,4 +12,8 @@ export const Fonts = {
     Exo2Regular: "Exo2-Regular",
     TimesNewRomanRegular: "TimesNewRoman-Regular",
     TimesNewRomanBold: "TimesNewRoman-Bold",
+    Bold: "TimesNewRoman-Bold",
+    Regular: "TimesNewRoman-Regular",
+    Light: "Dubai-Light",
+    Medium: "Dubai-Medium",
 }

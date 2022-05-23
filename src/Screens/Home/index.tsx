@@ -124,17 +124,17 @@ const styles = StyleSheet.create({
     },
     BottomContainerTextStyle: {
         color: Colors.white,
-        fontFamily: Fonts.Exo2Regular,
+        fontFamily: Fonts.Regular,
         marginLeft: Metrics.WIDTH * 0.015
     },
     PSPHeading1: {
         color: Colors.white,
-        fontFamily: Fonts.Exo2Bold,
+        fontFamily: Fonts.Bold,
         fontSize: Metrics.WIDTH * 0.05
     },
     PSPHeading2: {
         color: Colors.white,
-        fontFamily: Fonts.Exo2Regular,
+        fontFamily: Fonts.Regular,
         fontSize: Metrics.WIDTH * 0.04
     },
     StatusButtonsContainer: {
@@ -151,7 +151,7 @@ const styles = StyleSheet.create({
     PackagesContainerText: {
         color: Colors.white,
         lineHeight: Metrics.HEIGHT * 0.05,
-        fontFamily: Fonts.Exo2Regular
+        fontFamily: Fonts.Regular
     }
 });
 

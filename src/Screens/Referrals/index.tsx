@@ -108,18 +108,18 @@ const styles = StyleSheet.create({
     SC1_Text1: {
         color: Colors.black,
         fontSize: Metrics.WIDTH * 0.04,
-        fontFamily: Fonts.DubaiMedium,
+        fontFamily: Fonts.Medium,
         textAlign: "center"
     },
     SC1_Text2: {
         color: Colors.black,
-        fontFamily: Fonts.DubaiMedium,
+        fontFamily: Fonts.Medium,
         fontSize: Metrics.WIDTH * 0.035,
         textAlign: "center"
     },
     SC1_Text3: {
         color: Colors.black,
-        fontFamily: Fonts.DubaiMedium,
+        fontFamily: Fonts.Medium,
         fontSize: Metrics.WIDTH * 0.035,
         textAlign: "center"
     },
@@ -139,7 +139,7 @@ const styles = StyleSheet.create({
     },
     ShareText: {
         color: Colors.black,
-        fontFamily: Fonts.DubaiMedium,
+        fontFamily: Fonts.Medium,
         fontSize: Metrics.WIDTH * 0.04,
     }
 });

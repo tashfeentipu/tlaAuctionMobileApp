@@ -77,20 +77,20 @@ const styles = StyleSheet.create({
         fontSize: Metrics.WIDTH * 0.05,
         lineHeight: Metrics.HEIGHT * 0.08,
         color: Colors.black,
-        fontFamily: Fonts.DubaiBold,
+        fontFamily: Fonts.Bold,
         textAlign: 'center'
     },
     Heading2: {
         fontSize: Metrics.WIDTH * 0.035,
         lineHeight: Metrics.HEIGHT * 0.08,
         color: Colors.black,
-        fontFamily: Fonts.DubaiMedium,
+        fontFamily: Fonts.Medium,
         textAlign: 'center'
     },
     Heading3: {
         fontSize: Metrics.WIDTH * 0.05,
         lineHeight: Metrics.HEIGHT * 0.08,
-        fontFamily: Fonts.DubaiBold,
+        fontFamily: Fonts.Bold,
         fontWeight: "bold",
         color: Colors.black,
         textAlign: 'center'
@@ -122,7 +122,7 @@ const styles = StyleSheet.create({
     },
     TasksText: {
         color: Colors.white,
-        fontFamily: Fonts.DubaiMedium
+        fontFamily: Fonts.Medium
     }
 });
 

@@ -111,7 +111,7 @@ const styles = StyleSheet.create({
     },
     MarketHeading: {
         fontSize: Metrics.WIDTH * 0.06,
-        fontFamily: Fonts.DubaiBold,
+        fontFamily: Fonts.Bold,
     },
     SubContainer1: {
         flexDirection: "row",
@@ -123,18 +123,18 @@ const styles = StyleSheet.create({
     },
     AddressText: {
         color: Colors.white,
-        fontFamily: Fonts.Exo2Regular,
+        fontFamily: Fonts.Regular,
         marginRight: Metrics.WIDTH * 0.02
     },
     BalanceContainer: {
     },
     BalanceText1: {
         color: Colors.white,
-        fontFamily: Fonts.Exo2Regular
+        fontFamily: Fonts.Regular
     },
     BalanceText2: {
         color: Colors.white,
-        fontFamily: Fonts.Exo2Regular,
+        fontFamily: Fonts.Regular,
         fontSize: Metrics.WIDTH * 0.08
     },
     SubContainer2: {
@@ -144,7 +144,7 @@ const styles = StyleSheet.create({
     SubContainer3: {
     },
     BottomContainerTextStyle: {
-        fontFamily: Fonts.Exo2Regular,
+        fontFamily: Fonts.Regular,
         color: Colors.white,
         marginLeft: Metrics.WIDTH * 0.015
     },

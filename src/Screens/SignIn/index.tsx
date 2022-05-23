@@ -94,7 +94,7 @@ const styles = StyleSheet.create({
     },
     FPLabel: {
         fontSize: 14,
-        fontFamily: Fonts.Exo2Regular,
+        fontFamily: Fonts.Regular,
         color: Colors.black
     },
     signInButtonContainer: {
@@ -107,7 +107,7 @@ const styles = StyleSheet.create({
     },
     signInButtonText: {
         color: Colors.white,
-        fontFamily: Fonts.Exo2Regular,
+        fontFamily: Fonts.Regular,
         fontSize: Metrics.WIDTH * 0.04
     }
 });

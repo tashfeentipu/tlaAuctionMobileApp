@@ -94,7 +94,7 @@ const styles = StyleSheet.create({
     },
     PPLabel: {
         fontSize: 14,
-        fontFamily: Fonts.Exo2Regular,
+        fontFamily: Fonts.Regular,
         color: Colors.black
     },
     SignInButtonContainer: {
@@ -106,7 +106,7 @@ const styles = StyleSheet.create({
         justifyContent: 'center'
     },
     SignInButtonText: {
-        fontFamily: Fonts.Exo2Regular,
+        fontFamily: Fonts.Regular,
         color: Colors.white
     }
 });

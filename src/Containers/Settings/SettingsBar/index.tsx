@@ -69,12 +69,12 @@ const styles = StyleSheet.create({
     },
     TitleText: {
         color: Colors.black,
-        fontFamily: Fonts.Exo2SemiBold,
+        fontFamily: Fonts.Medium,
         fontSize: Metrics.WIDTH * 0.04
     },
     ContentText: {
         color: Colors.black,
-        fontFamily: Fonts.Exo2Bold
+        fontFamily: Fonts.Bold
     }
 });
 

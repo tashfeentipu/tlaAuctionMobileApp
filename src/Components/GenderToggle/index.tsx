@@ -45,7 +45,7 @@ const styles = StyleSheet.create({
     Title: {
         color: Colors.black,
         fontSize: Metrics.WIDTH * 0.04,
-        fontFamily: Fonts.Exo2Regular,
+        fontFamily: Fonts.Regular,
         marginTop: Metrics.HEIGHT * 0.02
     },
     GenderContainer: {
@@ -71,7 +71,7 @@ const styles = StyleSheet.create({
     },
     GenderText: {
         color: Colors.black,
-        fontFamily: Fonts.Exo2Regular,
+        fontFamily: Fonts.Regular,
         marginLeft: Metrics.WIDTH * 0.03
     }
 });

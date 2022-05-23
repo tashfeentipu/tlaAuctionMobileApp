@@ -120,7 +120,7 @@ const styles = StyleSheet.create({
     },
     TitleText: {
         color: Colors.indigo1,
-        fontFamily: Fonts.Exo2Regular,
+        fontFamily: Fonts.Regular,
         fontSize: Metrics.WIDTH * 0.04
     },
     LanguageTextContainer: {
@@ -130,7 +130,7 @@ const styles = StyleSheet.create({
     },
     LanguageText: {
         color: Colors.black,
-        fontFamily: Fonts.Exo2Bold,
+        fontFamily: Fonts.Bold,
         fontSize: Metrics.WIDTH * 0.04
     },
     SubContainer1: {

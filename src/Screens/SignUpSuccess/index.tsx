@@ -76,11 +76,11 @@ const styles = StyleSheet.create({
     Label1: {
         color: Colors.indigo1,
         fontSize: Metrics.WIDTH * 0.07,
-        fontFamily: Fonts.Exo2Regular
+        fontFamily: Fonts.Regular
     },
     Label2: {
         color: Colors.black,
-        fontFamily: Fonts.Exo2Regular,
+        fontFamily: Fonts.Regular,
         fontSize: Metrics.WIDTH * 0.04
     },
     signInButtonContainer: {
@@ -94,7 +94,7 @@ const styles = StyleSheet.create({
     },
     signInButtonText: {
         color: Colors.white,
-        fontFamily: Fonts.Exo2Regular,
+        fontFamily: Fonts.Regular,
         fontSize: Metrics.WIDTH * 0.04
     },
     LabelsContainer: {

@@ -52,13 +52,13 @@ const styles = StyleSheet.create({
     },
     TextStyle: {
         color: Colors.black,
-        fontFamily: Fonts.DubaiMedium
+        fontFamily: Fonts.Medium
     },
     TextContainer: {
         flex: 0.6
     },
     ButtonTextStyle: {
-        fontFamily: Fonts.DubaiMedium,
+        fontFamily: Fonts.Medium,
         color: Colors.black,
         fontSize: Metrics.WIDTH * 0.04
     }

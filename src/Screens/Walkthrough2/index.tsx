@@ -57,12 +57,12 @@ const styles = StyleSheet.create({
     },
     Label1: {
         fontSize: 20,
-        fontFamily: Fonts.Exo2Regular,
+        fontFamily: Fonts.Regular,
         color: Colors.indigo1
     },
     Label2: {
         fontSize: 14,
-        fontFamily: Fonts.Exo2Regular,
+        fontFamily: Fonts.Regular,
         color: Colors.black
     },
     SubContainer2: {
@@ -71,11 +71,11 @@ const styles = StyleSheet.create({
         justifyContent: "space-between"
     },
     SkipText: {
-        fontFamily: Fonts.Exo2Regular,
+        fontFamily: Fonts.Regular,
         color: Colors.grey
     },
     NextText: {
-        fontFamily: Fonts.Exo2Regular,
+        fontFamily: Fonts.Regular,
         color: Colors.black
     }
 });

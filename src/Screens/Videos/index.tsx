@@ -34,7 +34,7 @@ class Videos extends Component<IProps, IState> {
 const styles = StyleSheet.create({
     MainContainer: {},
     videosHeading: {
-        fontFamily: Fonts.DubaiBold,
+        fontFamily: Fonts.Bold,
         fontSize: Metrics.WIDTH * 0.06
     }
 });

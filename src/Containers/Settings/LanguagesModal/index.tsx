@@ -73,7 +73,7 @@ const styles = StyleSheet.create({
         marginVertical: Metrics.HEIGHT * 0.02
     },
     HeadingText: {
-        fontFamily: Fonts.Exo2Bold,
+        fontFamily: Fonts.Bold,
         fontSize: Metrics.WIDTH * 0.06,
         color: Colors.black
     },
@@ -88,7 +88,7 @@ const styles = StyleSheet.create({
     LanguageItemText: {
         color: Colors.black,
         fontSize: Metrics.WIDTH * 0.05,
-        fontFamily: Fonts.Exo2Regular
+        fontFamily: Fonts.Regular
     },
 });
 
