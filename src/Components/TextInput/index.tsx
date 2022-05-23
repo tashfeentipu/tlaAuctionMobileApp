@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Image, StyleSheet, Text, TextInput, TextInputProps, TouchableOpacity, View } from "react-native";
-import VisibleEye from "../../Assets/Visible_Eye.png";
+import { VisibleEye } from "../../Assets";
 import { Colors, Fonts, Metrics } from "../../Theme";
 
 interface IProps extends TextInputProps {

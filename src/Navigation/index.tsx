@@ -1,6 +1,7 @@
 import { NavigationContainer } from '@react-navigation/native';
 import React, { Component } from "react";
 import StackNavigator from './StackNavigator';
+import { DefaultTheme } from "../Theme";
 
 interface IProps {
 
@@ -16,9 +17,14 @@ class HOCNavigationContainer extends Component<IProps, IState> {
         this.state = {};
     }
 
+    darkTheme = {
+        dark: false,
+        colors: DefaultTheme
+    }
+
     render() {
         return (
-            <NavigationContainer>
+            <NavigationContainer theme={this.darkTheme} >
                 <StackNavigator />
             </NavigationContainer>
 

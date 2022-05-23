@@ -18,3 +18,14 @@ export const Colors = {
     green1: "#00BD13",
     red: "#FF0000"
 }
+
+export const DefaultTheme = {
+    primary: '#DC30B2',
+    background: 'white',
+    card: 'white',
+    text: 'white',
+    border: 'rgb(199, 199, 204)',
+    notification: 'rgb(255, 69, 58)',
+    buttonTextColor: "white",
+    labelText: "black" 
+}

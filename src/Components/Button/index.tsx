@@ -1,5 +1,6 @@
-import React, { Component, CSSProperties } from "react";
+import React from "react";
 import { StyleSheet, Text, TouchableOpacity } from "react-native";
+import { useTheme } from "@react-navigation/native";
 import { Metrics } from "../../Theme";
 
 interface IProps {
@@ -8,23 +9,14 @@ interface IProps {
     buttonContainerStyle?: any
 }
 
-interface IState {
+const { colors: Colors } = useTheme()
 
-}
-
-class Button extends Component<IProps, IState> {
-    constructor(props: IProps) {
-        super(props);
-        this.state = {};
-    }
-
-    render() {
-        return (
-            <TouchableOpacity style={{ ...styles.MainContainer, ...this.props.buttonContainerStyle }} onPress={() => this.props.onPress()} >
-                <Text style={styles.title}>{this.props.title}</Text>
-            </TouchableOpacity>
-        );
-    }
+const Button = (props: IProps) => {
+    return (
+        <TouchableOpacity style={{ ...styles.MainContainer, ...props.buttonContainerStyle }} onPress={() => props.onPress()} >
+            <Text style={styles.title}>{props.title}</Text>
+        </TouchableOpacity>
+    );
 }
 
 const styles = StyleSheet.create({
@@ -37,7 +29,7 @@ const styles = StyleSheet.create({
         backgroundColor: "purple",
     },
     title: {
-        color: "white",
+        color: Colors.text,
         fontSize: 20
     }
 });

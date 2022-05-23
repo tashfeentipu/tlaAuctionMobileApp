@@ -51,6 +51,8 @@ import Plus from "./Plus.png"
 import RightIcon from "./RightIcon.png"
 import ActiveIcon from "./Active.png"
 import DisabledIcon from "./Disabled.png"
+import VisibleEye from "./Visible_Eye.png"
+
 
 export {
     HomeBannerImage, Logo, AddonFeaturesBack, NewsUpdate, AirDrop, Packages,
@@ -61,5 +63,5 @@ export {
     Notifications, Community, Support, Region, Language, AppVersion, SignOut,
     Walkthrough1_Image, Walkthrough2_Image, Walkthrough3_Image, Copy_Icon,
     Deposit, Withdraw, Buy, Stake, Stellar, Bitcoin, Eth_Classic, Dogecoin,
-    Litecoin, Tether, Plus, RightIcon, ActiveIcon, DisabledIcon
+    Litecoin, Tether, Plus, RightIcon, ActiveIcon, DisabledIcon, VisibleEye
 }
