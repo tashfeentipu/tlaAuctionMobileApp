@@ -53,7 +53,7 @@ const styles = StyleSheet.create({
     Title: {
         color: Colors.black,
         fontSize: Metrics.WIDTH * 0.04,
-        fontFamily: Fonts.Exo2Regular,
+        fontFamily: Fonts.TimesNewRomanRegular,
         marginVertical: Metrics.HEIGHT * 0.02
     },
     InputContainer: {

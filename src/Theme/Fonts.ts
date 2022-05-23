@@ -10,4 +10,6 @@ export const Fonts = {
     Exo2Bold: "Exo2-Bold",
     Exo2SemiBold: "Exo2-SemiBold",
     Exo2Regular: "Exo2-Regular",
+    TimesNewRomanRegular: "TimesNewRoman-Regular",
+    TimesNewRomanBold: "TimesNewRoman-Bold",
 }

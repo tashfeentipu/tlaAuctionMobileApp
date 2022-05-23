@@ -24,6 +24,9 @@
 		9226548DD19E4FD895AA57B3 /* SegoeUIVariableStaticDisplay.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9535EBE79CB64CDFADF3F9E6 /* SegoeUIVariableStaticDisplay.ttf */; };
 		D6EBFCEAA6DA4829845E00A0 /* SegoeUIVariableStaticDisplayBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D291C0C002EC49818F280F00 /* SegoeUIVariableStaticDisplayBold.ttf */; };
 		E3A876EC0AAA4499BFCFB18E /* SegoeUIVariableStaticDisplayLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 11449A1C8B414F85A8F60DA3 /* SegoeUIVariableStaticDisplayLight.ttf */; };
+		CA32C8B1AA6046478BEF70DE /* Exo2-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F6603AA71F374018AE6E5F93 /* Exo2-SemiBold.ttf */; };
+		F12832E7AA864F55AEEBA2A1 /* TimesNewRoman-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B8DF775F42E64433AF7C5794 /* TimesNewRoman-Bold.ttf */; };
+		653310C9AA394D96AD576D25 /* TimesNewRoman-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CAE507D0A8814B9893301D83 /* TimesNewRoman-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +67,9 @@
 		9535EBE79CB64CDFADF3F9E6 /* SegoeUIVariableStaticDisplay.ttf */ = {isa = PBXFileReference; name = "SegoeUIVariableStaticDisplay.ttf"; path = "../src/assets/Fonts/SegoeUIVariableStaticDisplay.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		D291C0C002EC49818F280F00 /* SegoeUIVariableStaticDisplayBold.ttf */ = {isa = PBXFileReference; name = "SegoeUIVariableStaticDisplayBold.ttf"; path = "../src/assets/Fonts/SegoeUIVariableStaticDisplayBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		11449A1C8B414F85A8F60DA3 /* SegoeUIVariableStaticDisplayLight.ttf */ = {isa = PBXFileReference; name = "SegoeUIVariableStaticDisplayLight.ttf"; path = "../src/assets/Fonts/SegoeUIVariableStaticDisplayLight.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		F6603AA71F374018AE6E5F93 /* Exo2-SemiBold.ttf */ = {isa = PBXFileReference; name = "Exo2-SemiBold.ttf"; path = "../src/assets/Fonts/Exo2-SemiBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		B8DF775F42E64433AF7C5794 /* TimesNewRoman-Bold.ttf */ = {isa = PBXFileReference; name = "TimesNewRoman-Bold.ttf"; path = "../src/assets/Fonts/TimesNewRoman-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		CAE507D0A8814B9893301D83 /* TimesNewRoman-Regular.ttf */ = {isa = PBXFileReference; name = "TimesNewRoman-Regular.ttf"; path = "../src/assets/Fonts/TimesNewRoman-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,6 +188,9 @@
 				9535EBE79CB64CDFADF3F9E6 /* SegoeUIVariableStaticDisplay.ttf */,
 				D291C0C002EC49818F280F00 /* SegoeUIVariableStaticDisplayBold.ttf */,
 				11449A1C8B414F85A8F60DA3 /* SegoeUIVariableStaticDisplayLight.ttf */,
+				F6603AA71F374018AE6E5F93 /* Exo2-SemiBold.ttf */,
+				B8DF775F42E64433AF7C5794 /* TimesNewRoman-Bold.ttf */,
+				CAE507D0A8814B9893301D83 /* TimesNewRoman-Regular.ttf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -293,6 +302,9 @@
 				9226548DD19E4FD895AA57B3 /* SegoeUIVariableStaticDisplay.ttf in Resources */,
 				D6EBFCEAA6DA4829845E00A0 /* SegoeUIVariableStaticDisplayBold.ttf in Resources */,
 				E3A876EC0AAA4499BFCFB18E /* SegoeUIVariableStaticDisplayLight.ttf in Resources */,
+				CA32C8B1AA6046478BEF70DE /* Exo2-SemiBold.ttf in Resources */,
+				F12832E7AA864F55AEEBA2A1 /* TimesNewRoman-Bold.ttf in Resources */,
+				653310C9AA394D96AD576D25 /* TimesNewRoman-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

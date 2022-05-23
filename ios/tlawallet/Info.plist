@@ -63,6 +63,9 @@
 		<string>SegoeUIVariableStaticDisplay.ttf</string>
 		<string>SegoeUIVariableStaticDisplayBold.ttf</string>
 		<string>SegoeUIVariableStaticDisplayLight.ttf</string>
+		<string>Exo2-SemiBold.ttf</string>
+		<string>TimesNewRoman-Bold.ttf</string>
+		<string>TimesNewRoman-Regular.ttf</string>
 	</array>
 </dict>
 </plist>
