@@ -10,7 +10,8 @@ import Wallet from "../Screens/Wallet";
 import { Metrics, Fonts, Colors } from '../Theme';
 import { REFERRELS, PROFILE, HOME, WALLET, REWARDS, SETTINGS } from "./Routes";
 
-import { HeaderAccountIcon, ConnectivityIcon, HomeIcon, AccountIcon, RewardsIcon, WalletIcon, SettingsIcon } from "../Assets";
+import { HeaderAccountIcon, ConnectivityIcon, HomeIcon, 
+    AccountIcon, RewardsIcon, WalletIcon, SettingsIcon } from "../Assets";
 
 const Tab = createBottomTabNavigator();
 

@@ -9,7 +9,7 @@ import {
     YieldFarming, Academy, PlayToEarn,
     Logo, NewsUpdate, Packages, Stake, Withdraw
 } from "../../Assets";
-import { VIDEOS } from "../../Navigation/Routes";
+import { AIRDROP, NEWS_UPDATES, PACKAGES, PLAY_TO_EARN, VIDEOS, YIELD_FARMING } from "../../Navigation/Routes";
 import { Colors, Fonts, Metrics } from "../../Theme";
 
 interface IProps {
@@ -75,14 +75,14 @@ class Home extends Component<IProps, IState> {
                 </LinearGradient>
                 <View style={styles.StatusButtonsContainer} >
                     <View style={styles.StatusButtonsSubContainer} >
-                        {this.statusButtons(NewsUpdate, () => { this.props.navigation.navigate(VIDEOS) })}
-                        {this.statusButtons(AirDrop)}
-                        {this.statusButtons(Packages)}
+                        {this.statusButtons(NewsUpdate, () => { this.props.navigation.navigate(NEWS_UPDATES) })}
+                        {this.statusButtons(AirDrop, () => { this.props.navigation.navigate(AIRDROP) })}
+                        {this.statusButtons(Packages, () => { this.props.navigation.navigate(PACKAGES) })}
                     </View>
                     <View style={styles.StatusButtonsSubContainer}>
-                        {this.statusButtons(PlayToEarn)}
+                        {this.statusButtons(PlayToEarn, () => { this.props.navigation.navigate(PLAY_TO_EARN) })}
                         {this.statusButtons(Academy, () => { this.props.navigation.navigate(VIDEOS) })}
-                        {this.statusButtons(YieldFarming)}
+                        {this.statusButtons(YieldFarming, () => { this.props.navigation.navigate(YIELD_FARMING) })}
                     </View>
                 </View>
 

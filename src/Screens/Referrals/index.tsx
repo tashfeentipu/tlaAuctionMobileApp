@@ -126,7 +126,6 @@ const styles = StyleSheet.create({
     SubContainer2: {
         borderTopLeftRadius: Metrics.WIDTH * 0.07,
         borderTopRightRadius: Metrics.WIDTH * 0.07,
-        backgroundColor: Colors.skyBlue,
         height: Metrics.HEIGHT * 0.45,
         width: Metrics.WIDTH,
         alignItems: "center",

@@ -45,7 +45,7 @@ class Settings extends Component<IProps, IState> {
                     </View>
                 </View>
                 <View style={styles.TitleTextContainer} >
-                    <Text style={styles.TitleText} >Shayan Shahid</Text>
+                    <Text style={styles.TitleText} >User</Text>
                 </View>
                 <View style={styles.SubContainer1} >
                     <SettingsBar source={Notifications} title="Notifications"
@@ -139,7 +139,6 @@ const styles = StyleSheet.create({
         justifyContent: "space-around",
         borderBottomColor: Colors.backgroundGrey,
         borderBottomWidth: Metrics.HEIGHT * 0.002,
-        backgroundColor: Colors.skyBlue,
         borderTopColor: Colors.backgroundGrey,
         borderTopWidth: Metrics.HEIGHT * 0.002,
     },
@@ -148,7 +147,6 @@ const styles = StyleSheet.create({
         borderTopWidth: Metrics.HEIGHT * 0.002,
         borderBottomColor: Colors.backgroundGrey,
         borderBottomWidth: Metrics.HEIGHT * 0.002,
-        backgroundColor: Colors.skyBlue,
         marginBottom: Metrics.HEIGHT * 0.05,
         width: Metrics.WIDTH,
         alignItems: 'center',
