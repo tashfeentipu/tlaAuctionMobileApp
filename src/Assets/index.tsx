@@ -14,8 +14,10 @@ import NewsUpdate from "./NewsUpdate.png"
 import AirDrop from "./AirDrop.png"
 import Packages from "./Packages.png"
 import Referrels_1 from "./Referrels_1.png"
-import Share from "./Share.png"
 import Referrels_2 from "./Referrels_2.png"
+import Referrels_3 from "./Referrels_3.png"
+import Referrels_4 from "./Referrels_4.png"
+import Share from "./Share.png"
 import GooglePlus_Icon from "./GooglePlus_Icon.png"
 import Facebook_Icon from "./Facebook_Icon.png"
 import Twitter_Icon from "./Twitter_Icon.png"
@@ -60,8 +62,9 @@ export {
     HomeBannerImage, Logo, NewsUpdate, AirDrop, Packages,
     EditIcon, ProfileImage, BackArrow, HeaderAccountIcon, ConnectivityIcon,
     HomeIcon, AccountIcon, RewardsIcon, WalletIcon, SettingsIcon, Tick,
-    Referrels_1, Referrels_2, Share, GooglePlus_Icon, Facebook_Icon, Twitter_Icon,
-    WhatsApp_Icon, SnapChat_Icon, Message_Icon, Rewards_Icon, Logo2,
+    Referrels_1, Referrels_2, Referrels_3, Referrels_4, Share, GooglePlus_Icon,
+    Facebook_Icon, Twitter_Icon, WhatsApp_Icon, SnapChat_Icon, Message_Icon,
+    Rewards_Icon, Logo2,
     Notifications, Community, Support, Region, Language, AppVersion, SignOut,
     Walkthrough1_Image, Walkthrough2_Image, Walkthrough3_Image, Copy_Icon,
     Deposit, Withdraw, Buy, Stake, Stellar, Bitcoin, Eth_Classic, Dogecoin,

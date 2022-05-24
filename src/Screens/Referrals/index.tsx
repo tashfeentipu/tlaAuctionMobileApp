@@ -1,11 +1,8 @@
 import React, { Component } from "react";
-import { Image, TouchableOpacity, StyleSheet, Text, View } from "react-native";
+import { Image, StyleSheet, Text, View, ScrollView } from "react-native";
 import LinearGradient from "react-native-linear-gradient";
+import { HeaderAccountIcon, Referrels_1, Referrels_2, Referrels_3, Referrels_4, Share } from "../../Assets";
 import { Colors, Fonts, Metrics } from "../../Theme";
-import {
-    Referrels_1, Referrels_2, Share, GooglePlus_Icon,
-    Facebook_Icon, Twitter_Icon, WhatsApp_Icon, SnapChat_Icon, Message_Icon
-} from "../../Assets";
 
 interface IProps {
 
@@ -23,7 +20,7 @@ class Referrels extends Component<IProps, IState> {
 
     render() {
         return (
-            <View style={styles.MainContainer} >
+            <ScrollView style={styles.MainContainer} contentContainerStyle={styles.MainContainer2} >
                 <View style={styles.SubContainer1}  >
                     <Image source={Referrels_1} style={{ width: Metrics.WIDTH * 0.161, height: Metrics.WIDTH * 0.161 }} />
                     <Text style={styles.SC1_Text1} >5% bonus coins on your referral purchases.</Text>
@@ -47,46 +44,30 @@ class Referrels extends Component<IProps, IState> {
                     <View>
                         <Text style={styles.ShareText} >Share and Get referrals using these</Text>
                     </View>
-                    <View style={styles.ImageContainer} >
-                        <TouchableOpacity>
-                            <Image source={GooglePlus_Icon} style={{ width: Metrics.WIDTH * 0.11, height: Metrics.WIDTH * 0.11 }} />
-                        </TouchableOpacity>
-                        <TouchableOpacity>
-                            <Image source={Facebook_Icon} style={{ width: Metrics.WIDTH * 0.11, height: Metrics.WIDTH * 0.11 }} />
-                        </TouchableOpacity>
-                        <TouchableOpacity>
-                            <Image source={Twitter_Icon} style={{ width: Metrics.WIDTH * 0.11, height: Metrics.WIDTH * 0.11 }} />
-                        </TouchableOpacity>
+                    <View style={styles.AccountIconContainer} >
+                        <Image source={Referrels_3} style={{ width: Metrics.WIDTH * 0.88, height: Metrics.WIDTH * 0.182 }} />
                     </View>
-                    <View style={styles.ImageContainer} >
-                        <TouchableOpacity>
-                            <Image source={WhatsApp_Icon} style={{ width: Metrics.WIDTH * 0.11, height: Metrics.WIDTH * 0.11 }} />
-                        </TouchableOpacity>
-                        <TouchableOpacity>
-                            <Image source={SnapChat_Icon} style={{ width: Metrics.WIDTH * 0.11, height: Metrics.WIDTH * 0.11 }} />
-                        </TouchableOpacity>
-                        <TouchableOpacity>
-                            <Image source={Message_Icon} style={{ width: Metrics.WIDTH * 0.11, height: Metrics.WIDTH * 0.11 }} />
-                        </TouchableOpacity>
+                    <View style={styles.AccountIconContainer} >
+                        <Image source={Referrels_4} style={{ width: Metrics.WIDTH * 0.44, height: Metrics.WIDTH * 0.5 }} />
                     </View>
                 </View>
-            </View>
+            </ScrollView>
         );
     }
 }
 
 const styles = StyleSheet.create({
     MainContainer: {
-        flex: 1,
+        backgroundColor: Colors.white,
+    },
+    MainContainer2: {
         alignItems: "center",
         justifyContent: "space-between",
-        backgroundColor: Colors.white,
     },
     SubContainer1: {
         height: Metrics.HEIGHT * 0.3,
         width: Metrics.WIDTH * 0.883,
         borderRadius: Metrics.WIDTH * 0.08,
-        // backgroundColor: Colors.skyBlue,
         alignItems: "center",
         justifyContent: "space-around"
     },
@@ -126,15 +107,16 @@ const styles = StyleSheet.create({
     SubContainer2: {
         borderTopLeftRadius: Metrics.WIDTH * 0.07,
         borderTopRightRadius: Metrics.WIDTH * 0.07,
-        height: Metrics.HEIGHT * 0.45,
-        width: Metrics.WIDTH,
+        borderColor: Colors.grey2,
+        borderWidth: Metrics.WIDTH * 0.005,
+        height: Metrics.HEIGHT * 0.7,
+        width: Metrics.WIDTH * 0.95,
         alignItems: "center",
-        justifyContent: "space-around"
+        justifyContent: "space-around",
+        marginTop: Metrics.HEIGHT * 0.1,
     },
-    ImageContainer: {
-        flexDirection: "row",
-        width: Metrics.WIDTH * 0.8,
-        justifyContent: "space-between"
+    AccountIconContainer: {
+
     },
     ShareText: {
         color: Colors.black,
