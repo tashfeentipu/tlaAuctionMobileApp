@@ -11,11 +11,13 @@ import { SIGN_IN_SCHEMA } from "../../Validations/SignIn";
 import { LoginController } from "../../Network/Controllers/LoginController";
 import { mapDispatchToProps, mapStateToProps } from "../../Redux/Dispatchers";
 import { Logo2 } from "../../Assets";
+import { withTranslation } from "react-i18next";
 
 interface IProps {
     navigation: any
     loginToken: string
     setLoginToken: Function
+    t: any
 }
 
 interface IState {
@@ -31,6 +33,8 @@ class SignIn extends Component<IProps, IState> {
     }
 
     render() {
+        const { t } = this.props
+
         return (
             <View style={styles.MainContainer} >
                 <LogonToggle toggle={true} navigation={this.props.navigation} />
@@ -112,4 +116,4 @@ const styles = StyleSheet.create({
     }
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(SignIn);
+export default connect(mapStateToProps, mapDispatchToProps)(withTranslation("SignIn")(SignIn));

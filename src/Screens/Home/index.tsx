@@ -1,11 +1,12 @@
 import React, { Component } from "react";
 import {
-    Image, ImageBackground, ImageSourcePropType, ScrollView,
+    Image, ImageSourcePropType, ScrollView,
     StyleSheet, Text, TouchableOpacity, View
 } from "react-native";
 import LinearGradient from "react-native-linear-gradient";
 import {
-    AddonFeaturesBack, AirDrop, Buy, Deposit, HomeBannerImage,
+    AirDrop, Buy, Deposit, HomeBannerImage,
+    YieldFarming, Academy, PlayToEarn,
     Logo, NewsUpdate, Packages, Stake, Withdraw
 } from "../../Assets";
 import { VIDEOS } from "../../Navigation/Routes";
@@ -36,13 +37,13 @@ class Home extends Component<IProps, IState> {
         </TouchableOpacity>
     }
 
-    statusButtons = (source: ImageSourcePropType, text: string, onPress?: () => void) => {
-        return <ImageBackground source={AddonFeaturesBack} style={{ height: Metrics.WIDTH * 0.35, width: Metrics.WIDTH * 0.3 }} >
-            <TouchableOpacity style={styles.PackagesContainer} onPress={onPress} >
-                <Image source={source} />
-                <Text style={styles.PackagesContainerText}>{text}</Text>
-            </TouchableOpacity >
-        </ImageBackground>
+    statusButtons = (source: ImageSourcePropType, onPress?: () => void) => {
+        return <TouchableOpacity style={styles.PackagesContainer} onPress={onPress} >
+            <Image source={source} style={{
+                width: Metrics.WIDTH * 0.22,
+                height: Metrics.WIDTH * 0.2,
+            }} />
+        </TouchableOpacity >
     }
 
     render() {
@@ -73,9 +74,16 @@ class Home extends Component<IProps, IState> {
                     </View>
                 </LinearGradient>
                 <View style={styles.StatusButtonsContainer} >
-                    {this.statusButtons(NewsUpdate, "News Update", () => { this.props.navigation.navigate(VIDEOS) })}
-                    {this.statusButtons(AirDrop, "Air Drop")}
-                    {this.statusButtons(Packages, "Packages")}
+                    <View style={styles.StatusButtonsSubContainer} >
+                        {this.statusButtons(NewsUpdate, () => { this.props.navigation.navigate(VIDEOS) })}
+                        {this.statusButtons(AirDrop)}
+                        {this.statusButtons(Packages)}
+                    </View>
+                    <View style={styles.StatusButtonsSubContainer}>
+                        {this.statusButtons(PlayToEarn)}
+                        {this.statusButtons(Academy, () => { this.props.navigation.navigate(VIDEOS) })}
+                        {this.statusButtons(YieldFarming)}
+                    </View>
                 </View>
 
             </ScrollView>
@@ -138,13 +146,14 @@ const styles = StyleSheet.create({
         fontSize: Metrics.WIDTH * 0.04
     },
     StatusButtonsContainer: {
-        flexDirection: "row",
+        width: Metrics.WIDTH * 0.85,
+    },
+    StatusButtonsSubContainer: {
         marginVertical: Metrics.HEIGHT * 0.025,
-        width: Metrics.WIDTH * 0.95,
+        flexDirection: "row",
         justifyContent: "space-between",
     },
     PackagesContainer: {
-        flex: 1,
         alignItems: "center",
         justifyContent: "center"
     },

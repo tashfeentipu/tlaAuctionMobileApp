@@ -10,7 +10,6 @@ import ProfileImage from "./Profile.png";
 import EditIcon from "./Pen.png";
 import HomeBannerImage from "./HomeBanner.png"
 import Logo from "./Logo.png"
-import AddonFeaturesBack from "./AddonFeaturesBack.png"
 import NewsUpdate from "./NewsUpdate.png"
 import AirDrop from "./AirDrop.png"
 import Packages from "./Packages.png"
@@ -52,10 +51,13 @@ import RightIcon from "./RightIcon.png"
 import ActiveIcon from "./Active.png"
 import DisabledIcon from "./Disabled.png"
 import VisibleEye from "./Visible_Eye.png"
+import Academy from "./Academy.png"
+import PlayToEarn from "./PlayToEarn.png"
+import YieldFarming from "./YieldFarming.png"
 
 
 export {
-    HomeBannerImage, Logo, AddonFeaturesBack, NewsUpdate, AirDrop, Packages,
+    HomeBannerImage, Logo, NewsUpdate, AirDrop, Packages,
     EditIcon, ProfileImage, BackArrow, HeaderAccountIcon, ConnectivityIcon,
     HomeIcon, AccountIcon, RewardsIcon, WalletIcon, SettingsIcon, Tick,
     Referrels_1, Referrels_2, Share, GooglePlus_Icon, Facebook_Icon, Twitter_Icon,
@@ -63,5 +65,6 @@ export {
     Notifications, Community, Support, Region, Language, AppVersion, SignOut,
     Walkthrough1_Image, Walkthrough2_Image, Walkthrough3_Image, Copy_Icon,
     Deposit, Withdraw, Buy, Stake, Stellar, Bitcoin, Eth_Classic, Dogecoin,
-    Litecoin, Tether, Plus, RightIcon, ActiveIcon, DisabledIcon, VisibleEye
+    Litecoin, Tether, Plus, RightIcon, ActiveIcon, DisabledIcon, VisibleEye,
+    Academy, PlayToEarn, YieldFarming
 }
