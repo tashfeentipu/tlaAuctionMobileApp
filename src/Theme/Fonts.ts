@@ -14,6 +14,6 @@ export const Fonts = {
     TimesNewRomanBold: "TimesNewRoman-Bold",
     Bold: "TimesNewRoman-Bold",
     Regular: "TimesNewRoman-Regular",
-    Light: "Dubai-Light",
-    Medium: "Dubai-Medium",
+    Light: "TimesNewRoman-Regular",
+    Medium: "TimesNewRoman-Regular",
 }

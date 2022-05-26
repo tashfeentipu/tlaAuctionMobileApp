@@ -35,7 +35,7 @@ class SettingsBar extends Component<IProps, IState> {
                 onPress={this.props.onPress}
             >
                 <View style={{ flex: 0.15 }}  >
-                    <Image source={this.props.source} style={{ width: Metrics.WIDTH * 0.056, height: Metrics.WIDTH * 0.056, }} />
+                    <Image source={this.props.source} style={{ width: Metrics.WIDTH * 0.056, height: Metrics.WIDTH * 0.056, resizeMode: "contain" }} />
                 </View>
                 <View style={{ flex: 0.55 }}>
                     <Text style={styles.TitleText}>{this.props.title}</Text>
@@ -46,8 +46,8 @@ class SettingsBar extends Component<IProps, IState> {
                 <View style={{ flex: 0.1, alignItems: "center" }} >
                     {this.props.rightArrow && <Image source={RightIcon} />}
                     {this.props.switch && <Switch
-                        trackColor={{ false: "#767577", true: "#81b0ff" }}
-                        thumbColor={this.props.swichValue ? "#f5dd4b" : "#f4f3f4"}
+                        trackColor={{ false: Colors.black, true: Colors.pink2 }}
+                        thumbColor={"#f4f3f4"}
                         ios_backgroundColor="#3e3e3e"
                         onValueChange={this.props.switchToggle}
                         value={this.props.swichValue}
