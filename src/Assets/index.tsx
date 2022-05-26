@@ -44,10 +44,10 @@ import Buy from "./Buy.png"
 import Stake from "./Stake.png"
 import Bitcoin from "./Bitcoin.png"
 import Eth_Classic from "./Eth_Classic.png"
-import Stellar from "./Stellar.png"
-import Dogecoin from "./Dogecoin.png"
-import Litecoin from "./Litecoin.png"
 import Tether from "./Tether.png"
+import BUSD from "./BUSD.png"
+import PSPad from "./PSPad.png"
+import Matic from "./Matic.png"
 import Plus from "./Plus.png"
 import RightIcon from "./RightIcon.png"
 import ActiveIcon from "./Active.png"
@@ -59,15 +59,14 @@ import YieldFarming from "./YieldFarming.png"
 
 
 export {
-    HomeBannerImage, Logo, NewsUpdate, AirDrop, Packages,
+    HomeBannerImage, Logo, NewsUpdate, AirDrop, Packages, PSPad, Matic,
     EditIcon, ProfileImage, BackArrow, HeaderAccountIcon, ConnectivityIcon,
     HomeIcon, AccountIcon, RewardsIcon, WalletIcon, SettingsIcon, Tick,
     Referrels_1, Referrels_2, Referrels_3, Referrels_4, Share, GooglePlus_Icon,
     Facebook_Icon, Twitter_Icon, WhatsApp_Icon, SnapChat_Icon, Message_Icon,
-    Rewards_Icon, Logo2,
-    Notifications, Community, Support, Region, Language, AppVersion, SignOut,
+    Rewards_Icon, Logo2, Notifications, Community, Support, Region, Language,
     Walkthrough1_Image, Walkthrough2_Image, Walkthrough3_Image, Copy_Icon,
-    Deposit, Withdraw, Buy, Stake, Stellar, Bitcoin, Eth_Classic, Dogecoin,
-    Litecoin, Tether, Plus, RightIcon, ActiveIcon, DisabledIcon, VisibleEye,
-    Academy, PlayToEarn, YieldFarming
+    Deposit, Withdraw, Buy, Stake, Bitcoin, Eth_Classic, Tether,
+    Plus, RightIcon, ActiveIcon, DisabledIcon, VisibleEye,
+    Academy, PlayToEarn, YieldFarming, AppVersion, SignOut, BUSD,
 }

@@ -33,7 +33,7 @@ const HomeStackNav = () => {
 
 const StackNavigator = () => {
     return (
-        <Stack.Navigator initialRouteName={RouteNames.HOME_TAB_NAV_MAIN} screenOptions={{ headerShown: false }}>
+        <Stack.Navigator initialRouteName={RouteNames.SPLASH} screenOptions={{ headerShown: false }}>
             <Stack.Screen name={RouteNames.SIGN_IN} component={SignIn} />
             <Stack.Screen name={RouteNames.SIGN_UP} component={SignUp} />
             <Stack.Screen name={RouteNames.SPLASH} component={SplashScreen} />

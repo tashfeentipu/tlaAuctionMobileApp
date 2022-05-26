@@ -1,12 +1,11 @@
 import React, { Component } from "react";
-import { View, Text, StyleSheet, ScrollView, Image, TouchableOpacity } from "react-native";
+import { Image, ScrollView, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import LinearGradient from "react-native-linear-gradient";
 import {
-    Bitcoin, Buy, Copy_Icon, Deposit, Dogecoin, Eth_Classic,
-    Litecoin, Logo, Stake, Stellar, Tether, Withdraw
+    Bitcoin, BUSD, Buy, Copy_Icon, Deposit, Eth_Classic, Logo, Matic, PSPad, Stake, Tether, Withdraw
 } from "../../Assets";
 import WalletItem from "../../Containers/Wallet/WalletItem";
-import { Metrics, Colors, Fonts } from "../../Theme";
+import { Colors, Fonts, Metrics } from "../../Theme";
 
 interface IProps {
 
@@ -68,10 +67,10 @@ class Wallet extends Component<IProps, IState> {
                     </Text>
                     <WalletItem source={Bitcoin} symbol={"BTC"} name={"Bitcoin"} balance={"$ 100"} percentage={"+2.75%"} />
                     <WalletItem source={Eth_Classic} symbol={"ETH"} name={"Ehtereum"} balance={"$ 100"} percentage={"-2.78%"} />
-                    <WalletItem source={Stellar} symbol={"XLM"} name={"Stellar"} />
-                    <WalletItem source={Dogecoin} symbol={"DOGE"} name={"Dogecoin"} />
-                    <WalletItem source={Litecoin} symbol={"LTC"} name={"Litecoin"} />
+                    <WalletItem source={PSPad} symbol={"PSP"} name={"Polkadot"} />
                     <WalletItem source={Tether} symbol={"USDT"} name={"Tether"} />
+                    <WalletItem source={BUSD} symbol={"BUSD"} name={"Binance USD"} />
+                    <WalletItem source={Matic} symbol={"MATIC"} name={"Polygon"} />
                 </View>
             </ScrollView>
         );

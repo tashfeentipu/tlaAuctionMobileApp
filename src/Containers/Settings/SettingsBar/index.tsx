@@ -35,7 +35,7 @@ class SettingsBar extends Component<IProps, IState> {
                 onPress={this.props.onPress}
             >
                 <View style={{ flex: 0.15 }}  >
-                    <Image source={this.props.source} />
+                    <Image source={this.props.source} style={{ width: Metrics.WIDTH * 0.056, height: Metrics.WIDTH * 0.056, }} />
                 </View>
                 <View style={{ flex: 0.55 }}>
                     <Text style={styles.TitleText}>{this.props.title}</Text>

@@ -24,7 +24,7 @@ class WalletItem extends Component<IProps, IState> {
         return (
             <View style={styles.MainContainer}>
                 <View style={styles.SubContainer1}>
-                    <Image source={this.props.source} />
+                    <Image source={this.props.source} style={{ width: Metrics.WIDTH * 0.11, height: Metrics.WIDTH * 0.11, }} />
                 </View>
                 <View style={styles.SubContainer2}>
                     <Text style={styles.symbolText}>
