@@ -91,9 +91,9 @@ const styles = StyleSheet.create({
         borderTopLeftRadius: Metrics.WIDTH * 0.05,
         borderTopRightRadius: Metrics.WIDTH * 0.05,
         elevation: 1,
-        width: Metrics.WIDTH * 0.98,
-        left: Metrics.WIDTH * 0.01,
-        right: Metrics.WIDTH * 0.01,
+        width: Metrics.WIDTH * 0.96,
+        left: Metrics.WIDTH * 0.02,
+        right: Metrics.WIDTH * 0.02,
         height: Metrics.HEIGHT * 0.08
     },
     tabBarLabel: {

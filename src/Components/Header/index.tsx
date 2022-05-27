@@ -13,7 +13,7 @@ interface IProps {
 const Header = (props: IProps) => {
     return <View style={styles.MainContainer} >
         {props.leftIcon}
-        <Text style={styles.Title} >{props.route.name}</Text>
+        <Text style={styles.Title} >{props.route.name.split("_")[0]}</Text>
         {props.rightIcon}
     </View>
 }

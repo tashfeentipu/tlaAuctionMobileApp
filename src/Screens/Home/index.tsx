@@ -3,13 +3,12 @@ import {
     Image, ImageSourcePropType, ScrollView,
     StyleSheet, Text, TouchableOpacity, View
 } from "react-native";
-import LinearGradient from "react-native-linear-gradient";
-import Swiper from 'react-native-swiper'
+import Swiper from 'react-native-swiper';
 import {
-    AirDrop, Buy, Deposit, HomeBannerImage,
-    YieldFarming, Academy, PlayToEarn,
-    Logo, NewsUpdate, Packages, Stake, Withdraw
+    Academy, AirDrop, Buy, Deposit, HomeBannerImage, Logo,
+    NewsUpdate, Packages, PlayToEarn, Stake, Withdraw, YieldFarming
 } from "../../Assets";
+import LinearGradientComponent from "../../Components/LinearGradient";
 import { AIRDROP, NEWS_UPDATES, PACKAGES, PLAY_TO_EARN, VIDEOS, YIELD_FARMING } from "../../Navigation/Routes";
 import { Colors, Fonts, Metrics } from "../../Theme";
 
@@ -55,11 +54,7 @@ class Home extends Component<IProps, IState> {
                         <Image source={HomeBannerImage} style={styles.BannerImage} />
                     </View>
                 </Swiper>
-                <LinearGradient
-                    start={{ x: 0, y: 0 }}
-                    end={{ x: 1, y: 0 }}
-                    colors={[Colors.purple1, Colors.purple2]}
-                    style={styles.GradientContainer}>
+                <LinearGradientComponent gradientStyle={styles.GradientContainer} >
                     <View style={styles.GradientSubContainer1}>
                         <View>
                             <Text style={styles.PSPHeading1} >
@@ -79,7 +74,7 @@ class Home extends Component<IProps, IState> {
                     <View style={styles.GradientSubContainer2} >
                         <Image source={Logo} style={{ width: Metrics.WIDTH * 0.356, height: Metrics.WIDTH * 0.2 }} />
                     </View>
-                </LinearGradient>
+                </LinearGradientComponent>
                 <View style={styles.StatusButtonsContainer} >
                     <View style={styles.StatusButtonsSubContainer} >
                         {this.statusButtons(NewsUpdate, () => { this.props.navigation.navigate(NEWS_UPDATES) })}
@@ -104,14 +99,12 @@ const styles = StyleSheet.create({
         backgroundColor: Colors.white
     },
     BannerImage: {
-        marginTop: Metrics.HEIGHT * 0.01,
         width: Metrics.WIDTH * 0.85,
         height: 205
     },
     CarouselContainer: {
         marginVertical: Metrics.HEIGHT * 0.025,
-        height: 300
-        // alignItems: 'center'
+        height: 205,
     },
     CarouselImageView: {
         alignItems: 'center',
@@ -120,7 +113,7 @@ const styles = StyleSheet.create({
     GradientContainer: {
         width: Metrics.WIDTH * 0.873,
         height: Metrics.HEIGHT * 0.325,
-        marginVertical: Metrics.HEIGHT * 0.025,
+        marginBottom: Metrics.HEIGHT * 0.025,
         borderRadius: Metrics.WIDTH * 0.1,
         padding: Metrics.WIDTH * 0.05,
         flexDirection: "row",

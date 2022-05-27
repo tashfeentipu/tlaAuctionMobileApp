@@ -1,8 +1,8 @@
-import React, { useState } from "react";
-import { StyleSheet, Text, View, Modal, TouchableOpacity, TouchableWithoutFeedback } from "react-native";
+import React from "react";
+import { Modal, StyleSheet, Text, TouchableOpacity, TouchableWithoutFeedback, View } from "react-native";
 import { launchCamera, launchImageLibrary } from 'react-native-image-picker';
-import LinearGradient from "react-native-linear-gradient";
 import { Colors, Fonts, Metrics } from "../../Theme";
+import LinearGradientComponent from "../LinearGradient";
 
 interface IProps {
     modalVisible: boolean
@@ -18,11 +18,11 @@ interface ModalButtonProps {
 
 const Button = (props: ModalButtonProps) => {
     return <TouchableOpacity onPress={() => { props.onPress() }} >
-        <LinearGradient start={{ x: 0, y: 0 }} end={{ x: 1, y: 0 }} colors={[Colors.purple1, Colors.purple2]} style={styles.ButtonContainer}>
+        <LinearGradientComponent gradientStyle={styles.ButtonContainer}>
             <Text style={styles.ButtonText} >
                 {props.title}
             </Text>
-        </LinearGradient >
+        </LinearGradientComponent >
     </TouchableOpacity>
 }
 

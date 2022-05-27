@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Image, ScrollView, StyleSheet, Text, View } from "react-native";
-import LinearGradient from "react-native-linear-gradient";
 import { Rewards_Icon } from "../../Assets";
+import LinearGradientComponent from "../../Components/LinearGradient";
 import PSP_Button from "../../Containers/Rewards/PSP_Button";
 import { Colors, Fonts, Metrics } from "../../Theme";
 
@@ -32,20 +32,14 @@ class Rewards extends Component<IProps, IState> {
                 </View>
                 <View style={styles.TasksMainContainer} >
                     <View style={styles.TasksContainer1} >
-                        <LinearGradient
-                            start={{ x: 0, y: 0 }}
-                            end={{ x: 1, y: 0 }}
-                            colors={[Colors.purple1, Colors.purple2]}
-                            style={styles.TasksContainer}>
+                        <LinearGradientComponent
+                            gradientStyle={styles.TasksContainer}>
                             <Text style={styles.TasksText}>TASKS TO DO</Text>
-                        </LinearGradient>
-                        <LinearGradient
-                            start={{ x: 0, y: 0 }}
-                            end={{ x: 1, y: 0 }}
-                            colors={[Colors.purple1, Colors.purple2]}
-                            style={styles.ClaimContainer}>
+                        </LinearGradientComponent>
+                        <LinearGradientComponent
+                            gradientStyle={styles.ClaimContainer}>
                             <Text style={styles.TasksText}>CLAIM</Text>
-                        </LinearGradient>
+                        </LinearGradientComponent>
                     </View>
                     <View style={styles.TasksContainer2} >
                         <PSP_Button ButtonText="10" Text="Share the App with 5 Unique individuals by using your referrel link" />

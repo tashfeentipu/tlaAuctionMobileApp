@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import { Image, StyleSheet, Text, View, TouchableOpacity } from "react-native";
-import LinearGradient from "react-native-linear-gradient";
+import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import { Tick } from "../../Assets";
 import { Colors, Fonts, Metrics } from "../../Theme";
+import LinearGradientComponent from "../LinearGradient";
 
 interface IProps {
 
@@ -10,9 +10,9 @@ interface IProps {
 
 
 const TickLinearGradient = () => {
-    return <LinearGradient start={{ x: 0, y: 0 }} end={{ x: 1, y: 0 }} colors={[Colors.purple1, Colors.purple2]} style={styles.TickContainer} >
+    return <LinearGradientComponent gradientStyle={styles.TickContainer} >
         <Image source={Tick} style={{ width: Metrics.WIDTH * 0.06, height: Metrics.WIDTH * 0.06 }} />
-    </LinearGradient>
+    </LinearGradientComponent>
 }
 
 const GenderToggle = (props: IProps) => {

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import { Image, StyleSheet, Text, View, ScrollView } from "react-native";
-import LinearGradient from "react-native-linear-gradient";
-import { HeaderAccountIcon, Referrels_1, Referrels_2, Referrels_3, Referrels_4, Share } from "../../Assets";
+import { Image, ScrollView, StyleSheet, Text, View } from "react-native";
+import { Referrels_1, Referrels_2, Referrels_3, Referrels_4, Share } from "../../Assets";
+import LinearGradientComponent from "../../Components/LinearGradient";
 import { Colors, Fonts, Metrics } from "../../Theme";
 
 interface IProps {
@@ -24,7 +24,7 @@ class Referrels extends Component<IProps, IState> {
                 <View style={styles.SubContainer1}  >
                     <Image source={Referrels_1} style={{ width: Metrics.WIDTH * 0.161, height: Metrics.WIDTH * 0.161 }} />
                     <Text style={styles.SC1_Text1} >5% bonus coins on your referral purchases.</Text>
-                    <LinearGradient start={{ x: 0, y: 0 }} end={{ x: 1, y: 0 }} colors={[Colors.purple1, Colors.purple2]} style={styles.GradientContainer}>
+                    <LinearGradientComponent gradientStyle={styles.GradientContainer}>
                         <View style={styles.GradientSubContainer} >
                             <View style={{ flex: 0.1 }} />
                             <View style={{ flex: 0.8 }} >
@@ -34,7 +34,7 @@ class Referrels extends Component<IProps, IState> {
                                 <Image source={Share} />
                             </View>
                         </View>
-                    </LinearGradient>
+                    </LinearGradientComponent>
                     <Text style={styles.SC1_Text3}>Share it with your friends</Text>
                 </View>
                 <View style={styles.SubContainer2}>

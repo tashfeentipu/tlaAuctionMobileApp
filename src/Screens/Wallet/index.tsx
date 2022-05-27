@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import { Image, ScrollView, StyleSheet, Text, TouchableOpacity, View } from "react-native";
-import LinearGradient from "react-native-linear-gradient";
 import {
     Bitcoin, BUSD, Buy, Copy_Icon, Deposit, Eth_Classic, Logo, Matic, PSPad, Stake, Tether, Withdraw
 } from "../../Assets";
+import LinearGradientComponent from "../../Components/LinearGradient";
 import WalletItem from "../../Containers/Wallet/WalletItem";
 import { Colors, Fonts, Metrics } from "../../Theme";
 
@@ -24,7 +24,7 @@ class Wallet extends Component<IProps, IState> {
     render() {
         return (
             <ScrollView style={styles.MainContainerStyle} contentContainerStyle={styles.MainContainer} >
-                <LinearGradient start={{ x: 0, y: 0 }} end={{ x: 1, y: 0 }} colors={[Colors.purple1, Colors.purple2]} style={styles.GradientContainer}>
+                <LinearGradientComponent gradientStyle={styles.GradientContainer}>
                     <View style={styles.SubContainer1} >
                         <View style={styles.SubContainer2}>
                             <View style={styles.AddressContainer} >
@@ -60,7 +60,7 @@ class Wallet extends Component<IProps, IState> {
                             <Text style={styles.BottomContainerTextStyle}>Stake</Text>
                         </TouchableOpacity>
                     </View>
-                </LinearGradient>
+                </LinearGradientComponent>
                 <View style={styles.MarketContainer} >
                     <Text style={styles.MarketHeading} >
                         Market
