@@ -1,8 +1,14 @@
 import React, { Component } from "react";
 import { View, Text, StyleSheet } from "react-native";
-import { Community_Discord, Community_Medium, Community_Telegram, Community_Twitter, Community_Website } from "../../Assets";
+import {
+    Community_Discord, Community_Medium, Community_Telegram,
+    Community_Twitter, Community_Website
+} from "../../Assets";
+import Settings from "../../Constants/Settings";
 import CommunityItems from "../../Containers/Community/CommunityItems";
 import { Colors, Fonts, Metrics } from "../../Theme";
+
+const { DISCORD, TELEGRAM, TWITTER, MEDIUM, WEBSITE } = Settings
 
 interface IProps {
 
@@ -29,31 +35,31 @@ class Community extends Component<IProps, IState> {
                         onPress={() => { }}
                         imageSource={Community_Website}
                         maintext="WEBSITE"
-                        subText="https://polkastarterpad.com/"
+                        subText={WEBSITE}
                     />
                     <CommunityItems
                         onPress={() => { }}
                         imageSource={Community_Discord}
                         maintext="DISCORD"
-                        subText="https://polkastarterpad.com/"
+                        subText={DISCORD}
                     />
                     <CommunityItems
                         onPress={() => { }}
                         imageSource={Community_Telegram}
                         maintext="TELEGRAM"
-                        subText="https://polkastarterpad.com/"
+                        subText={TELEGRAM}
                     />
                     <CommunityItems
                         onPress={() => { }}
                         imageSource={Community_Twitter}
                         maintext="TWITTER"
-                        subText="https://polkastarterpad.com/"
+                        subText={TWITTER}
                     />
                     <CommunityItems
                         onPress={() => { }}
                         imageSource={Community_Medium}
                         maintext="MEDIUM"
-                        subText="https://polkastarterpad.com/"
+                        subText={MEDIUM}
                     />
                 </View>
             </View>
