@@ -1,7 +1,6 @@
 import React, { Component } from "react";
-import LottieView from 'lottie-react-native';
-import { View, Text, StyleSheet } from "react-native";
-import { Metrics } from "../../Theme";
+import { StyleSheet, View } from "react-native";
+import Loader from "../../Components/Loader";
 
 interface IProps {
 
@@ -20,10 +19,7 @@ class YieldFarming extends Component<IProps, IState> {
     render() {
         return (
             <View style={styles.MainContainer} >
-                <LottieView source={require('../../Assets/Loader/Loader3.json')}
-                    autoPlay
-                    loop                  
-                />
+                <Loader />
             </View>
         );
     }

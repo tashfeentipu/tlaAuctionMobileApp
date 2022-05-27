@@ -18,12 +18,6 @@ import Referrels_2 from "./Referrels_2.png"
 import Referrels_3 from "./Referrels_3.png"
 import Referrels_4 from "./Referrels_4.png"
 import Share from "./Share.png"
-import GooglePlus_Icon from "./GooglePlus_Icon.png"
-import Facebook_Icon from "./Facebook_Icon.png"
-import Twitter_Icon from "./Twitter_Icon.png"
-import WhatsApp_Icon from "./WhatsApp_Icon.png"
-import SnapChat_Icon from "./SnapChat_Icon.png"
-import Message_Icon from "./Message_Icon.png"
 import Rewards_Icon from "./Rewards_Icon.png"
 import Notifications from "./Notifications.png"
 import Community from "./Community.png"
@@ -62,8 +56,7 @@ export {
     HomeBannerImage, Logo, NewsUpdate, AirDrop, Packages, PSPad, Matic,
     EditIcon, ProfileImage, BackArrow, HeaderAccountIcon, ConnectivityIcon,
     HomeIcon, AccountIcon, RewardsIcon, WalletIcon, SettingsIcon, Tick,
-    Referrels_1, Referrels_2, Referrels_3, Referrels_4, Share, GooglePlus_Icon,
-    Facebook_Icon, Twitter_Icon, WhatsApp_Icon, SnapChat_Icon, Message_Icon,
+    Referrels_1, Referrels_2, Referrels_3, Referrels_4, Share, 
     Rewards_Icon, Logo2, Notifications, Community, Support, Region, Language,
     Walkthrough1_Image, Walkthrough2_Image, Walkthrough3_Image, Copy_Icon,
     Deposit, Withdraw, Buy, Stake, Bitcoin, Eth_Classic, Tether,

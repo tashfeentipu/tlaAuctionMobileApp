@@ -53,6 +53,12 @@ class Home extends Component<IProps, IState> {
                     <View style={styles.CarouselImageView} >
                         <Image source={HomeBannerImage} style={styles.BannerImage} />
                     </View>
+                    <View style={styles.CarouselImageView} >
+                        <Image source={HomeBannerImage} style={styles.BannerImage} />
+                    </View>
+                    <View style={styles.CarouselImageView} >
+                        <Image source={HomeBannerImage} style={styles.BannerImage} />
+                    </View>
                 </Swiper>
                 <LinearGradientComponent gradientStyle={styles.GradientContainer} >
                     <View style={styles.GradientSubContainer1}>

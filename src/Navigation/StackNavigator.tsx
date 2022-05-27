@@ -37,7 +37,7 @@ export const HomeStackNav = () => {
 
 export const SettingsStack = () => {
     return (
-        <Stack.Navigator initialRouteName={RouteNames.SETTINGS}>
+        <Stack.Navigator initialRouteName={RouteNames.SETTINGS} screenOptions={{ headerShown: false }}>
             <Stack.Screen name={RouteNames.SETTINGS} component={Settings} />
             <Stack.Screen name={RouteNames.COMMUNITY} component={Community} />
             <Stack.Screen name={RouteNames.SUPPORT} component={Support} />

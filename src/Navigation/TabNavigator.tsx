@@ -2,7 +2,8 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import React, { Component } from "react";
 import { Image, ImageSourcePropType, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import {
-    AccountIcon, ConnectivityIcon, HeaderAccountIcon, HomeIcon, RewardsIcon, SettingsIcon, WalletIcon
+    AccountIcon, ConnectivityIcon, HeaderAccountIcon, HomeIcon,
+    RewardsIcon, SettingsIcon, WalletIcon
 } from "../Assets";
 import Header from '../Components/Header';
 import Referrels from '../Screens/Referrals';
