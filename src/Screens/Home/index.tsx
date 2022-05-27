@@ -4,6 +4,7 @@ import {
     StyleSheet, Text, TouchableOpacity, View
 } from "react-native";
 import LinearGradient from "react-native-linear-gradient";
+import Swiper from 'react-native-swiper'
 import {
     AirDrop, Buy, Deposit, HomeBannerImage,
     YieldFarming, Academy, PlayToEarn,
@@ -49,10 +50,16 @@ class Home extends Component<IProps, IState> {
     render() {
         return (
             <ScrollView contentContainerStyle={styles.MainContainer} >
-                <View style={styles.BannerImageContainer} >
-                    <Image source={HomeBannerImage} style={styles.BannerImage} />
-                </View>
-                <LinearGradient start={{ x: 0, y: 0 }} end={{ x: 1, y: 0 }} colors={[Colors.purple1, Colors.purple2]} style={styles.GradientContainer}>
+                <Swiper autoplay style={styles.CarouselContainer}  >
+                    <View style={styles.CarouselImageView} >
+                        <Image source={HomeBannerImage} style={styles.BannerImage} />
+                    </View>
+                </Swiper>
+                <LinearGradient
+                    start={{ x: 0, y: 0 }}
+                    end={{ x: 1, y: 0 }}
+                    colors={[Colors.purple1, Colors.purple2]}
+                    style={styles.GradientContainer}>
                     <View style={styles.GradientSubContainer1}>
                         <View>
                             <Text style={styles.PSPHeading1} >
@@ -101,8 +108,14 @@ const styles = StyleSheet.create({
         width: Metrics.WIDTH * 0.85,
         height: 205
     },
-    BannerImageContainer: {
-        marginVertical: Metrics.HEIGHT * 0.025
+    CarouselContainer: {
+        marginVertical: Metrics.HEIGHT * 0.025,
+        height: 300
+        // alignItems: 'center'
+    },
+    CarouselImageView: {
+        alignItems: 'center',
+        justifyContent: "center"
     },
     GradientContainer: {
         width: Metrics.WIDTH * 0.873,

@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import LottieView from 'lottie-react-native';
 import { View, Text, StyleSheet } from "react-native";
+import { Metrics } from "../../Theme";
 
 interface IProps {
 
@@ -19,14 +20,21 @@ class YieldFarming extends Component<IProps, IState> {
     render() {
         return (
             <View style={styles.MainContainer} >
-                <LottieView source={require('../../Assets/Loader/Loader2.json')} autoPlay loop />
+                <LottieView source={require('../../Assets/Loader/Loader3.json')}
+                    autoPlay
+                    loop                  
+                />
             </View>
         );
     }
 }
 
 const styles = StyleSheet.create({
-    MainContainer: {}
+    MainContainer: {
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center'
+    }
 });
 
 export default YieldFarming;
