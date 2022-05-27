@@ -50,6 +50,11 @@ import VisibleEye from "./Visible_Eye.png"
 import Academy from "./Academy.png"
 import PlayToEarn from "./PlayToEarn.png"
 import YieldFarming from "./YieldFarming.png"
+import Community_Discord from "./Community_Discord.png"
+import Community_Twitter from "./Community_Twitter.png"
+import Community_Website from "./Community_Website.png"
+import Community_Telegram from "./Community_Telegram.png"
+import Community_Medium from "./Community_Medium.png"
 
 
 export {
@@ -62,4 +67,6 @@ export {
     Deposit, Withdraw, Buy, Stake, Bitcoin, Eth_Classic, Tether,
     Plus, RightIcon, ActiveIcon, DisabledIcon, VisibleEye,
     Academy, PlayToEarn, YieldFarming, AppVersion, SignOut, BUSD,
+    Community_Discord, Community_Medium, Community_Telegram, Community_Website,
+    Community_Twitter
 }
