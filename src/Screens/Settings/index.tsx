@@ -7,10 +7,11 @@ import {
 import LanguagesModal from "../../Containers/Settings/LanguagesModal";
 import RegionModal from "../../Containers/Settings/RegionModal";
 import SettingsBar from "../../Containers/Settings/SettingsBar";
+import { COMMUNITY } from "../../Navigation/Routes";
 import { Fonts, Metrics, Colors } from "../../Theme";
 
 interface IProps {
-
+    navigation: any
 }
 
 interface IState {
@@ -60,7 +61,12 @@ class Settings extends Component<IProps, IState> {
                         switchToggle={() => this.setState(prevState => ({
                             darkModeEnabled: !prevState.darkModeEnabled
                         }))} />
-                    <SettingsBar source={Community} title="Community" rightArrow />
+                    <SettingsBar
+                        source={Community}
+                        title="Community"
+                        rightArrow
+                        onPress={() => { this.props.navigation.navigate(COMMUNITY) }}
+                    />
                     <SettingsBar source={Support} title="Support" noBorder rightArrow />
                 </View>
 

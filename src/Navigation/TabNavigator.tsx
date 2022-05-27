@@ -1,17 +1,17 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import React, { Component } from "react";
 import { Image, ImageSourcePropType, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import {
+    AccountIcon, ConnectivityIcon, HeaderAccountIcon, HomeIcon, RewardsIcon, SettingsIcon, WalletIcon
+} from "../Assets";
 import Header from '../Components/Header';
-import Home from '../Screens/Home';
 import Referrels from '../Screens/Referrals';
 import Rewards from "../Screens/Rewards";
-import Settings from '../Screens/Settings';
 import Wallet from "../Screens/Wallet";
-import { Metrics, Fonts, Colors } from '../Theme';
-import { REFERRELS, PROFILE, HOME, WALLET, REWARDS, SETTINGS } from "./Routes";
+import { Colors, Fonts, Metrics } from '../Theme';
+import { HOME_TAB_NAV, PROFILE, REFERRELS, REWARDS, SETTINGS_TAB_NAV, WALLET } from "./Routes";
+import { HomeStackNav, SettingsStack } from './StackNavigator';
 
-import { HeaderAccountIcon, ConnectivityIcon, HomeIcon, 
-    AccountIcon, RewardsIcon, WalletIcon, SettingsIcon } from "../Assets";
 
 const Tab = createBottomTabNavigator();
 
@@ -49,10 +49,10 @@ class BottomTabNavigator extends Component<IProps, IState> {
                 />,
                 tabBarStyle: styles.tabBarStyles,
                 tabBarLabel: ({ focused }: any) => {
-                    return focused && <Text style={styles.tabBarLabel}>{route.name}</Text> || null
+                    return focused && <Text style={styles.tabBarLabel}>{route.name.split("_")[0]}</Text> || null
                 }
             })} >
-                <Tab.Screen name={HOME} component={Home}
+                <Tab.Screen name={HOME_TAB_NAV} component={HomeStackNav}
                     options={{
                         tabBarIcon: () => this.imageHandler(HomeIcon)
                     }} />
@@ -68,7 +68,7 @@ class BottomTabNavigator extends Component<IProps, IState> {
                     options={{
                         tabBarIcon: () => this.imageHandler(AccountIcon)
                     }} />
-                <Tab.Screen name={SETTINGS} component={Settings}
+                <Tab.Screen name={SETTINGS_TAB_NAV} component={SettingsStack}
                     options={{
                         tabBarIcon: () => this.imageHandler(SettingsIcon)
                     }} />
