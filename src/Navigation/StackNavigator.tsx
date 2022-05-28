@@ -23,10 +23,9 @@ import * as RouteNames from "./Routes";
 import BottomTabNavigator from "./TabNavigator";
 
 const Stack = createStackNavigator();
-// https://youtu.be/vkii9bPl_iw
 
 export const HomeStackNav = () => {
-    return <Stack.Navigator initialRouteName={RouteNames.HOME} screenOptions={{ headerShown: false }}>
+    return <Stack.Navigator initialRouteName={RouteNames.HISTORY} screenOptions={{ headerShown: false }}>
         <Stack.Screen name={RouteNames.HOME} component={Home} />
         <Stack.Screen name={RouteNames.VIDEOS} component={Videos} />
         <Stack.Screen name={RouteNames.AIRDROP} component={AirDrops} />

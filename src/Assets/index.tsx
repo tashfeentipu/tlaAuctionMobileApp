@@ -55,18 +55,19 @@ import Community_Twitter from "./Community_Twitter.png"
 import Community_Website from "./Community_Website.png"
 import Community_Telegram from "./Community_Telegram.png"
 import Community_Medium from "./Community_Medium.png"
+import No_Transactions from "./No_Transactions.png"
 
 
 export {
     HomeBannerImage, Logo, NewsUpdate, AirDrop, Packages, PSPad, Matic,
     EditIcon, ProfileImage, BackArrow, HeaderAccountIcon, ConnectivityIcon,
     HomeIcon, AccountIcon, RewardsIcon, WalletIcon, SettingsIcon, Tick,
-    Referrels_1, Referrels_2, Referrels_3, Referrels_4, Share, 
+    Referrels_1, Referrels_2, Referrels_3, Referrels_4, Share,
     Rewards_Icon, Logo2, Notifications, Community, Support, Region, Language,
     Walkthrough1_Image, Walkthrough2_Image, Walkthrough3_Image, Copy_Icon,
     Deposit, Withdraw, Buy, Stake, Bitcoin, Eth_Classic, Tether,
     Plus, RightIcon, ActiveIcon, DisabledIcon, VisibleEye,
     Academy, PlayToEarn, YieldFarming, AppVersion, SignOut, BUSD,
-    Community_Discord, Community_Medium, Community_Telegram, Community_Website,
-    Community_Twitter
+    Community_Discord, Community_Medium, Community_Telegram,
+    Community_Website, Community_Twitter, No_Transactions
 }

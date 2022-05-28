@@ -9,7 +9,10 @@ import {
     NewsUpdate, Packages, PlayToEarn, Stake, Withdraw, YieldFarming
 } from "../../Assets";
 import LinearGradientComponent from "../../Components/LinearGradient";
-import { AIRDROP, NEWS_UPDATES, PACKAGES, PLAY_TO_EARN, VIDEOS, YIELD_FARMING } from "../../Navigation/Routes";
+import {
+    AIRDROP, NEWS_UPDATES, PACKAGES,
+    PLAY_TO_EARN, VIDEOS, YIELD_FARMING
+} from "../../Navigation/Routes";
 import { Colors, Fonts, Metrics } from "../../Theme";
 
 interface IProps {
@@ -49,7 +52,7 @@ class Home extends Component<IProps, IState> {
     render() {
         return (
             <ScrollView contentContainerStyle={styles.MainContainer} >
-                <Swiper autoplay style={styles.CarouselContainer}  >
+                <Swiper autoplay style={styles.CarouselContainer} dotColor={Colors.grey} activeDotColor={Colors.white}>
                     <View style={styles.CarouselImageView} >
                         <Image source={HomeBannerImage} style={styles.BannerImage} />
                     </View>

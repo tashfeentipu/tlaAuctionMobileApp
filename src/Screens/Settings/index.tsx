@@ -7,7 +7,7 @@ import {
 import LanguagesModal from "../../Containers/Settings/LanguagesModal";
 import RegionModal from "../../Containers/Settings/RegionModal";
 import SettingsBar from "../../Containers/Settings/SettingsBar";
-import { COMMUNITY } from "../../Navigation/Routes";
+import { COMMUNITY, SUPPORT } from "../../Navigation/Routes";
 import { Fonts, Metrics, Colors } from "../../Theme";
 
 interface IProps {
@@ -67,7 +67,13 @@ class Settings extends Component<IProps, IState> {
                         rightArrow
                         onPress={() => { this.props.navigation.navigate(COMMUNITY) }}
                     />
-                    <SettingsBar source={Support} title="Support" noBorder rightArrow />
+                    <SettingsBar
+                        source={Support}
+                        title="Support"
+                        noBorder
+                        rightArrow
+                        onPress={() => { this.props.navigation.navigate(SUPPORT) }}
+                    />
                 </View>
 
                 <View style={styles.LanguageTextContainer}>
