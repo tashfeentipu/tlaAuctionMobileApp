@@ -2,6 +2,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import React from "react";
 import AirDrops from '../Screens/AirDrops';
 import Community from '../Screens/Community';
+import History from '../Screens/History';
 import Home from '../Screens/Home';
 import NewsUpdates from '../Screens/NewsUpdates';
 import Packages from '../Screens/Packages';
@@ -22,12 +23,14 @@ import * as RouteNames from "./Routes";
 import BottomTabNavigator from "./TabNavigator";
 
 const Stack = createStackNavigator();
+// https://youtu.be/vkii9bPl_iw
 
 export const HomeStackNav = () => {
     return <Stack.Navigator initialRouteName={RouteNames.HOME} screenOptions={{ headerShown: false }}>
         <Stack.Screen name={RouteNames.HOME} component={Home} />
         <Stack.Screen name={RouteNames.VIDEOS} component={Videos} />
         <Stack.Screen name={RouteNames.AIRDROP} component={AirDrops} />
+        <Stack.Screen name={RouteNames.HISTORY} component={History} />
         <Stack.Screen name={RouteNames.PLAY_TO_EARN} component={PlayToEarn} />
         <Stack.Screen name={RouteNames.YIELD_FARMING} component={YieldFarming} />
         <Stack.Screen name={RouteNames.NEWS_UPDATES} component={NewsUpdates} />

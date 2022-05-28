@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet, ScrollView } from "react-native";
 import {
     Community_Discord, Community_Medium, Community_Telegram,
     Community_Twitter, Community_Website
@@ -26,7 +26,7 @@ class Community extends Component<IProps, IState> {
 
     render() {
         return (
-            <View style={styles.MainContainer} >
+            <ScrollView contentContainerStyle={styles.MainContainer} >
                 <View style={styles.MainContainer2}  >
                     <View style={styles.HeadingContainer} >
                         <Text style={styles.HeadingText}>Connect with thousand of other PolkaStarterPad users to discuss and share anything about crypto knowledge.</Text>
@@ -60,9 +60,9 @@ class Community extends Component<IProps, IState> {
                         imageSource={Community_Medium}
                         maintext="MEDIUM"
                         subText={MEDIUM}
-                    />
+                    />                   
                 </View>
-            </View>
+            </ScrollView>
         );
     }
 }
@@ -70,7 +70,6 @@ class Community extends Component<IProps, IState> {
 const styles = StyleSheet.create({
     MainContainer: {
         alignItems: "center",
-        flex: 1
     },
     MainContainer2: {
         width: Metrics.WIDTH * 0.9
