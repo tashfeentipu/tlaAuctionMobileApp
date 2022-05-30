@@ -1,14 +1,16 @@
 import React, { Component } from "react";
 import {
-    Image, ImageSourcePropType, ScrollView,
-    StyleSheet, Text, TouchableOpacity, View
+    Image, ScrollView,
+    StyleSheet, Text, View
 } from "react-native";
 import Swiper from 'react-native-swiper';
 import {
-    Academy, AirDrop, Buy, Deposit, Logo, Slide1, Slide2, Slide3,
-    NewsUpdate, Packages, PlayToEarn, Stake, Withdraw, YieldFarming
+    Academy, AirDrop, Buy, Deposit, Logo, NewsUpdate, Packages, 
+    PlayToEarn, Slide1, Slide2, Slide3, Stake, Withdraw, YieldFarming
 } from "../../Assets";
 import LinearGradientComponent from "../../Components/LinearGradient";
+import ActionButton from "../../Containers/Home/ActionButton";
+import StatusButton from "../../Containers/Home/StatusButton";
 import {
     AIRDROP, NEWS_UPDATES, PACKAGES,
     PLAY_TO_EARN, VIDEOS, YIELD_FARMING
@@ -27,26 +29,6 @@ class Home extends Component<IProps, IState> {
     constructor(props: IProps) {
         super(props);
         this.state = {};
-    }
-
-    actionButtons = (source: ImageSourcePropType, text: string) => {
-        return <TouchableOpacity style={styles.ImageContainer}>
-            <View style={{ flex: 0.5 }} >
-                <Text style={styles.BottomContainerTextStyle}>{text}</Text>
-            </View>
-            <View style={{ flex: 0.2, alignItems: "center" }} >
-                <Image source={source} />
-            </View>
-        </TouchableOpacity>
-    }
-
-    statusButtons = (source: ImageSourcePropType, onPress?: () => void) => {
-        return <TouchableOpacity style={styles.PackagesContainer} onPress={onPress} >
-            <Image source={source} style={{
-                width: Metrics.WIDTH * 0.22,
-                height: Metrics.WIDTH * 0.2,
-            }} />
-        </TouchableOpacity >
     }
 
     render() {
@@ -71,10 +53,10 @@ class Home extends Component<IProps, IState> {
                             </Text>
                         </View>
                         <View style={styles.HomeImagesContainer}>
-                            {this.actionButtons(Deposit, "Deposit")}
-                            {this.actionButtons(Withdraw, "Withdraw")}
-                            {this.actionButtons(Buy, "Buy")}
-                            {this.actionButtons(Stake, "Stake")}
+                            <ActionButton source={Deposit} text={"Deposit"} />
+                            <ActionButton source={Withdraw} text={"Withdraw"} />
+                            <ActionButton source={Buy} text={"Buy"} />
+                            <ActionButton source={Stake} text={"Stake"} />
                         </View>
                     </View>
                     <View style={styles.GradientSubContainer2} >
@@ -83,14 +65,14 @@ class Home extends Component<IProps, IState> {
                 </LinearGradientComponent>
                 <View style={styles.StatusButtonsContainer} >
                     <View style={styles.StatusButtonsSubContainer} >
-                        {this.statusButtons(NewsUpdate, () => { this.props.navigation.navigate(NEWS_UPDATES) })}
-                        {this.statusButtons(AirDrop, () => { this.props.navigation.navigate(AIRDROP) })}
-                        {this.statusButtons(Packages, () => { this.props.navigation.navigate(PACKAGES) })}
+                        <StatusButton source={NewsUpdate} onPress={() => { this.props.navigation.navigate(NEWS_UPDATES) }} />
+                        <StatusButton source={AirDrop} onPress={() => { this.props.navigation.navigate(AIRDROP) }} />
+                        <StatusButton source={Packages} onPress={() => { this.props.navigation.navigate(PACKAGES) }} />
                     </View>
                     <View style={styles.StatusButtonsSubContainer}>
-                        {this.statusButtons(PlayToEarn, () => { this.props.navigation.navigate(PLAY_TO_EARN) })}
-                        {this.statusButtons(Academy, () => { this.props.navigation.navigate(VIDEOS) })}
-                        {this.statusButtons(YieldFarming, () => { this.props.navigation.navigate(YIELD_FARMING) })}
+                        <StatusButton source={PlayToEarn} onPress={() => { this.props.navigation.navigate(PLAY_TO_EARN) }} />
+                        <StatusButton source={Academy} onPress={() => { this.props.navigation.navigate(VIDEOS) }} />
+                        <StatusButton source={YieldFarming} onPress={() => { this.props.navigation.navigate(YIELD_FARMING) }} />
                     </View>
                 </View>
 
@@ -137,20 +119,10 @@ const styles = StyleSheet.create({
         flex: 0.8,
         justifyContent: "space-between",
     },
-    ImageContainer: {
-        flexDirection: "row",
-        alignItems: "center",
-        flex: 1
-    },
     Logo: {
         width: Metrics.WIDTH * 0.45,
         height: Metrics.WIDTH * 0.41,
         resizeMode: "contain"
-    },
-    BottomContainerTextStyle: {
-        color: Colors.white,
-        fontFamily: Fonts.Regular,
-        marginLeft: Metrics.WIDTH * 0.015
     },
     PSPHeading1: {
         color: Colors.white,
@@ -169,10 +141,6 @@ const styles = StyleSheet.create({
         marginVertical: Metrics.HEIGHT * 0.025,
         flexDirection: "row",
         justifyContent: "space-between",
-    },
-    PackagesContainer: {
-        alignItems: "center",
-        justifyContent: "center"
     },
     PackagesContainerText: {
         color: Colors.white,
