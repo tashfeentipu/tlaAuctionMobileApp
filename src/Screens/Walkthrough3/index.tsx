@@ -21,7 +21,7 @@ class Walkthrough3 extends Component<IProps, IState> {
     render() {
         return (
             <View style={styles.MainContainer} >
-                <Image source={Walkthrough3_Image} />
+                <Image source={Walkthrough3_Image} style={styles.Image} />
                 <View style={styles.SubContainer1}>
                     <Text style={styles.Label1}>PSPad Wallet</Text>
                     <Text style={styles.Label2}>PSPad will provide reliable wallet</Text>
@@ -42,6 +42,10 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: "space-evenly",
         alignItems: "center",
+    },
+    Image: {
+        width: Metrics.WIDTH * 0.8,
+        resizeMode: "contain"
     },
     SubContainer1: {
         height: Metrics.HEIGHT * 0.2,

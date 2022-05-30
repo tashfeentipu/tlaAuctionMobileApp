@@ -5,7 +5,7 @@ import {
 } from "react-native";
 import Swiper from 'react-native-swiper';
 import {
-    Academy, AirDrop, Buy, Deposit, Logo, NewsUpdate, Packages, 
+    Academy, AirDrop, Buy, Deposit, Logo, NewsUpdate, Packages,
     PlayToEarn, Slide1, Slide2, Slide3, Stake, Withdraw, YieldFarming
 } from "../../Assets";
 import LinearGradientComponent from "../../Components/LinearGradient";
@@ -88,7 +88,7 @@ const styles = StyleSheet.create({
     },
     BannerImage: {
         width: Metrics.WIDTH * 0.85,
-        height: 205
+        resizeMode: "contain"
     },
     CarouselContainer: {
         marginVertical: Metrics.HEIGHT * 0.025,

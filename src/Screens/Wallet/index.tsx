@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import { Image, ScrollView, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import {
-    Bitcoin, BUSD, Buy, Copy_Icon, Deposit, Eth_Classic, Logo, Matic, PSPad, Stake, Tether, Withdraw
+    Bitcoin, BUSD, Buy, Copy_Icon, Deposit, Eth_Classic,
+    Logo, Matic, PSPad, Stake, Tether, Withdraw
 } from "../../Assets";
 import LinearGradientComponent from "../../Components/LinearGradient";
 import WalletItem from "../../Containers/Wallet/WalletItem";
@@ -101,11 +102,10 @@ const styles = StyleSheet.create({
         borderTopRightRadius: Metrics.HEIGHT * 0.05,
         width: Metrics.WIDTH,
         backgroundColor: Colors.white
-
     },
     LogoImageStyle: {
-        width: Metrics.WIDTH * 0.4,
-        height: Metrics.HEIGHT * 0.115,
+        width: Metrics.WIDTH * 0.37,
+        resizeMode: "contain",
         opacity: 0.63
     },
     MarketHeading: {
