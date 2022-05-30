@@ -58,7 +58,7 @@ class Home extends Component<IProps, IState> {
                 <Swiper autoplay style={styles.CarouselContainer} dotColor={Colors.grey} activeDotColor={Colors.white}>
                     {SliderArray.map((item, index) => <View style={styles.CarouselImageView} key={index} >
                         <Image source={item} style={styles.BannerImage} />
-                    </View>)}                    
+                    </View>)}
                 </Swiper>
                 <LinearGradientComponent gradientStyle={styles.GradientContainer} >
                     <View style={styles.GradientSubContainer1}>
@@ -78,7 +78,7 @@ class Home extends Component<IProps, IState> {
                         </View>
                     </View>
                     <View style={styles.GradientSubContainer2} >
-                        <Image source={Logo} style={{ width: Metrics.WIDTH * 0.356, height: Metrics.WIDTH * 0.2 }} />
+                        <Image source={Logo} style={styles.Logo} />
                     </View>
                 </LinearGradientComponent>
                 <View style={styles.StatusButtonsContainer} >
@@ -141,6 +141,11 @@ const styles = StyleSheet.create({
         flexDirection: "row",
         alignItems: "center",
         flex: 1
+    },
+    Logo: {
+        width: Metrics.WIDTH * 0.45,
+        height: Metrics.WIDTH * 0.41,
+        resizeMode: "contain"
     },
     BottomContainerTextStyle: {
         color: Colors.white,

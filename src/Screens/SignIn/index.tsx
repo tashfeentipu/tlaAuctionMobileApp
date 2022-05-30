@@ -1,17 +1,16 @@
-import React, { Component } from "react";
-import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
-import { WALKTHROUGH1 } from "../../Navigation/Routes";
 import { Formik } from "formik";
+import React, { Component } from "react";
+import { withTranslation } from "react-i18next";
+import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import { connect } from "react-redux";
+import { Logo } from "../../Assets";
 import ErrorText from "../../Components/ErrorText";
-import { Fonts, Colors, Metrics } from "../../Theme";
 import TextInputBox from "../../Components/TextInput";
 import LogonToggle from "../../Containers/LogonToggle";
-import { connect } from "react-redux";
-import { SIGN_IN_SCHEMA } from "../../Validations/SignIn";
-import { LoginController } from "../../Network/Controllers/LoginController";
+import { WALKTHROUGH1 } from "../../Navigation/Routes";
 import { mapDispatchToProps, mapStateToProps } from "../../Redux/Dispatchers";
-import { Logo2 } from "../../Assets";
-import { withTranslation } from "react-i18next";
+import { Colors, Fonts, Metrics } from "../../Theme";
+import { SIGN_IN_SCHEMA } from "../../Validations/SignIn";
 
 interface IProps {
     navigation: any
@@ -39,7 +38,7 @@ class SignIn extends Component<IProps, IState> {
             <View style={styles.MainContainer} >
                 <LogonToggle toggle={true} navigation={this.props.navigation} />
                 <View>
-                    <Image source={Logo2} style={{ width: 210, height: 130 }} />
+                    <Image source={Logo} style={{ width: Metrics.WIDTH * 0.451, height: Metrics.WIDTH * 0.407, resizeMode: "contain" }} />
                 </View>
                 <Formik
                     initialValues={{ [EMAIL]: "placeholder", [PASSWORD]: "placeholder" }}

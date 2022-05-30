@@ -1,13 +1,13 @@
+import { Formik } from "formik";
 import React, { Component } from "react";
-import { View, Text, StyleSheet, Image, TouchableOpacity, ScrollView } from "react-native";
+import { Image, ScrollView, StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import { Logo } from "../../Assets";
+import ErrorText from "../../Components/ErrorText";
 import TextInputBox from "../../Components/TextInput";
 import LogonToggle from "../../Containers/LogonToggle";
-import { Colors, Fonts, Metrics } from "../../Theme";
 import { SIGN_UP_SUCCESS } from "../../Navigation/Routes";
-import { Formik } from "formik";
-import ErrorText from "../../Components/ErrorText";
+import { Colors, Fonts, Metrics } from "../../Theme";
 import { SIGN_UP_SCHEMA } from "../../Validations/SignUp";
-import { Logo2 } from "../../Assets";
 
 interface IProps {
     navigation: any
@@ -32,7 +32,7 @@ class SignUp extends Component<IProps, IState> {
             <ScrollView contentContainerStyle={styles.MainContainer} >
                 <LogonToggle toggle={false} navigation={this.props.navigation} />
                 <View>
-                    <Image source={Logo2} style={{ width: Metrics.WIDTH * 0.55, height: Metrics.HEIGHT * 0.185 }} />
+                    <Image source={Logo} style={{ width: Metrics.WIDTH * 0.55, height: Metrics.HEIGHT * 0.185, resizeMode: "contain"  }} />
                 </View>
                 <Formik
                     initialValues={{ [NAME]: "", [EMAIL]: "", [PASSWORD]: "" }}

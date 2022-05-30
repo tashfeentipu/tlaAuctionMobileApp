@@ -28,7 +28,6 @@ import Region from "./Region.png"
 import Language from "./Language.png"
 import AppVersion from "./AppVersion.png"
 import SignOut from "./SignOut.png"
-import Logo2 from "./Logo2.png"
 import Tick from "./Tick.png"
 import Walkthrough1_Image from "./Walkthrough1.png"
 import Walkthrough2_Image from "./Walkthrough2.png"
@@ -65,7 +64,7 @@ export {
     EditIcon, ProfileImage, BackArrow, HeaderAccountIcon, ConnectivityIcon,
     HomeIcon, AccountIcon, RewardsIcon, WalletIcon, SettingsIcon, Tick,
     Referrels_1, Referrels_2, Referrels_3, Referrels_4, Share,
-    Rewards_Icon, Logo2, Notifications, Community, Support, Region, Language,
+    Rewards_Icon, Notifications, Community, Support, Region, Language,
     Walkthrough1_Image, Walkthrough2_Image, Walkthrough3_Image, Copy_Icon,
     Deposit, Withdraw, Buy, Stake, Bitcoin, Eth_Classic, Tether,
     Plus, RightIcon, ActiveIcon, DisabledIcon, VisibleEye,
