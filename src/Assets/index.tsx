@@ -8,7 +8,9 @@ import SettingsIcon from "./Settings.png";
 import BackArrow from "./Back_Arrow.png";
 import ProfileImage from "./Profile.png";
 import EditIcon from "./Pen.png";
-import HomeBannerImage from "./HomeBanner.png"
+import Slide1 from "./Slide1.png"
+import Slide2 from "./Slide2.png"
+import Slide3 from "./Slide3.png"
 import Logo from "./Logo.png"
 import NewsUpdate from "./NewsUpdate.png"
 import AirDrop from "./AirDrop.png"
@@ -59,7 +61,7 @@ import No_Transactions from "./No_Transactions.png"
 
 
 export {
-    HomeBannerImage, Logo, NewsUpdate, AirDrop, Packages, PSPad, Matic,
+    Slide1, Slide2, Slide3, Logo, NewsUpdate, AirDrop, Packages, PSPad, Matic,
     EditIcon, ProfileImage, BackArrow, HeaderAccountIcon, ConnectivityIcon,
     HomeIcon, AccountIcon, RewardsIcon, WalletIcon, SettingsIcon, Tick,
     Referrels_1, Referrels_2, Referrels_3, Referrels_4, Share,

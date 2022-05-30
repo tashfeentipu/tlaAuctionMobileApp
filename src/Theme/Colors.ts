@@ -36,5 +36,6 @@ export const DefaultTheme: ITheme = {
 
 export const DarkTheme: ITheme = {
     ...DefaultTheme,
-    background: "black"
+    background: "black",
+    text: "white"
 }

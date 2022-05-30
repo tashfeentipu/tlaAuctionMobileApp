@@ -5,7 +5,7 @@ import {
 } from "react-native";
 import Swiper from 'react-native-swiper';
 import {
-    Academy, AirDrop, Buy, Deposit, HomeBannerImage, Logo,
+    Academy, AirDrop, Buy, Deposit, Logo, Slide1, Slide2, Slide3,
     NewsUpdate, Packages, PlayToEarn, Stake, Withdraw, YieldFarming
 } from "../../Assets";
 import LinearGradientComponent from "../../Components/LinearGradient";
@@ -50,18 +50,15 @@ class Home extends Component<IProps, IState> {
     }
 
     render() {
+
+        const SliderArray = [Slide1, Slide2, Slide3]
+
         return (
             <ScrollView contentContainerStyle={styles.MainContainer} >
                 <Swiper autoplay style={styles.CarouselContainer} dotColor={Colors.grey} activeDotColor={Colors.white}>
-                    <View style={styles.CarouselImageView} >
-                        <Image source={HomeBannerImage} style={styles.BannerImage} />
-                    </View>
-                    <View style={styles.CarouselImageView} >
-                        <Image source={HomeBannerImage} style={styles.BannerImage} />
-                    </View>
-                    <View style={styles.CarouselImageView} >
-                        <Image source={HomeBannerImage} style={styles.BannerImage} />
-                    </View>
+                    {SliderArray.map((item, index) => <View style={styles.CarouselImageView} key={index} >
+                        <Image source={item} style={styles.BannerImage} />
+                    </View>)}                    
                 </Swiper>
                 <LinearGradientComponent gradientStyle={styles.GradientContainer} >
                     <View style={styles.GradientSubContainer1}>
