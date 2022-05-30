@@ -1,7 +1,9 @@
 import React, { Component } from "react";
 import { View, Text, StyleSheet, Image, ImageSourcePropType, TouchableOpacity, Switch } from "react-native";
 import { RightIcon } from "../../../Assets";
+import { ThemeContext } from "../../../Context/ThemeContext";
 import { Fonts, Colors, Metrics } from "../../../Theme";
+import { IThemeContext } from "../../../Types/Theme";
 
 interface IProps {
     source: ImageSourcePropType
@@ -24,8 +26,10 @@ class SettingsBar extends Component<IProps, IState> {
         super(props);
         this.state = {};
     }
-
+    static contextType?: React.Context<IThemeContext> | undefined = ThemeContext;
     render() {
+        const { theme, switchTheme }: IThemeContext = this.context as IThemeContext
+
         return (
             <TouchableOpacity
                 style={{
@@ -38,10 +42,10 @@ class SettingsBar extends Component<IProps, IState> {
                     <Image source={this.props.source} style={{ width: Metrics.WIDTH * 0.056, height: Metrics.WIDTH * 0.056, resizeMode: "contain" }} />
                 </View>
                 <View style={{ flex: 0.55 }}>
-                    <Text style={styles.TitleText}>{this.props.title}</Text>
+                    <Text style={{ ...styles.TitleText, color: theme.text }}>{this.props.title}</Text>
                 </View>
                 <View style={{ flex: 0.2, alignItems: "center" }} >
-                    {!!this.props.content && <Text style={styles.ContentText} >{this.props.content}</Text>}
+                    {!!this.props.content && <Text style={{ ...styles.ContentText, color: theme.text }} >{this.props.content}</Text>}
                 </View>
                 <View style={{ flex: 0.1, alignItems: "center" }} >
                     {this.props.rightArrow && <Image source={RightIcon} />}
@@ -68,12 +72,10 @@ const styles = StyleSheet.create({
         borderBottomColor: Colors.backgroundGrey,
     },
     TitleText: {
-        color: Colors.black,
         fontFamily: Fonts.Medium,
         fontSize: Metrics.WIDTH * 0.04
     },
     ContentText: {
-        color: Colors.black,
         fontFamily: Fonts.Bold
     }
 });

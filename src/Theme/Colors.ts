@@ -27,7 +27,7 @@ export const DefaultTheme: ITheme = {
     secondary: "#4C1C7D",
     background: 'white',
     card: 'white',
-    text: 'white',
+    text: 'black',
     border: 'rgb(199, 199, 204)',
     notification: 'rgb(255, 69, 58)',
     buttonTextColor: "white",
