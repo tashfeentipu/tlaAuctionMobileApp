@@ -7,8 +7,10 @@ import {
 import LanguagesModal from "../../Containers/Settings/LanguagesModal";
 import RegionModal from "../../Containers/Settings/RegionModal";
 import SettingsBar from "../../Containers/Settings/SettingsBar";
+import { ThemeContext } from "../../Context/ThemeContext";
 import { COMMUNITY, SUPPORT } from "../../Navigation/Routes";
 import { Fonts, Metrics, Colors } from "../../Theme";
+import { ITheme, IThemeContext } from "../../Types/Theme";
 
 interface IProps {
     navigation: any
@@ -21,7 +23,6 @@ interface IState {
     regionValue: string
     notificationsEnabled: boolean
     darkModeEnabled: boolean
-
 }
 
 class Settings extends Component<IProps, IState> {
@@ -37,9 +38,14 @@ class Settings extends Component<IProps, IState> {
         };
     }
 
+    static contextType?: React.Context<IThemeContext> | undefined = ThemeContext;
+
     render() {
+
+        const { theme, switchTheme }: IThemeContext = this.context as IThemeContext
+
         return (
-            <ScrollView style={styles.MainContainer} contentContainerStyle={styles.MainContainer2} >
+            <ScrollView style={{ backgroundColor: theme.background }} contentContainerStyle={styles.MainContainer2} >
                 <View style={styles.ImageContainer1}  >
                     <View style={styles.ImageContainer2} >
                         <Image source={ProfileImage} style={{ width: Metrics.WIDTH * 0.25, height: Metrics.WIDTH * 0.25 }} />
@@ -58,9 +64,10 @@ class Settings extends Component<IProps, IState> {
                     <SettingsBar source={Notifications} title="Dark Mode"
                         switch
                         swichValue={this.state.darkModeEnabled}
-                        switchToggle={() => this.setState(prevState => ({
-                            darkModeEnabled: !prevState.darkModeEnabled
-                        }))} />
+                        switchToggle={() => {
+                            this.setState(prevState => ({ darkModeEnabled: !prevState.darkModeEnabled }))
+                            switchTheme()
+                        }} />
                     <SettingsBar
                         source={Community}
                         title="Community"
@@ -100,9 +107,6 @@ class Settings extends Component<IProps, IState> {
 }
 
 const styles = StyleSheet.create({
-    MainContainer: {
-        backgroundColor: Colors.white,
-    },
     MainContainer2: {
         alignItems: "center"
     },

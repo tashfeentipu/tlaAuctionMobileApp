@@ -25,7 +25,7 @@ import BottomTabNavigator from "./TabNavigator";
 const Stack = createStackNavigator();
 
 export const HomeStackNav = () => {
-    return <Stack.Navigator initialRouteName={RouteNames.HISTORY} screenOptions={{ headerShown: false }}>
+    return <Stack.Navigator initialRouteName={RouteNames.HOME} screenOptions={{ headerShown: false }}>
         <Stack.Screen name={RouteNames.HOME} component={Home} />
         <Stack.Screen name={RouteNames.VIDEOS} component={Videos} />
         <Stack.Screen name={RouteNames.AIRDROP} component={AirDrops} />
@@ -39,7 +39,7 @@ export const HomeStackNav = () => {
 
 export const SettingsStack = () => {
     return (
-        <Stack.Navigator initialRouteName={RouteNames.SUPPORT} screenOptions={{ headerShown: false }}>
+        <Stack.Navigator initialRouteName={RouteNames.SETTINGS} screenOptions={{ headerShown: false }}>
             <Stack.Screen name={RouteNames.SETTINGS} component={Settings} />
             <Stack.Screen name={RouteNames.COMMUNITY} component={Community} />
             <Stack.Screen name={RouteNames.SUPPORT} component={Support} />

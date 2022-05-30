@@ -1,3 +1,5 @@
+import { ITheme } from "../Types/Theme"
+
 export const Colors = {
     grey: "#5D5C71",
     grey2: "#E8E8E8",
@@ -20,13 +22,19 @@ export const Colors = {
     red: "#FF0000"
 }
 
-export const DefaultTheme = {
+export const DefaultTheme: ITheme = {
     primary: '#DC30B2',
+    secondary: "#4C1C7D",
     background: 'white',
     card: 'white',
     text: 'white',
     border: 'rgb(199, 199, 204)',
     notification: 'rgb(255, 69, 58)',
     buttonTextColor: "white",
-    labelText: "black" 
+    labelText: "black"
+}
+
+export const DarkTheme: ITheme = {
+    ...DefaultTheme,
+    background: "black"
 }

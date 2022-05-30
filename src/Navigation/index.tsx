@@ -1,35 +1,16 @@
-import { NavigationContainer } from '@react-navigation/native';
-import React, { Component } from "react";
+import React from "react";
 import StackNavigator from './StackNavigator';
-import { DefaultTheme } from "../Theme";
+import ThemeContextProvider from "../Context/ThemeContext";
+import { NavigationContainer } from '@react-navigation/native';
 
-interface IProps {
-
-}
-
-interface IState {
-
-}
-
-class HOCNavigationContainer extends Component<IProps, IState> {
-    constructor(props: IProps) {
-        super(props);
-        this.state = {};
-    }
-
-    darkTheme = {
-        dark: false,
-        colors: DefaultTheme
-    }
-
-    render() {
-        return (
-            <NavigationContainer theme={this.darkTheme} >
+const HOCNavigationContainer = () => {
+    return (
+        <NavigationContainer>
+            <ThemeContextProvider>
                 <StackNavigator />
-            </NavigationContainer>
-
-        );
-    }
+            </ThemeContextProvider>
+        </NavigationContainer>
+    );
 }
 
 export default HOCNavigationContainer;
