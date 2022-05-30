@@ -22,7 +22,7 @@ class Referrels extends Component<IProps, IState> {
         return (
             <ScrollView style={styles.MainContainer} contentContainerStyle={styles.MainContainer2} >
                 <View style={styles.SubContainer1}  >
-                    <Image source={Referrels_1} style={{ width: Metrics.WIDTH * 0.161, height: Metrics.WIDTH * 0.161 }} />
+                    <Image source={Referrels_1} style={{ width: Metrics.WIDTH * 0.161, resizeMode: "contain" }} />
                     <Text style={styles.SC1_Text1} >5% bonus coins on your referral purchases.</Text>
                     <LinearGradientComponent gradientStyle={styles.GradientContainer}>
                         <View style={styles.GradientSubContainer} >
@@ -39,7 +39,7 @@ class Referrels extends Component<IProps, IState> {
                 </View>
                 <View style={styles.SubContainer2}>
                     <View>
-                        <Image source={Referrels_2} style={{ width: Metrics.WIDTH * 0.145, height: Metrics.WIDTH * 0.145 }} />
+                        <Image source={Referrels_2} style={{ width: Metrics.WIDTH * 0.145, resizeMode: "contain" }} />
                     </View>
                     <View>
                         <Text style={styles.ShareText} >Share and Get referrals using these</Text>
