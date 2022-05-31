@@ -8,6 +8,7 @@ import LogonToggle from "../../Containers/LogonToggle";
 import { ThemeContext } from "../../Context/ThemeContext";
 import { SIGN_UP_SUCCESS } from "../../Navigation/Routes";
 import { Colors, Fonts, Metrics } from "../../Theme";
+import { Translate } from "../../Translations/localization";
 import { IThemeContext } from "../../Types/Theme";
 import { SIGN_UP_SCHEMA } from "../../Validations/SignUp";
 
@@ -47,21 +48,21 @@ class SignUp extends Component<IProps, IState> {
                     }}>
                     {formikProps => <>
                         <TextInputBox
-                            inputLabel="Name"
+                            inputLabel={Translate("Common.Name")}
                             value={formikProps.values[NAME]}
                             onBlur={formikProps.handleBlur(NAME)}
                             onChangeText={formikProps.handleChange(NAME)}
                         />
                         <ErrorText errorText={formikProps.errors[NAME]} enable={formikProps.touched[NAME]} />
                         <TextInputBox
-                            inputLabel="Email"
+                            inputLabel={Translate("Common.Email")}
                             value={formikProps.values[EMAIL]}
                             onBlur={formikProps.handleBlur(EMAIL)}
                             onChangeText={formikProps.handleChange(EMAIL)}
                         />
                         <ErrorText errorText={formikProps.errors[EMAIL]} enable={formikProps.touched[EMAIL]} />
                         <TextInputBox
-                            inputLabel="Password"
+                            inputLabel={Translate("Common.Password")}
                             secureTextEntry={true}
                             value={formikProps.values[PASSWORD]}
                             onBlur={formikProps.handleBlur(PASSWORD)}
@@ -69,10 +70,10 @@ class SignUp extends Component<IProps, IState> {
                         />
                         <ErrorText errorText={formikProps.errors[PASSWORD]} enable={formikProps.touched[PASSWORD]} />
                         <View style={styles.PPLabelContainer} >
-                            <Text style={styles.PPLabel} >Privacy Policy</Text>
+                            <Text style={styles.PPLabel} >{Translate("SignUp.PrivacyPolicy")}</Text>
                             <TouchableOpacity style={styles.SignInButtonContainer} onPress={formikProps.handleSubmit} >
                                 <Text style={styles.SignInButtonText}>
-                                    Sign Up
+                                    {Translate("SignUp.SignUp")}
                                 </Text>
                             </TouchableOpacity>
                         </View>

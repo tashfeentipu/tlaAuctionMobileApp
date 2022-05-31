@@ -1,8 +1,15 @@
 {
-    "name": "English",
-    "key": "en",
+    "Common": {
+        "Email": "Email",
+        "Password": "Password",
+        "Name": "Name"
+    },
     "SignIn": {
-        "ButtonText": "Sign In",
-        "ForgetPassword": "Forget Password"
+        "SignIn": "Sign In",
+        "ForgetPassword": "Forget Password?"
+    },
+    "SignUp": {
+        "SignUp": "Sign Up",
+        "PrivacyPolicy": "Privacy Policy"
     }
 }

@@ -3,6 +3,7 @@ import { View, Text, StyleSheet, Image, TouchableOpacity } from "react-native";
 import { Metrics, Colors, Fonts } from "../../Theme";
 import * as RouteNames from "../../Navigation/Routes";
 import { ActiveIcon, DisabledIcon } from "../../Assets";
+import { Translate } from "../../Translations/localization";
 
 interface IProps {
     toggle: boolean,
@@ -24,14 +25,14 @@ class LogonToggle extends Component<IProps, IState> {
             <View style={styles.MainContainer} >
                 <TouchableOpacity style={this.props.toggle && styles.Container1 || styles.Container2}
                     onPress={() => { this.props.navigation.navigate(RouteNames.SIGN_IN) }}  >
-                    <Text style={this.props.toggle && styles.Text1 || styles.Text2} >SIGN IN</Text>
+                    <Text style={this.props.toggle && styles.Text1 || styles.Text2} >{Translate("SignIn.SignIn")}</Text>
                     <Image source={this.props.toggle && ActiveIcon || DisabledIcon} />
                 </TouchableOpacity>
                 <View style={styles.Spacer} />
                 <TouchableOpacity style={!this.props.toggle && styles.Container1 || styles.Container2}
                     onPress={() => { this.props.navigation.navigate(RouteNames.SIGN_UP) }} >
                     <Image source={!this.props.toggle && ActiveIcon || DisabledIcon} />
-                    <Text style={!this.props.toggle && styles.Text1 || styles.Text2}>SIGN UP</Text>
+                    <Text style={!this.props.toggle && styles.Text1 || styles.Text2}>{Translate("SignUp.SignUp")}</Text>
                 </TouchableOpacity>
             </View >
         );

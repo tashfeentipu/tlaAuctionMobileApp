@@ -13,12 +13,12 @@ import { mapDispatchToProps, mapStateToProps } from "../../Redux/Dispatchers";
 import { Colors, Fonts, Metrics } from "../../Theme";
 import { IThemeContext } from "../../Types/Theme";
 import { SIGN_IN_SCHEMA } from "../../Validations/SignIn";
+import { Translate } from "../../Translations/localization";
 
 interface IProps {
     navigation: any
     loginToken: string
     setLoginToken: Function
-    t: any
 }
 
 interface IState {
@@ -53,14 +53,14 @@ class SignIn extends Component<IProps, IState> {
                     {formikProps => <>
                         <View>
                             <TextInputBox
-                                inputLabel="Email"
+                                inputLabel={Translate("Common.Email")}
                                 value={formikProps.values[EMAIL]}
                                 onBlur={formikProps.handleBlur(EMAIL)}
                                 onChangeText={formikProps.handleChange(EMAIL)}
                             />
                             <ErrorText errorText={formikProps.errors[EMAIL]} enable={formikProps.touched[EMAIL]} />
                             <TextInputBox
-                                inputLabel="Password"
+                                inputLabel={Translate("Common.Password")}
                                 secureTextEntry={true}
                                 value={formikProps.values[PASSWORD]}
                                 onBlur={formikProps.handleBlur(PASSWORD)}
@@ -69,10 +69,10 @@ class SignIn extends Component<IProps, IState> {
                             <ErrorText errorText={formikProps.errors[PASSWORD]} enable={formikProps.touched[PASSWORD]} />
                         </View>
                         <View style={styles.FPLabelContainer}>
-                            <Text style={styles.FPLabel}>Forgot Password?</Text>
+                            <Text style={styles.FPLabel}>{Translate("SignIn.ForgetPassword")}</Text>
                             <TouchableOpacity style={styles.signInButtonContainer} onPress={formikProps.handleSubmit}>
                                 <Text style={styles.signInButtonText}>
-                                    Sign In
+                                    {Translate("SignIn.SignIn")}
                                 </Text>
                             </TouchableOpacity>
                         </View>
