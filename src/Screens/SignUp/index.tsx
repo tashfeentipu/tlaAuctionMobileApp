@@ -5,8 +5,10 @@ import { Logo } from "../../Assets";
 import ErrorText from "../../Components/ErrorText";
 import TextInputBox from "../../Components/TextInput";
 import LogonToggle from "../../Containers/LogonToggle";
+import { ThemeContext } from "../../Context/ThemeContext";
 import { SIGN_UP_SUCCESS } from "../../Navigation/Routes";
 import { Colors, Fonts, Metrics } from "../../Theme";
+import { IThemeContext } from "../../Types/Theme";
 import { SIGN_UP_SCHEMA } from "../../Validations/SignUp";
 
 interface IProps {
@@ -27,12 +29,15 @@ class SignUp extends Component<IProps, IState> {
         this.state = {};
     }
 
+    static contextType?: React.Context<IThemeContext> | undefined = ThemeContext;
+
     render() {
+        const { theme }: IThemeContext = this.context as IThemeContext
         return (
             <ScrollView contentContainerStyle={styles.MainContainer} >
                 <LogonToggle toggle={false} navigation={this.props.navigation} />
                 <View>
-                    <Image source={Logo} style={{ width: Metrics.WIDTH * 0.55, height: Metrics.HEIGHT * 0.185, resizeMode: "contain"  }} />
+                    <Image source={Logo} style={{ width: Metrics.WIDTH * 0.55, height: Metrics.HEIGHT * 0.185, resizeMode: "contain" }} />
                 </View>
                 <Formik
                     initialValues={{ [NAME]: "", [EMAIL]: "", [PASSWORD]: "" }}

@@ -6,7 +6,9 @@ import {
 } from "../../Assets";
 import LinearGradientComponent from "../../Components/LinearGradient";
 import WalletItem from "../../Containers/Wallet/WalletItem";
+import { ThemeContext } from "../../Context/ThemeContext";
 import { Colors, Fonts, Metrics } from "../../Theme";
+import { IThemeContext } from "../../Types/Theme";
 
 interface IProps {
 
@@ -21,8 +23,10 @@ class Wallet extends Component<IProps, IState> {
         super(props);
         this.state = {};
     }
+    static contextType?: React.Context<IThemeContext> | undefined = ThemeContext;
 
     render() {
+        const { theme }: IThemeContext = this.context as IThemeContext
         return (
             <ScrollView style={styles.MainContainerStyle} contentContainerStyle={styles.MainContainer} >
                 <LinearGradientComponent gradientStyle={styles.GradientContainer}>

@@ -3,6 +3,8 @@ import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import { Metrics, Colors, Fonts } from "../../Theme";
 import { SIGN_IN } from "../../Navigation/Routes";
 import { Tick } from "../../Assets";
+import { IThemeContext } from "../../Types/Theme";
+import { ThemeContext } from "../../Context/ThemeContext";
 
 interface IProps {
     navigation: any
@@ -17,8 +19,10 @@ class SignUpSuccess extends Component<IProps, IState> {
         super(props);
         this.state = {};
     }
+    static contextType?: React.Context<IThemeContext> | undefined = ThemeContext;
 
     render() {
+        const { theme }: IThemeContext = this.context as IThemeContext
         return (
             <View style={styles.MainContainer} >
                 <View style={styles.TickContainer3} >

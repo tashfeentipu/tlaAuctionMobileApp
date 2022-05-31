@@ -3,6 +3,8 @@ import { View, Text, StyleSheet, Image, TouchableOpacity } from "react-native";
 import { Metrics, Colors, Fonts } from "../../Theme";
 import { WALKTHROUGH2, HOME_TAB_NAV_MAIN } from "../../Navigation/Routes";
 import { Walkthrough1_Image } from "../../Assets";
+import { IThemeContext } from "../../Types/Theme";
+import { ThemeContext } from "../../Context/ThemeContext";
 
 interface IProps {
     navigation: any
@@ -17,8 +19,10 @@ class Walkthrough1 extends Component<IProps, IState> {
         super(props);
         this.state = {};
     }
+    static contextType?: React.Context<IThemeContext> | undefined = ThemeContext;
 
     render() {
+        const { theme }: IThemeContext = this.context as IThemeContext
         return (
             <View style={styles.MainContainer} >
                 <Image source={Walkthrough1_Image} style={styles.Image} />

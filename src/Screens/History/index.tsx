@@ -1,7 +1,9 @@
 import React, { Component } from "react";
 import { View, Text, StyleSheet, TouchableOpacity, FlatList } from "react-native";
 import ListEmptyComponent from "../../Containers/History/ListEmptyComponent";
+import { ThemeContext } from "../../Context/ThemeContext";
 import { Colors, Fonts, Metrics } from "../../Theme";
+import { IThemeContext } from "../../Types/Theme";
 
 interface IProps {
 
@@ -20,9 +22,11 @@ class History extends Component<IProps, IState> {
         this.WITHDRAW = 1
         this.state = { activeTab: this.DEPOSIT };
     }
+    static contextType?: React.Context<IThemeContext> | undefined = ThemeContext;
 
 
     render() {
+        const { theme }: IThemeContext = this.context as IThemeContext
         return (
             <View style={styles.MainContainer} >
                 <View style={styles.TabViewContainer} >

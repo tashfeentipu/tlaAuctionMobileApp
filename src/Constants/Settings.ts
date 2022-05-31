@@ -5,4 +5,6 @@ export default {
     TWITTER: "https://polkastarterpad.com/",
     TELEGRAM: "https://polkastarterpad.com/",
     WEBSITE: "https://polkastarterpad.com/",
+    FACEBOOK: "https://polkastarterpad.com/",
+    INSTAGRAM: "https://polkastarterpad.com/",
 }

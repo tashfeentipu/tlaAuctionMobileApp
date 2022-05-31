@@ -1,14 +1,16 @@
 import React, { Component } from "react";
 import { View, Text, StyleSheet, ScrollView } from "react-native";
 import {
-    Community_Discord, Community_Medium, Community_Telegram,
+    Community_Discord, Community_Facebook, Community_Instagram, Community_Medium, Community_Telegram,
     Community_Twitter, Community_Website
 } from "../../Assets";
 import Settings from "../../Constants/Settings";
 import CommunityItems from "../../Containers/Community/CommunityItems";
+import { ThemeContext } from "../../Context/ThemeContext";
 import { Colors, Fonts, Metrics } from "../../Theme";
+import { IThemeContext } from "../../Types/Theme";
 
-const { DISCORD, TELEGRAM, TWITTER, MEDIUM, WEBSITE } = Settings
+const { DISCORD, TELEGRAM, TWITTER, MEDIUM, WEBSITE, FACEBOOK, INSTAGRAM } = Settings
 
 interface IProps {
 
@@ -24,9 +26,13 @@ class Community extends Component<IProps, IState> {
         this.state = {};
     }
 
+    static contextType?: React.Context<IThemeContext> | undefined = ThemeContext;
+
+
     render() {
+        const { theme }: IThemeContext = this.context as IThemeContext
         return (
-            <ScrollView contentContainerStyle={styles.MainContainer} >
+            <ScrollView contentContainerStyle={{ ...styles.MainContainer, backgroundColor: theme.background }} >
                 <View style={styles.MainContainer2}  >
                     <View style={styles.HeadingContainer} >
                         <Text style={styles.HeadingText}>Connect with thousand of other PolkaStarterPad users to discuss and share anything about crypto knowledge.</Text>
@@ -60,7 +66,19 @@ class Community extends Component<IProps, IState> {
                         imageSource={Community_Medium}
                         maintext="MEDIUM"
                         subText={MEDIUM}
-                    />                   
+                    />
+                    <CommunityItems
+                        onPress={() => { }}
+                        imageSource={Community_Facebook}
+                        maintext="FACEBOOK"
+                        subText={FACEBOOK}
+                    />
+                    <CommunityItems
+                        onPress={() => { }}
+                        imageSource={Community_Instagram}
+                        maintext="INSTAGRAM"
+                        subText={INSTAGRAM}
+                    />
                 </View>
             </ScrollView>
         );

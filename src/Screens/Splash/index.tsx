@@ -1,8 +1,10 @@
 import React, { Component } from "react";
 import { Image, SafeAreaView, StyleSheet } from "react-native";
 import { Logo } from "../../Assets";
+import { ThemeContext } from "../../Context/ThemeContext";
 import { SIGN_IN } from "../../Navigation/Routes";
 import { Metrics } from "../../Theme";
+import { IThemeContext } from "../../Types/Theme";
 
 interface IProps {
     navigation: any
@@ -24,7 +26,10 @@ class SplashScreen extends Component<IProps, IState> {
         }, 4000)
     }
 
+    static contextType?: React.Context<IThemeContext> | undefined = ThemeContext;
+
     render() {
+        const { theme }: IThemeContext = this.context as IThemeContext
         return (
             <SafeAreaView style={styles.MainContainer} >
                 <Image source={Logo} style={styles.LogoImage} />

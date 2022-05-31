@@ -1,7 +1,9 @@
 import React, { Component } from "react";
 import { View, Text, StyleSheet } from "react-native";
 import YoutubePlayer from "react-native-youtube-iframe";
+import { ThemeContext } from "../../Context/ThemeContext";
 import { Fonts, Metrics } from "../../Theme";
+import { IThemeContext } from "../../Types/Theme";
 
 interface IProps {
 
@@ -16,8 +18,10 @@ class Videos extends Component<IProps, IState> {
         super(props);
         this.state = {};
     }
+    static contextType?: React.Context<IThemeContext> | undefined = ThemeContext;
 
     render() {
+        const { theme }: IThemeContext = this.context as IThemeContext
         return (
             <View style={styles.MainContainer} >
                 <Text style={styles.videosHeading} >Videos</Text>

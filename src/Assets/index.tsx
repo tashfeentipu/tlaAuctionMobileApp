@@ -56,6 +56,8 @@ import Community_Twitter from "./Community_Twitter.png"
 import Community_Website from "./Community_Website.png"
 import Community_Telegram from "./Community_Telegram.png"
 import Community_Medium from "./Community_Medium.png"
+import Community_Facebook from "./Community_Facebook.png"
+import Community_Instagram from "./Community_Instagram.png"
 import No_Transactions from "./No_Transactions.png"
 
 
@@ -67,8 +69,8 @@ export {
     Rewards_Icon, Notifications, Community, Support, Region, Language,
     Walkthrough1_Image, Walkthrough2_Image, Walkthrough3_Image, Copy_Icon,
     Deposit, Withdraw, Buy, Stake, Bitcoin, Eth_Classic, Tether,
-    Plus, RightIcon, ActiveIcon, DisabledIcon, VisibleEye,
+    Plus, RightIcon, ActiveIcon, DisabledIcon, VisibleEye, Community_Facebook,
     Academy, PlayToEarn, YieldFarming, AppVersion, SignOut, BUSD,
-    Community_Discord, Community_Medium, Community_Telegram,
+    Community_Discord, Community_Medium, Community_Telegram, Community_Instagram,
     Community_Website, Community_Twitter, No_Transactions
 }

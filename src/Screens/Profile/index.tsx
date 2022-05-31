@@ -11,6 +11,8 @@ import { PROFILE_SCHEMA } from "../../Validations/Profile";
 import Header from "../../Components/Header";
 import { BackArrow, Plus, ProfileImage } from "../../Assets";
 import ErrorText from "../../Components/ErrorText";
+import { IThemeContext } from "../../Types/Theme";
+import { ThemeContext } from "../../Context/ThemeContext";
 
 interface IProps {
     navigation: any
@@ -36,8 +38,10 @@ class Profile extends Component<IProps, IState> {
             fileName: ""
         };
     }
+    static contextType?: React.Context<IThemeContext> | undefined = ThemeContext;
 
     render() {
+        const { theme }: IThemeContext = this.context as IThemeContext
         return (
             <ScrollView contentContainerStyle={styles.MainContainer} >
                 <Formik

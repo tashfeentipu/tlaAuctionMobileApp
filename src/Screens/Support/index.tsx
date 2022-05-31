@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { FlatList, StyleSheet, View } from "react-native";
 import ChatItem from "../../Containers/Support/ChatItem";
+import { ThemeContext } from "../../Context/ThemeContext";
+import { IThemeContext } from "../../Types/Theme";
 
 interface IProps {
 
@@ -16,7 +18,10 @@ class Support extends Component<IProps, IState> {
         this.state = {};
     }
 
+    static contextType?: React.Context<IThemeContext> | undefined = ThemeContext;
+
     render() {
+        const { theme }: IThemeContext = this.context as IThemeContext
         return (
             <View style={styles.MainContainer} >
                 <FlatList

@@ -11,11 +11,13 @@ import {
 import LinearGradientComponent from "../../Components/LinearGradient";
 import ActionButton from "../../Containers/Home/ActionButton";
 import StatusButton from "../../Containers/Home/StatusButton";
+import { ThemeContext } from "../../Context/ThemeContext";
 import {
     AIRDROP, NEWS_UPDATES, PACKAGES,
     PLAY_TO_EARN, VIDEOS, YIELD_FARMING
 } from "../../Navigation/Routes";
 import { Colors, Fonts, Metrics } from "../../Theme";
+import { IThemeContext } from "../../Types/Theme";
 
 interface IProps {
     navigation: any
@@ -31,7 +33,11 @@ class Home extends Component<IProps, IState> {
         this.state = {};
     }
 
+    static contextType?: React.Context<IThemeContext> | undefined = ThemeContext;
+
+
     render() {
+        const { theme }: IThemeContext = this.context as IThemeContext
 
         const SliderArray = [Slide1, Slide2, Slide3]
 

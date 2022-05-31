@@ -7,9 +7,11 @@ import { Logo } from "../../Assets";
 import ErrorText from "../../Components/ErrorText";
 import TextInputBox from "../../Components/TextInput";
 import LogonToggle from "../../Containers/LogonToggle";
+import { ThemeContext } from "../../Context/ThemeContext";
 import { WALKTHROUGH1 } from "../../Navigation/Routes";
 import { mapDispatchToProps, mapStateToProps } from "../../Redux/Dispatchers";
 import { Colors, Fonts, Metrics } from "../../Theme";
+import { IThemeContext } from "../../Types/Theme";
 import { SIGN_IN_SCHEMA } from "../../Validations/SignIn";
 
 interface IProps {
@@ -31,8 +33,9 @@ class SignIn extends Component<IProps, IState> {
         super(props);
     }
 
+    static contextType?: React.Context<IThemeContext> | undefined = ThemeContext;
     render() {
-        const { t } = this.props
+        const { theme }: IThemeContext = this.context as IThemeContext
 
         return (
             <View style={styles.MainContainer} >
@@ -115,4 +118,4 @@ const styles = StyleSheet.create({
     }
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(withTranslation("SignIn")(SignIn));
+export default connect(mapStateToProps, mapDispatchToProps)(SignIn);

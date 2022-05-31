@@ -2,7 +2,9 @@ import React, { Component } from "react";
 import { Image, ScrollView, StyleSheet, Text, View } from "react-native";
 import { Referrels_1, Referrels_2, Referrels_3, Referrels_4, Share } from "../../Assets";
 import LinearGradientComponent from "../../Components/LinearGradient";
+import { ThemeContext } from "../../Context/ThemeContext";
 import { Colors, Fonts, Metrics } from "../../Theme";
+import { IThemeContext } from "../../Types/Theme";
 
 interface IProps {
 
@@ -18,7 +20,10 @@ class Referrels extends Component<IProps, IState> {
         this.state = {};
     }
 
+    static contextType?: React.Context<IThemeContext> | undefined = ThemeContext;
     render() {
+        const { theme }: IThemeContext = this.context as IThemeContext
+
         return (
             <ScrollView style={styles.MainContainer} contentContainerStyle={styles.MainContainer2} >
                 <View style={styles.SubContainer1}  >
