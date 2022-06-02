@@ -1,6 +1,5 @@
 import { Formik } from "formik";
 import React, { Component } from "react";
-import { withTranslation } from "react-i18next";
 import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import { connect } from "react-redux";
 import { Logo } from "../../Assets";
@@ -11,9 +10,9 @@ import { ThemeContext } from "../../Context/ThemeContext";
 import { WALKTHROUGH1 } from "../../Navigation/Routes";
 import { mapDispatchToProps, mapStateToProps } from "../../Redux/Dispatchers";
 import { Colors, Fonts, Metrics } from "../../Theme";
+import { Translate } from "../../Translations/localization";
 import { IThemeContext } from "../../Types/Theme";
 import { SIGN_IN_SCHEMA } from "../../Validations/SignIn";
-import { Translate } from "../../Translations/localization";
 
 interface IProps {
     navigation: any

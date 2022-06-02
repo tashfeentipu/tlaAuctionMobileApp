@@ -1,4 +1,6 @@
 {
+    "name": "English",
+    "key": "en",
     "Common": {
         "Email": "Email",
         "Password": "Password",

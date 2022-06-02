@@ -1,0 +1,102 @@
+{
+    "name": "French",
+    "key": "fr",
+    "Common": {
+        "Email": "Email",
+        "Password": "Password",
+        "Name": "Name",
+        "Deposit": "Deposit",
+        "Withdraw": "Withdraw",
+        "Buy": "Buy",
+        "Stake": "Stake",
+        "ChooseLanguage": "Choose Language"
+    },
+    "SignIn": {
+        "SignIn": "Sign In",
+        "ForgetPassword": "Forget Password?"
+    },
+    "SignUp": {
+        "SignUp": "Sign Up",
+        "PrivacyPolicy": "Privacy Policy"
+    },
+    "Community": {
+        "Heading": ""
+    },
+    "WalkThrough": {
+        "Skip": "Skip",
+        "Next": "Next",
+        "Heading1": "Safe Account",
+        "Heading2": "Secure Transaction",
+        "Heading3": "PSPad Wallet",
+        "SubHeading1": "PSPad will provide Secure transaction",
+        "SubHeading2": "PSPad will provide Secure transaction",
+        "SubHeading3": "PSPad will provide reliable wallet",
+        "GotIt": "Got It"
+    },
+    "Home": {
+        "Heading1": "PSPad",
+        "Heading2": "Total Balance :"
+    },
+    "Profile": {
+        "Save": "Save",
+        "Name": "Name",
+        "Email": "Email",
+        "DOB": "Date of Birth",
+        "Gender": "Gender",
+        "ID": "ID"
+    },
+    "Referrels": {
+        "Heading1": "5% bonus coins on your referral purchases.",
+        "Share": "Share it with your friends",
+        "GetReferrels": "Share and Get referrals using these"
+    },
+    "Rewards": {
+        "Heading1": "COMPLETE THE TASK TO EARN",
+        "Heading2": "CLAIM YOUR 50 PSPAD REWARD COINS",
+        "Heading3": "PSPad COINS",
+        "Tasks": "TASKS TO DO",
+        "Claim": "CLAIM",
+        "Text1": "Share the App with 5 Unique individuals by using your referrel link",
+        "Text2": "Follow PSPad Facebook Page",
+        "Text3": "Join our Telegram channel/group",
+        "Text4": "Follow PSPad Twitter page",
+        "Text5": "Follow PSPad Instagram page.",
+        "Text6": "Follow Polkadotlab YouTube channel",
+        "Text7": "Join our Discord server",
+        "Reward1": "5",
+        "Reward2": "10"
+    },
+    "SignUpSuccess": {
+        "Heading1": "Sign Up Successful !!",
+        "Heading2": "You are entering a new world of Blockchain",
+        "Back": "Back To SIGN IN"
+    },
+    "Settings": {
+        "User": "French",
+        "Notifications": "French",
+        "DarkMode": "French",
+        "LnR": "LANGUAGE & REGION",
+        "Community": "Community",
+        "Support": "Support",
+        "Region": "French",
+        "Language": "Language",
+        "AppVersion": "App Version",
+        "SignOut": "Sign Out"
+    },
+    "Wallet": {
+        "CurrentBalance": "Your Current Balance",
+        "Market": "Market",
+        "Bitcoin": "Bitcoin",
+        "Ehtereum": "Ehtereum",
+        "Polkadot": "Polkadot",
+        "Tether": "Tether",
+        "Binance": "Binance USD",
+        "Polygon": "Polygon",
+        "MATIC": "MATIC",
+        "BUSD": "BUSD",
+        "USDT": "USDT",
+        "PSP": "PSP",
+        "ETH": "ETH",
+        "BTC": "BTC"
+    }
+}
