@@ -8,7 +8,8 @@
         "Deposit": "Deposit",
         "Withdraw": "Withdraw",
         "Buy": "Buy",
-        "Stake": "Stake"
+        "Stake": "Stake",
+        "ChooseLanguage": "Choose Language"
     },
     "SignIn": {
         "SignIn": "Sign In",

@@ -72,16 +72,16 @@
         "Back": "Back To SIGN IN"
     },
     "Settings": {
-        "User": "French",
-        "Notifications": "French",
-        "DarkMode": "French",
-        "LnR": "LANGUAGE & REGION",
-        "Community": "Community",
-        "Support": "Support",
-        "Region": "French",
-        "Language": "Language",
-        "AppVersion": "App Version",
-        "SignOut": "Sign Out"
+        "User": "Utilisateur",
+        "Notifications": "Avis",
+        "DarkMode": "Mode sombre",
+        "LnR": "LANGUE & RÉGION",
+        "Community": "Communauté",
+        "Support": "Soutien",
+        "Region": "Région",
+        "Language": "Langue",
+        "AppVersion": "Version de l'application",
+        "SignOut": "Se déconnecter"
     },
     "Wallet": {
         "CurrentBalance": "Your Current Balance",

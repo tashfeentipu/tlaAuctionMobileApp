@@ -31,8 +31,8 @@ class Settings extends Component<IProps, IState> {
         super(props);
         this.state = {
             languageModalVisible: false,
-            languageValue: "",
-            regionValue: "",
+            languageValue: "English",
+            regionValue: "UK",
             regionModalVisible: false,
             darkModeEnabled: false,
             notificationsEnabled: false

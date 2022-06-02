@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { View, Text, StyleSheet, FlatList, Modal, TouchableOpacity } from "react-native";
 import { Colors, Fonts, Metrics } from "../../../Theme";
-import { Translate } from "../../../Translations/localization";
+import { i18n, Translate } from "../../../Translations/localization";
 
 interface IProps {
     modalVisible: boolean
@@ -9,24 +9,19 @@ interface IProps {
     setContent: (content: string) => void
 }
 
-interface IState {
+const Languages = [{ key: "en", name: "English" }, { key: "fr", name: "French" }]
 
-}
 
-class LanguagesModal extends Component<IProps, IState> {
-    constructor(props: IProps) {
-        super(props);
-        this.state = {};
-    }
-
-    languageListItem = ({ item, index }: { item: string, index: number }) => <TouchableOpacity
+class LanguagesModal extends Component<IProps> {
+    languageListItem = ({ item, index }: { item: { key: string, name: string }, index: number }) => <TouchableOpacity
         key={index}
         onPress={() => {
             this.props.setModalVisible(false)
-            this.props.setContent(item)
+            this.props.setContent(item.name)
+            i18n.locale = item.key
         }}
         style={styles.LanguageItemContainer}>
-        <Text style={styles.LanguageItemText}>{item}</Text>
+        <Text style={styles.LanguageItemText}>{item.name}</Text>
     </TouchableOpacity>
 
     languageListHeader = () => <View style={styles.HeadingContainer}>
@@ -44,7 +39,7 @@ class LanguagesModal extends Component<IProps, IState> {
                 <TouchableOpacity style={styles.MainContainer} onPress={() => this.props.setModalVisible(false)} >
                     <View style={styles.SubContainer}>
                         <FlatList
-                            data={["en", "fr"]}
+                            data={Languages}
                             renderItem={this.languageListItem}
                             ListHeaderComponent={this.languageListHeader}
                         />
