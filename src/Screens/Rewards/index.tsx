@@ -5,6 +5,7 @@ import LinearGradientComponent from "../../Components/LinearGradient";
 import PSP_Button from "../../Containers/Rewards/PSP_Button";
 import { ThemeContext } from "../../Context/ThemeContext";
 import { Colors, Fonts, Metrics } from "../../Theme";
+import { Translate } from "../../Translations/localization";
 import { IThemeContext } from "../../Types/Theme";
 
 interface IProps {
@@ -30,29 +31,29 @@ class Rewards extends Component<IProps, IState> {
                     <Image source={Rewards_Icon} />
                 </View>
                 <View>
-                    <Text style={styles.Heading1}>COMPLETE THE TASK TO EARN</Text>
-                    <Text style={styles.Heading2}>CLAIM YOUR 50 PSPAD REWARD COINS</Text>
-                    <Text style={styles.Heading3}>0 PSPad COINS</Text>
+                    <Text style={styles.Heading1}>{Translate("Rewards.Heading1")}</Text>
+                    <Text style={styles.Heading2}>{Translate("Rewards.Heading2")}</Text>
+                    <Text style={styles.Heading3}>{Translate("Rewards.Heading3")}</Text>
                 </View>
                 <View style={styles.TasksMainContainer} >
                     <View style={styles.TasksContainer1} >
                         <LinearGradientComponent
                             gradientStyle={styles.TasksContainer}>
-                            <Text style={styles.TasksText}>TASKS TO DO</Text>
+                            <Text style={styles.TasksText}>{Translate("Rewards.Tasks")}</Text>
                         </LinearGradientComponent>
                         <LinearGradientComponent
                             gradientStyle={styles.ClaimContainer}>
-                            <Text style={styles.TasksText}>CLAIM</Text>
+                            <Text style={styles.TasksText}>{Translate("Rewards.Claim")}</Text>
                         </LinearGradientComponent>
                     </View>
                     <View style={styles.TasksContainer2} >
-                        <PSP_Button ButtonText="10" Text="Share the App with 5 Unique individuals by using your referrel link" />
-                        <PSP_Button ButtonText="5" Text="Follow PSPad Facebook Page" />
-                        <PSP_Button ButtonText="10" Text="Join our Telegram channel/group" />
-                        <PSP_Button ButtonText="5" Text="Follow PSPad Twitter page " />
-                        <PSP_Button ButtonText="5" Text="Follow PSPad Instagram page" />
-                        <PSP_Button ButtonText="5" Text="Follow Polkadotlab YouTube channel" />
-                        <PSP_Button ButtonText="10" Text="Join our Discord server" />
+                        <PSP_Button ButtonText={Translate("Rewards.Reward2")} Text={Translate("Rewards.Text1")} />
+                        <PSP_Button ButtonText={Translate("Rewards.Reward1")} Text={Translate("Rewards.Text2")} />
+                        <PSP_Button ButtonText={Translate("Rewards.Reward2")} Text={Translate("Rewards.Text3")} />
+                        <PSP_Button ButtonText={Translate("Rewards.Reward1")} Text={Translate("Rewards.Text4")} />
+                        <PSP_Button ButtonText={Translate("Rewards.Reward1")} Text={Translate("Rewards.Text5")} />
+                        <PSP_Button ButtonText={Translate("Rewards.Reward1")} Text={Translate("Rewards.Text6")} />
+                        <PSP_Button ButtonText={Translate("Rewards.Reward2")} Text={Translate("Rewards.Text7")} />
                     </View>
                 </View>
 

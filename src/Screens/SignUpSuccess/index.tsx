@@ -5,6 +5,7 @@ import { SIGN_IN } from "../../Navigation/Routes";
 import { Tick } from "../../Assets";
 import { IThemeContext } from "../../Types/Theme";
 import { ThemeContext } from "../../Context/ThemeContext";
+import { Translate } from "../../Translations/localization";
 
 interface IProps {
     navigation: any
@@ -33,12 +34,12 @@ class SignUpSuccess extends Component<IProps, IState> {
                     </View>
                 </View>
                 <View style={styles.LabelsContainer} >
-                    <Text style={styles.Label1}>Sign Up Successful !!</Text>
-                    <Text style={styles.Label2}>You are entering a new world of Blockchain</Text>
+                    <Text style={styles.Label1}>{Translate("SignUpSuccess.Heading1")}</Text>
+                    <Text style={styles.Label2}>{Translate("SignUpSuccess.Heading2")}</Text>
                 </View>
                 <TouchableOpacity style={styles.signInButtonContainer} onPress={() => { this.props.navigation.navigate(SIGN_IN) }} >
                     <Text style={styles.signInButtonText}>
-                        Back To SIGN IN
+                        {Translate("SignUpSuccess.Back")}
                     </Text>
                 </TouchableOpacity>
             </View>

@@ -13,6 +13,7 @@ import { BackArrow, Plus, ProfileImage } from "../../Assets";
 import ErrorText from "../../Components/ErrorText";
 import { IThemeContext } from "../../Types/Theme";
 import { ThemeContext } from "../../Context/ThemeContext";
+import { Translate } from "../../Translations/localization";
 
 interface IProps {
     navigation: any
@@ -60,13 +61,13 @@ class Profile extends Component<IProps, IState> {
                                 }
                                 {...this.props}
                                 rightIcon={<TouchableOpacity style={styles.SaveTextContainer} onPress={formikProps.handleSubmit}>
-                                    <Text style={styles.SaveText}>Save</Text>
+                                    <Text style={styles.SaveText}>{Translate("Profile.Save")}</Text>
                                 </TouchableOpacity>}
                             />
                             <View style={styles.ProfileContainer2} >
                                 <View style={styles.ProfileContainer1}>
                                     {
-                                        this.state.fileName !== "" &&
+                                        !!this.state.fileName &&
                                         <Image source={{ uri: this.state.fileName }} style={{ width: Metrics.WIDTH * 0.45, height: Metrics.WIDTH * 0.45 }} />
                                         ||
                                         <Image source={ProfileImage} style={{ width: Metrics.WIDTH * 0.25, height: Metrics.WIDTH * 0.25 }} />
@@ -80,14 +81,14 @@ class Profile extends Component<IProps, IState> {
                             </LinearGradientComponent>
                         </View>
                         <EditableInput
-                            title={"Name"}
+                            title={Translate("Profile.Name")}
                             value={formikProps.values[NAME]}
                             onBlur={formikProps.handleBlur(NAME)}
                             onChangeText={formikProps.handleChange(NAME)}
                         />
                         <ErrorText errorText={formikProps.errors[NAME]} enable={formikProps.touched[NAME]} />
                         <EditableInput
-                            title={"Email"}
+                            title={Translate("Profile.Email")}
                             value={formikProps.values[EMAIL]}
                             onBlur={formikProps.handleBlur(EMAIL)}
                             onChangeText={formikProps.handleChange(EMAIL)}
@@ -96,15 +97,15 @@ class Profile extends Component<IProps, IState> {
                         <DatePickerModal
                             modalVisible={this.state.dateModalVisible}
                             setModalVisible={(dateModalVisible: boolean) => this.setState({ dateModalVisible })}
-                            title={"Date of Birth"}
+                            title={Translate("Profile.DOB")}
                             dateValue={formikProps.values[DATE]}
                             setDateValue={formikProps.handleChange(DATE)}
                             onPressEdit={() => { this.setState({ dateModalVisible: true }) }}
                         />
                         <GenderToggle />
-                        <EditableInput title={"Id"} />
+                        <EditableInput title={Translate("Profile.ID")} />
                         <EditableInput
-                            title={"Password"}
+                            title={Translate("Common.Password")}
                             value={formikProps.values[PASSWORD]}
                             onBlur={formikProps.handleBlur(PASSWORD)}
                             onChangeText={formikProps.handleChange(PASSWORD)}

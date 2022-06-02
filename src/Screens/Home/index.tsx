@@ -17,6 +17,7 @@ import {
     PLAY_TO_EARN, VIDEOS, YIELD_FARMING
 } from "../../Navigation/Routes";
 import { Colors, Fonts, Metrics } from "../../Theme";
+import { Translate } from "../../Translations/localization";
 import { IThemeContext } from "../../Types/Theme";
 
 interface IProps {
@@ -35,7 +36,6 @@ class Home extends Component<IProps, IState> {
 
     static contextType?: React.Context<IThemeContext> | undefined = ThemeContext;
 
-
     render() {
         const { theme }: IThemeContext = this.context as IThemeContext
 
@@ -52,17 +52,17 @@ class Home extends Component<IProps, IState> {
                     <View style={styles.GradientSubContainer1}>
                         <View>
                             <Text style={styles.PSPHeading1} >
-                                PSPad
+                                {Translate("Home.Heading1")}
                             </Text>
                             <Text style={styles.PSPHeading2} >
-                                Total Balance : 0.00
+                                {Translate("Home.Heading2")} 0.00
                             </Text>
                         </View>
                         <View style={styles.HomeImagesContainer}>
-                            <ActionButton source={Deposit} text={"Deposit"} />
-                            <ActionButton source={Withdraw} text={"Withdraw"} />
-                            <ActionButton source={Buy} text={"Buy"} />
-                            <ActionButton source={Stake} text={"Stake"} />
+                            <ActionButton source={Deposit} text={Translate("Home.Deposit")} />
+                            <ActionButton source={Withdraw} text={Translate("Home.Withdraw")} />
+                            <ActionButton source={Buy} text={Translate("Home.Buy")} />
+                            <ActionButton source={Stake} text={Translate("Home.Stake")} />
                         </View>
                     </View>
                     <View style={styles.GradientSubContainer2} >

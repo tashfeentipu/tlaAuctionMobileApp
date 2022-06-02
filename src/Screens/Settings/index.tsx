@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Image, ScrollView, StyleSheet, View, Text } from "react-native";
+import { Image, ScrollView, StyleSheet, Text, View } from "react-native";
 import {
     AppVersion, Community, Language, Notifications,
     ProfileImage, Region, SignOut, Support
@@ -9,8 +9,8 @@ import RegionModal from "../../Containers/Settings/RegionModal";
 import SettingsBar from "../../Containers/Settings/SettingsBar";
 import { ThemeContext } from "../../Context/ThemeContext";
 import { COMMUNITY, SUPPORT } from "../../Navigation/Routes";
-import { Fonts, Metrics, Colors } from "../../Theme";
-import { ITheme, IThemeContext } from "../../Types/Theme";
+import { Colors, Fonts, Metrics } from "../../Theme";
+import { IThemeContext } from "../../Types/Theme";
 
 interface IProps {
     navigation: any

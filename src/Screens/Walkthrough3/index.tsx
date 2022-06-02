@@ -5,6 +5,7 @@ import { HOME_TAB_NAV_MAIN } from "../../Navigation/Routes";
 import { Walkthrough3_Image } from "../../Assets";
 import { IThemeContext } from "../../Types/Theme";
 import { ThemeContext } from "../../Context/ThemeContext";
+import { Translate } from "../../Translations/localization";
 
 interface IProps {
     navigation: any
@@ -27,12 +28,12 @@ class Walkthrough3 extends Component<IProps, IState> {
             <View style={styles.MainContainer} >
                 <Image source={Walkthrough3_Image} style={styles.Image} />
                 <View style={styles.SubContainer1}>
-                    <Text style={styles.Label1}>PSPad Wallet</Text>
-                    <Text style={styles.Label2}>PSPad will provide reliable wallet</Text>
+                    <Text style={styles.Label1}>{Translate("WalkThrough.Heading1")}</Text>
+                    <Text style={styles.Label2}>{Translate("WalkThrough.SubHeading1")}</Text>
                 </View>
                 <TouchableOpacity onPress={() => { this.props.navigation.navigate(HOME_TAB_NAV_MAIN) }} style={styles.GotItButton} >
                     <Text style={styles.GotItText}>
-                        GOT IT
+                        {Translate("WalkThrough.GotIt")}
                     </Text>
                 </TouchableOpacity>
             </View>

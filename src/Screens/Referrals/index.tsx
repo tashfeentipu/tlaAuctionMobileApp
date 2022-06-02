@@ -4,6 +4,7 @@ import { Referrels_1, Referrels_2, Referrels_3, Referrels_4, Share } from "../..
 import LinearGradientComponent from "../../Components/LinearGradient";
 import { ThemeContext } from "../../Context/ThemeContext";
 import { Colors, Fonts, Metrics } from "../../Theme";
+import { Translate } from "../../Translations/localization";
 import { IThemeContext } from "../../Types/Theme";
 
 interface IProps {
@@ -28,7 +29,7 @@ class Referrels extends Component<IProps, IState> {
             <ScrollView style={styles.MainContainer} contentContainerStyle={styles.MainContainer2} >
                 <View style={styles.SubContainer1}  >
                     <Image source={Referrels_1} style={{ width: Metrics.WIDTH * 0.161, resizeMode: "contain" }} />
-                    <Text style={styles.SC1_Text1} >5% bonus coins on your referral purchases.</Text>
+                    <Text style={styles.SC1_Text1} >{Translate("Referrels.Heading1")}</Text>
                     <LinearGradientComponent gradientStyle={styles.GradientContainer}>
                         <View style={styles.GradientSubContainer} >
                             <View style={{ flex: 0.1 }} />
@@ -40,14 +41,14 @@ class Referrels extends Component<IProps, IState> {
                             </View>
                         </View>
                     </LinearGradientComponent>
-                    <Text style={styles.SC1_Text3}>Share it with your friends</Text>
+                    <Text style={styles.SC1_Text3}>{Translate("Referrels.Share")}</Text>
                 </View>
                 <View style={styles.SubContainer2}>
                     <View>
                         <Image source={Referrels_2} style={{ width: Metrics.WIDTH * 0.145, resizeMode: "contain" }} />
                     </View>
                     <View>
-                        <Text style={styles.ShareText} >Share and Get referrals using these</Text>
+                        <Text style={styles.ShareText} >{Translate("Referrels.GetReferrels")}</Text>
                     </View>
                     <View style={styles.AccountIconContainer} >
                         <Image source={Referrels_3} style={{ width: Metrics.WIDTH * 0.88, height: Metrics.WIDTH * 0.182 }} />

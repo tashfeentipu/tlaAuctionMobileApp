@@ -5,6 +5,7 @@ import { WALKTHROUGH3, HOME_TAB_NAV_MAIN } from "../../Navigation/Routes";
 import { Walkthrough2_Image } from "../../Assets";
 import { IThemeContext } from "../../Types/Theme";
 import { ThemeContext } from "../../Context/ThemeContext";
+import { Translate } from "../../Translations/localization";
 
 interface IProps {
     navigation: any
@@ -27,18 +28,18 @@ class Walkthrough2 extends Component<IProps, IState> {
             <View style={styles.MainContainer} >
                 <Image source={Walkthrough2_Image} style={styles.Image} />
                 <View style={styles.SubContainer1}>
-                    <Text style={styles.Label1}>Secure Transaction</Text>
-                    <Text style={styles.Label2}>PSPad will provide Secure transaction</Text>
+                    <Text style={styles.Label1}>{Translate("WalkThrough.Heading2")}</Text>
+                    <Text style={styles.Label2}>{Translate("WalkThrough.SubHeading2")}</Text>
                 </View>
                 <View style={styles.SubContainer2} >
                     <TouchableOpacity onPress={() => { this.props.navigation.navigate(HOME_TAB_NAV_MAIN) }} >
                         <Text style={styles.SkipText} >
-                            SKIP
+                            {Translate("WalkThrough.Skip")}
                         </Text>
                     </TouchableOpacity>
                     <TouchableOpacity onPress={() => { this.props.navigation.navigate(WALKTHROUGH3) }} >
                         <Text style={styles.NextText}>
-                            NEXT
+                            {Translate("WalkThrough.Next")}
                         </Text>
                     </TouchableOpacity>
                 </View>
