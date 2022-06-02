@@ -8,6 +8,7 @@ import LinearGradientComponent from "../../Components/LinearGradient";
 import WalletItem from "../../Containers/Wallet/WalletItem";
 import { ThemeContext } from "../../Context/ThemeContext";
 import { Colors, Fonts, Metrics } from "../../Theme";
+import { Translate } from "../../Translations/localization";
 import { IThemeContext } from "../../Types/Theme";
 
 interface IProps {
@@ -39,7 +40,7 @@ class Wallet extends Component<IProps, IState> {
                                 </TouchableOpacity>
                             </View>
                             <View style={styles.BalanceContainer} >
-                                <Text style={styles.BalanceText1}>Your Current Balance</Text>
+                                <Text style={styles.BalanceText1}>{Translate("Wallet.CurrentBalance")}</Text>
                                 <Text style={styles.BalanceText2}>$ 0.000</Text>
                             </View>
                         </View>
@@ -50,32 +51,32 @@ class Wallet extends Component<IProps, IState> {
                     <View style={styles.SubContainer4}>
                         <TouchableOpacity style={styles.ImageContainer}>
                             <Image source={Deposit} />
-                            <Text style={styles.BottomContainerTextStyle}>Deposit</Text>
+                            <Text style={styles.BottomContainerTextStyle}>{Translate("Common.Deposit")}</Text>
                         </TouchableOpacity>
                         <TouchableOpacity style={styles.ImageContainer}>
                             <Image source={Withdraw} />
-                            <Text style={styles.BottomContainerTextStyle}>Withdraw</Text>
+                            <Text style={styles.BottomContainerTextStyle}>{Translate("Common.Withdraw")}</Text>
                         </TouchableOpacity>
                         <TouchableOpacity style={styles.ImageContainer}>
                             <Image source={Buy} />
-                            <Text style={styles.BottomContainerTextStyle}>Buy</Text>
+                            <Text style={styles.BottomContainerTextStyle}>{Translate("Common.Buy")}</Text>
                         </TouchableOpacity>
                         <TouchableOpacity style={styles.ImageContainer}>
                             <Image source={Stake} />
-                            <Text style={styles.BottomContainerTextStyle}>Stake</Text>
+                            <Text style={styles.BottomContainerTextStyle}>{Translate("Common.Stake")}</Text>
                         </TouchableOpacity>
                     </View>
                 </LinearGradientComponent>
                 <View style={styles.MarketContainer} >
                     <Text style={styles.MarketHeading} >
-                        Market
+                        {Translate("Wallet.Market")}
                     </Text>
-                    <WalletItem source={Bitcoin} symbol={"BTC"} name={"Bitcoin"} balance={"$ 100"} percentage={"+2.75%"} />
-                    <WalletItem source={Eth_Classic} symbol={"ETH"} name={"Ehtereum"} balance={"$ 100"} percentage={"-2.78%"} />
-                    <WalletItem source={PSPad} symbol={"PSP"} name={"Polkadot"} />
-                    <WalletItem source={Tether} symbol={"USDT"} name={"Tether"} />
-                    <WalletItem source={BUSD} symbol={"BUSD"} name={"Binance USD"} />
-                    <WalletItem source={Matic} symbol={"MATIC"} name={"Polygon"} />
+                    <WalletItem source={Bitcoin} symbol={Translate("Wallet.BTC")} name={Translate("Wallet.Bitcoin")} balance={"$ 100"} percentage={"+2.75%"} />
+                    <WalletItem source={Eth_Classic} symbol={Translate("Wallet.ETH")} name={Translate("Wallet.Ehtereum")} balance={"$ 100"} percentage={"-2.78%"} />
+                    <WalletItem source={PSPad} symbol={Translate("Wallet.PSP")} name={Translate("Wallet.Polkadot")} />
+                    <WalletItem source={Tether} symbol={Translate("Wallet.USDT")} name={Translate("Wallet.Tether")} />
+                    <WalletItem source={BUSD} symbol={Translate("Wallet.BUSD")} name={Translate("Wallet.Binance")} />
+                    <WalletItem source={Matic} symbol={Translate("Wallet.MATIC")} name={Translate("Wallet.Polygon")} />
                 </View>
             </ScrollView>
         );

@@ -59,10 +59,10 @@ class Home extends Component<IProps, IState> {
                             </Text>
                         </View>
                         <View style={styles.HomeImagesContainer}>
-                            <ActionButton source={Deposit} text={Translate("Home.Deposit")} />
-                            <ActionButton source={Withdraw} text={Translate("Home.Withdraw")} />
-                            <ActionButton source={Buy} text={Translate("Home.Buy")} />
-                            <ActionButton source={Stake} text={Translate("Home.Stake")} />
+                            <ActionButton source={Deposit} text={Translate("Common.Deposit")} />
+                            <ActionButton source={Withdraw} text={Translate("Common.Withdraw")} />
+                            <ActionButton source={Buy} text={Translate("Common.Buy")} />
+                            <ActionButton source={Stake} text={Translate("Common.Stake")} />
                         </View>
                     </View>
                     <View style={styles.GradientSubContainer2} >

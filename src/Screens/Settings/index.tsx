@@ -10,6 +10,7 @@ import SettingsBar from "../../Containers/Settings/SettingsBar";
 import { ThemeContext } from "../../Context/ThemeContext";
 import { COMMUNITY, SUPPORT } from "../../Navigation/Routes";
 import { Colors, Fonts, Metrics } from "../../Theme";
+import { Translate } from "../../Translations/localization";
 import { IThemeContext } from "../../Types/Theme";
 
 interface IProps {
@@ -52,16 +53,16 @@ class Settings extends Component<IProps, IState> {
                     </View>
                 </View>
                 <View style={styles.TitleTextContainer} >
-                    <Text style={styles.TitleText} >User</Text>
+                    <Text style={styles.TitleText} >{Translate("Settings.User")}</Text>
                 </View>
                 <View style={styles.SubContainer1} >
-                    <SettingsBar source={Notifications} title="Notifications"
+                    <SettingsBar source={Notifications} title={Translate("Settings.Notifications")}
                         switch
                         swichValue={this.state.notificationsEnabled}
                         switchToggle={() => this.setState(prevState => ({
                             notificationsEnabled: !prevState.notificationsEnabled
                         }))} />
-                    <SettingsBar source={Notifications} title="Dark Mode"
+                    <SettingsBar source={Notifications} title={Translate("Settings.DarkMode")}
                         switch
                         swichValue={this.state.darkModeEnabled}
                         switchToggle={() => {
@@ -70,13 +71,13 @@ class Settings extends Component<IProps, IState> {
                         }} />
                     <SettingsBar
                         source={Community}
-                        title="Community"
+                        title={Translate("Settings.Community")}
                         rightArrow
                         onPress={() => { this.props.navigation.navigate(COMMUNITY) }}
                     />
                     <SettingsBar
                         source={Support}
-                        title="Support"
+                        title={Translate("Settings.Support")}
                         noBorder
                         rightArrow
                         onPress={() => { this.props.navigation.navigate(SUPPORT) }}
@@ -84,14 +85,14 @@ class Settings extends Component<IProps, IState> {
                 </View>
 
                 <View style={styles.LanguageTextContainer}>
-                    <Text style={styles.LanguageText} >LANGUAGE & REGION</Text>
+                    <Text style={styles.LanguageText} >{Translate("Settings.LnR")}</Text>
                 </View>
 
                 <View style={styles.SubContainer2} >
-                    <SettingsBar source={Region} rightArrow title="Region" onPress={() => this.setState({ regionModalVisible: true })} content={this.state.regionValue} />
-                    <SettingsBar source={Language} rightArrow title="Language" onPress={() => this.setState({ languageModalVisible: true })} content={this.state.languageValue} />
-                    <SettingsBar source={AppVersion} rightArrow title="App Version" />
-                    <SettingsBar source={SignOut} rightArrow title="Sign Out" noBorder />
+                    <SettingsBar source={Region} rightArrow title={Translate("Settings.Region")} onPress={() => this.setState({ regionModalVisible: true })} content={this.state.regionValue} />
+                    <SettingsBar source={Language} rightArrow title={Translate("Settings.Language")} onPress={() => this.setState({ languageModalVisible: true })} content={this.state.languageValue} />
+                    <SettingsBar source={AppVersion} rightArrow title={Translate("Settings.AppVersion")} />
+                    <SettingsBar source={SignOut} rightArrow title={Translate("Settings.SignOut")} noBorder />
                 </View>
                 <RegionModal
                     modalVisible={this.state.regionModalVisible}

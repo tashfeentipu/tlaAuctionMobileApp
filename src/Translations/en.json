@@ -2,7 +2,11 @@
     "Common": {
         "Email": "Email",
         "Password": "Password",
-        "Name": "Name"
+        "Name": "Name",
+        "Deposit": "Deposit",
+        "Withdraw": "Withdraw",
+        "Buy": "Buy",
+        "Stake": "Stake"
     },
     "SignIn": {
         "SignIn": "Sign In",
@@ -28,11 +32,7 @@
     },
     "Home": {
         "Heading1": "PSPad",
-        "Heading2": "Total Balance :",
-        "Deposit": "Deposit",
-        "Withdraw": "Withdraw",
-        "Buy": "Buy",
-        "Stake": "Stake"
+        "Heading2": "Total Balance :"
     },
     "Profile": {
         "Save": "Save",
@@ -67,5 +67,33 @@
         "Heading1": "Sign Up Successful !!",
         "Heading2": "You are entering a new world of Blockchain",
         "Back": "Back To SIGN IN"
+    },
+    "Settings": {
+        "User": "User",
+        "Notifications": "Notifications",
+        "DarkMode": "Dark Mode",
+        "LnR": "LANGUAGE & REGION",
+        "Community": "Community",
+        "Support": "Support",
+        "Region": "Region",
+        "Language": "Language",
+        "AppVersion": "App Version",
+        "SignOut": "Sign Out"
+    },
+    "Wallet": {
+        "CurrentBalance": "Your Current Balance",
+        "Market": "Market",
+        "Bitcoin": "Bitcoin",
+        "Ehtereum": "Ehtereum",
+        "Polkadot": "Polkadot",
+        "Tether": "Tether",
+        "Binance": "Binance USD",
+        "Polygon": "Polygon",
+        "MATIC": "MATIC",
+        "BUSD": "BUSD",
+        "USDT": "USDT",
+        "PSP": "PSP",
+        "ETH": "ETH",
+        "BTC": "BTC"
     }
 }
