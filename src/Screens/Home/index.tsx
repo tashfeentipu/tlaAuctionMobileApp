@@ -94,7 +94,7 @@ const styles = StyleSheet.create({
     },
     BannerImage: {
         width: Metrics.WIDTH * 0.85,
-        resizeMode: "contain"
+        height: Metrics.WIDTH * 0.52,
     },
     CarouselContainer: {
         marginVertical: Metrics.HEIGHT * 0.025,
