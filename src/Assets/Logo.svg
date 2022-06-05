@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="235.682" height="212.145" viewBox="0 0 235.682 212.145">
+  <defs>
+    <linearGradient id="linear-gradient" y1="0.5" x2="1" y2="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#4c1c7d"/>
+      <stop offset="1" stop-color="#dc30b2"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="0" y1="0.5" x2="1" y2="0.5" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient-4" x1="0" y1="0.5" x2="1" y2="0.5" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient-5" x1="0" y1="0.5" x2="1" y2="0.5" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient-6" x1="0" y1="0.5" x2="1" y2="0.5" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient-7" x1="0" y1="0.5" x2="1" y2="0.5" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient-8" x1="0" y1="0.5" x2="1" y2="0.5" xlink:href="#linear-gradient"/>
+  </defs>
+  <g id="Group_351" data-name="Group 351" transform="translate(0)">
+    <g id="Group_350" data-name="Group 350" transform="translate(3.073)">
+      <path id="Path_366" data-name="Path 366" d="M821.922,631.736h61.743l3.03-5.742-26.939-50.987-7.878.044Z" transform="translate(-779.086 -575.006)" fill="url(#linear-gradient)"/>
+      <path id="Path_367" data-name="Path 367" d="M863.2,631.846h30.054l-52.785-56.818-7.083.043Z" transform="translate(-665.656 -574.788)" fill="url(#linear-gradient-2)"/>
+      <path id="Path_368" data-name="Path 368" d="M826.46,575.268l23.232,43.98,23.385-44.242Z" transform="translate(-734.173 -575.006)" fill="url(#linear-gradient)"/>
+      <path id="Path_369" data-name="Path 369" d="M863.293,575.026l-7.268.044-26.7,51.031,3.029,5.754h61.568Z" transform="translate(-705.798 -574.808)" fill="url(#linear-gradient-4)"/>
+      <path id="Path_370" data-name="Path 370" d="M876.835,575.034H870.9l-52.9,56.621H846.9Z" transform="translate(-817.991 -574.729)" fill="url(#linear-gradient-5)"/>
+    </g>
+    <path id="Path_371" data-name="Path 371" d="M1043.829,618.242,1006.18,581.05H935.273l-6.048,6.735L922.4,581.05H851.5l-33.248,37.116,41.671,40.461h0l70.744,68.706L972.649,686.8l.109.108Zm-103.62-26.109h61.416l26.349,26.011-34.02,32.877-29.87-29.487h-7.41l3.39-3.28L937.124,595.6ZM875.262,658.1l22.852-25.5h18.753l6.191,6-34.021,32.854Zm42.128-40.46,12.357-13.785,14.483,14.308-3.477,3.367H921.378ZM945.21,632.6h14.308l26.349,26.022-13.174,12.717-33.727-32.735ZM833.6,617.643l22.852-25.5H917.87l3.978,3.923-19.823,22.11,3.444,3.345H893.177l-25.848,28.845Zm97.115,94.281L896.991,679.19l34.021-32.866,33.725,32.735Z" transform="translate(-812.374 -515.188)" fill="url(#linear-gradient-6)"/>
+    <path id="Path_372" data-name="Path 372" d="M817.709,581.014h29.412l-28.965,34.74Z" transform="translate(-817.709 -515.545)" fill="url(#linear-gradient-7)"/>
+    <path id="Path_373" data-name="Path 373" d="M867.136,581.05H836.373l32.3,31.591Z" transform="translate(-632.99 -515.188)" fill="url(#linear-gradient-8)"/>
+  </g>
+</svg>

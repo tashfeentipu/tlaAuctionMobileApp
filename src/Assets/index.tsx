@@ -1,5 +1,5 @@
 import HeaderAccountIcon from "./Account1.png";
-import ConnectivityIcon from "./Connectivity.png";
+import ConnectivityIcon from "./Connectivity.svg";
 import HomeIcon from "./Home.png";
 import AccountIcon from "./Account.png";
 import RewardsIcon from "./Rewards.png";

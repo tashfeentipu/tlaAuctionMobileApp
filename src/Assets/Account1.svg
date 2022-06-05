@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="27.762" height="27.762" viewBox="0 0 27.762 27.762">
+  <defs>
+    <linearGradient id="linear-gradient" y1="0.5" x2="1" y2="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#4c1c7d"/>
+      <stop offset="1" stop-color="#dc30b2"/>
+    </linearGradient>
+    <clipPath id="clip-path">
+      <path id="Shape" d="M14.246,15.771a5.869,5.869,0,0,0-6.105-5.6,5.868,5.868,0,0,0-6.105,5.6H0A7.615,7.615,0,0,1,4.712,8.847a5.087,5.087,0,1,1,6.854,0,7.615,7.615,0,0,1,4.713,6.924Z" transform="translate(0)" fill="#fff"/>
+    </clipPath>
+  </defs>
+  <g id="Group_264" data-name="Group 264" transform="translate(-2269 17)">
+    <path id="Path_318" data-name="Path 318" d="M679.956,316.161a13.932,13.932,0,0,1,13.616,11.17,13.479,13.479,0,0,1,.265,2.714,13.881,13.881,0,1,1-13.881-13.883Z" transform="translate(1602.925 -333.161)" fill="url(#linear-gradient)"/>
+    <g id="prof_top_lef" data-name="prof top lef" transform="translate(2274.756 -11.244)">
+      <path id="Shape-2" data-name="Shape" d="M14.246,15.771a5.869,5.869,0,0,0-6.105-5.6,5.868,5.868,0,0,0-6.105,5.6H0A7.615,7.615,0,0,1,4.712,8.847a5.087,5.087,0,1,1,6.854,0,7.615,7.615,0,0,1,4.713,6.924Z" transform="translate(0 0)" fill="#fff"/>
+      <g id="Mask_Group_25" data-name="Mask Group 25" transform="translate(0 0)" clip-path="url(#clip-path)">
+        <g id="_Color" data-name="↳ 🎨Color" transform="translate(-5.088 -5.088)">
+          <rect id="Color" width="26.455" height="26.455" fill="#fff"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

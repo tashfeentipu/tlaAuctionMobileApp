@@ -27,7 +27,8 @@ const BottomTabNavigator = () => {
             header: (props) => <Header
                 rightIcon={
                     <View style={styles.ConnectivityIconContainer}>
-                        <Image source={ConnectivityIcon} style={{ width: Metrics.WIDTH * 0.07, height: Metrics.WIDTH * 0.08 }} />
+                        {/* <Image source={ConnectivityIcon} style={{ width: Metrics.WIDTH * 0.07, height: Metrics.WIDTH * 0.08 }} /> */}
+                        <ConnectivityIcon style={{ width: Metrics.WIDTH * 0.07, height: Metrics.WIDTH * 0.08 }} />
                     </View>
                 }
                 {...props}
