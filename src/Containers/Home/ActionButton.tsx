@@ -3,7 +3,7 @@ import { View, Text, StyleSheet, ImageSourcePropType, TouchableOpacity, Image } 
 import { Colors, Fonts, Metrics } from "../../Theme";
 
 interface IProps {
-    source: ImageSourcePropType,
+    source: any,
     text: string
 }
 
@@ -15,7 +15,7 @@ class ActionButton extends Component<IProps> {
                     <Text style={styles.BottomContainerTextStyle}>{this.props.text}</Text>
                 </View>
                 <View style={{ flex: 0.2, alignItems: "center" }} >
-                    <Image source={this.props.source} />
+                    <this.props.source />
                 </View>
             </TouchableOpacity>
         );

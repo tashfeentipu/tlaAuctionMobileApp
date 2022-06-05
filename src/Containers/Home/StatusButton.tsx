@@ -3,7 +3,7 @@ import { Image, ImageSourcePropType, StyleSheet, TouchableOpacity } from "react-
 import { Metrics } from "../../Theme";
 
 interface IProps {
-    source: ImageSourcePropType,
+    source: any,
     onPress?: () => void
 }
 
@@ -11,7 +11,7 @@ class StatusButton extends Component<IProps> {
     render() {
         return (
             <TouchableOpacity style={styles.PackagesContainer} onPress={this.props.onPress} >
-                <Image source={this.props.source} style={{
+                <this.props.source style={{
                     width: Metrics.WIDTH * 0.22,
                     height: Metrics.WIDTH * 0.2,
                 }} />

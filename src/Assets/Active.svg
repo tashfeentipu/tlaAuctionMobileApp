@@ -1,0 +1,13 @@
+<svg id="Active" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="25" height="25" viewBox="0 0 25 25">
+  <defs>
+    <clipPath id="clip-path">
+      <path id="Shape" d="M12.5,25A12.5,12.5,0,0,1,3.661,3.661,12.5,12.5,0,0,1,21.339,21.339,12.418,12.418,0,0,1,12.5,25Zm0-24A11.5,11.5,0,1,0,24,12.5,11.513,11.513,0,0,0,12.5,1Zm0,14A2.5,2.5,0,1,1,15,12.5,2.5,2.5,0,0,1,12.5,15Z" fill="#4a1c7c"/>
+    </clipPath>
+  </defs>
+  <path id="Shape-2" data-name="Shape" d="M12.5,25A12.5,12.5,0,0,1,3.661,3.661,12.5,12.5,0,0,1,21.339,21.339,12.418,12.418,0,0,1,12.5,25Zm0-24A11.5,11.5,0,1,0,24,12.5,11.513,11.513,0,0,0,12.5,1Zm0,14A2.5,2.5,0,1,1,15,12.5,2.5,2.5,0,0,1,12.5,15Z" fill="#4a1c7c"/>
+  <g id="Active-2" data-name="Active" clip-path="url(#clip-path)">
+    <g id="_Color" data-name="↳ 🎨Color" transform="translate(0 0)">
+      <rect id="Color" width="25" height="25" fill="#4a1c7c"/>
+    </g>
+  </g>
+</svg>
