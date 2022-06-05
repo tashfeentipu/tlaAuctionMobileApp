@@ -32,7 +32,7 @@ class SplashScreen extends Component<IProps, IState> {
         const { theme }: IThemeContext = this.context as IThemeContext
         return (
             <SafeAreaView style={styles.MainContainer} >
-                <Image source={Logo} style={styles.LogoImage} />
+                <Logo style={styles.LogoImage} />
             </SafeAreaView>
         );
     }

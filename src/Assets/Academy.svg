@@ -7,13 +7,34 @@
       <stop offset="0" stop-color="#ffd26d"/>
       <stop offset="1" stop-color="#ffc412"/>
     </linearGradient>
-    <linearGradient id="linear-gradient-2" x1="-1358.173" y1="596.325" x2="-1357.826" y2="596.325" xlink:href="#linear-gradient"/>
-    <linearGradient id="linear-gradient-3" x1="-493.669" y1="62.353" x2="-493.66" y2="62.353" xlink:href="#linear-gradient"/>
-    <linearGradient id="linear-gradient-4" x1="-1358.205" y1="566.565" x2="-1357.908" y2="566.565" xlink:href="#linear-gradient"/>
-    <linearGradient id="linear-gradient-5" x1="-328.518" y1="45.156" x2="-328.515" y2="45.156" xlink:href="#linear-gradient"/>
-    <linearGradient id="linear-gradient-6" x1="-380.744" y1="50.81" x2="-380.738" y2="50.81" xlink:href="#linear-gradient"/>
-    <linearGradient id="linear-gradient-7" x1="-502.629" y1="73.607" x2="-502.619" y2="73.607" xlink:href="#linear-gradient"/>
-    <linearGradient id="linear-gradient-8" x1="-577.6" y1="82.822" x2="-577.587" y2="82.822" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient-2" x1="-1358.173" y1="596.325" x2="-1357.826" y2="596.325" xlink:href="#linear-gradient">
+      <stop offset="0" stop-color="#ffd26d"/>
+      <stop offset="1" stop-color="#ffc412"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-3" x1="-493.669" y1="62.353" x2="-493.66" y2="62.353" xlink:href="#linear-gradient">
+      <stop offset="0" stop-color="#ffd26d"/>
+      <stop offset="1" stop-color="#ffc412"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-4" x1="-1358.205" y1="566.565" x2="-1357.908" y2="566.565" xlink:href="#linear-gradient">
+      <stop offset="0" stop-color="#ffd26d"/>
+      <stop offset="1" stop-color="#ffc412"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-5" x1="-328.518" y1="45.156" x2="-328.515" y2="45.156" xlink:href="#linear-gradient">
+      <stop offset="0" stop-color="#ffd26d"/>
+      <stop offset="1" stop-color="#ffc412"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-6" x1="-380.744" y1="50.81" x2="-380.738" y2="50.81" xlink:href="#linear-gradient">
+      <stop offset="0" stop-color="#ffd26d"/>
+      <stop offset="1" stop-color="#ffc412"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-7" x1="-502.629" y1="73.607" x2="-502.619" y2="73.607" xlink:href="#linear-gradient">
+      <stop offset="0" stop-color="#ffd26d"/>
+      <stop offset="1" stop-color="#ffc412"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-8" x1="-577.6" y1="82.822" x2="-577.587" y2="82.822" xlink:href="#linear-gradient">
+      <stop offset="0" stop-color="#ffd26d"/>
+      <stop offset="1" stop-color="#ffc412"/>
+    </linearGradient>
   </defs>
   <g id="Group_393" data-name="Group 393" transform="translate(-3274.037 -1083.021)">
     <g id="Group_362" data-name="Group 362" transform="translate(-4477.896 1855.928)" clip-path="url(#clip-path)">

@@ -32,7 +32,7 @@ const BottomTabNavigator = () => {
                 }
                 {...props}
                 leftIcon={<TouchableOpacity style={styles.AccountIconContainer} onPress={() => { props.navigation.navigate(PROFILE); }}>
-                    <Image source={HeaderAccountIcon} style={{ width: Metrics.WIDTH * 0.1, height: Metrics.WIDTH * 0.1 }} />
+                    <HeaderAccountIcon width={Metrics.WIDTH * 0.1} height={Metrics.WIDTH * 0.1} />
                 </TouchableOpacity>}
             />,
             tabBarStyle: styles.tabBarStyles,
