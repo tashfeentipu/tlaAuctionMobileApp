@@ -4,6 +4,8 @@ import { Metrics, Colors, Fonts } from "../../Theme";
 import * as RouteNames from "../../Navigation/Routes";
 import { ActiveIcon, DisabledIcon } from "../../Assets";
 import { Translate } from "../../Translations/localization";
+import { IThemeContext } from "../../Types/Theme";
+import { ThemeContext } from "../../Context/ThemeContext";
 
 interface IProps {
     toggle: boolean,
@@ -20,19 +22,22 @@ class LogonToggle extends Component<IProps, IState> {
         this.state = {};
     }
 
+    static contextType?: React.Context<IThemeContext> | undefined = ThemeContext;
     render() {
+        const { theme }: IThemeContext = this.context as IThemeContext
+
         return (
             <View style={styles.MainContainer} >
                 <TouchableOpacity style={this.props.toggle && styles.Container1 || styles.Container2}
                     onPress={() => { this.props.navigation.navigate(RouteNames.SIGN_IN) }}  >
-                    <Text style={this.props.toggle && styles.Text1 || styles.Text2} >{Translate("SignIn.SignIn")}</Text>
+                    <Text style={{ ...styles.Text, color: this.props.toggle && theme.buttonPrimary || theme.textPrimary }} >{Translate("SignIn.SignIn")}</Text>
                     <Image source={this.props.toggle && ActiveIcon || DisabledIcon} />
                 </TouchableOpacity>
                 <View style={styles.Spacer} />
                 <TouchableOpacity style={!this.props.toggle && styles.Container1 || styles.Container2}
                     onPress={() => { this.props.navigation.navigate(RouteNames.SIGN_UP) }} >
                     <Image source={!this.props.toggle && ActiveIcon || DisabledIcon} />
-                    <Text style={!this.props.toggle && styles.Text1 || styles.Text2}>{Translate("SignUp.SignUp")}</Text>
+                    <Text style={{ ...styles.Text, color: !this.props.toggle && theme.buttonPrimary || theme.textPrimary }}>{Translate("SignUp.SignUp")}</Text>
                 </TouchableOpacity>
             </View >
         );
@@ -64,15 +69,9 @@ const styles = StyleSheet.create({
         width: Metrics.WIDTH * 0.20,
         justifyContent: "space-between"
     },
-    Text1: {
+    Text: {
         fontSize: Metrics.WIDTH * 0.04,
         fontFamily: Fonts.Regular,
-        color: Colors.pink2
-    },
-    Text2: {
-        fontSize: Metrics.WIDTH * 0.04,
-        fontFamily: Fonts.Regular,
-        color: Colors.grey
     },
 });
 

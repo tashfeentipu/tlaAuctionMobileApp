@@ -31,7 +31,9 @@ export const DefaultTheme: ITheme = {
     border: 'rgb(199, 199, 204)',
     notification: 'rgb(255, 69, 58)',
     buttonTextColor: "white",
-    labelText: "black"
+    labelText: "black",
+    textPrimary: "grey",
+    buttonPrimary: "#4A1C7C"
 }
 
 export const DarkTheme: ITheme = {
