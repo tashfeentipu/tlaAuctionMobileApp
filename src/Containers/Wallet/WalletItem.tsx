@@ -1,9 +1,10 @@
 import React, { Component } from "react";
-import { Image, ImageSourcePropType, StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View } from "react-native";
+import { SvgProps } from "react-native-svg";
 import { Colors, Fonts, Metrics } from "../../Theme";
 
 interface IProps {
-    source: ImageSourcePropType,
+    source: React.FC<SvgProps>,
     symbol: string,
     name: string,
     balance?: string,
@@ -24,7 +25,7 @@ class WalletItem extends Component<IProps, IState> {
         return (
             <View style={styles.MainContainer}>
                 <View style={styles.SubContainer1}>
-                    <Image source={this.props.source} style={{ width: Metrics.WIDTH * 0.11, height: Metrics.WIDTH * 0.11, resizeMode: "contain" }} />
+                    <this.props.source width={Metrics.WIDTH * 0.11} height={Metrics.WIDTH * 0.11} />
                 </View>
                 <View style={styles.SubContainer2}>
                     <Text style={styles.symbolText}>

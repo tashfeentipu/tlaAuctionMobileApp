@@ -12,14 +12,15 @@ import { Colors, Fonts, Metrics } from '../Theme';
 import { HomeStackNav, SettingsStack } from './StackNavigator';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { HOME_TAB_NAV, PROFILE, REFERRELS, REWARDS, SETTINGS_TAB_NAV, WALLET } from "./Routes";
+import { SvgProps } from "react-native-svg";
 
 
 const Tab = createBottomTabNavigator();
 
 const BottomTabNavigator = () => {
 
-    const imageHandler = (source: ImageSourcePropType) => {
-        return <Image source={source} style={{ width: 20, height: 20 }} />
+    const imageHandler = (SOURCE: React.FC<SvgProps>) => {
+        return <SOURCE width={20} height={20} />
     }
 
     return (

@@ -40,7 +40,7 @@ class SignIn extends Component<IProps, IState> {
             <View style={styles.MainContainer} >
                 <LogonToggle toggle={true} navigation={this.props.navigation} />
                 <View>
-                    <Logo style={{ width: Metrics.WIDTH * 0.451, height: Metrics.WIDTH * 0.407 }} />
+                    <Logo width={Metrics.WIDTH * 0.451} height={Metrics.WIDTH * 0.407} />
                 </View>
                 <Formik
                     initialValues={{ [EMAIL]: "placeholder", [PASSWORD]: "placeholder" }}

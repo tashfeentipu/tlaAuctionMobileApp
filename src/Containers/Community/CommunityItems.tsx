@@ -1,10 +1,11 @@
 import React, { Component } from "react";
-import { View, Text, StyleSheet, TouchableOpacity, Image, ImageSourcePropType } from "react-native";
+import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import { SvgProps } from "react-native-svg";
 import { Colors, Fonts, Metrics } from "../../Theme";
 
 interface IProps {
     onPress: () => void
-    imageSource: ImageSourcePropType
+    imageSource: React.FC<SvgProps>
     maintext: string
     subText?: string
 }
@@ -20,13 +21,12 @@ class CommunityItems extends Component<IProps, IState> {
     }
 
     render() {
+        const ImageSource = this.props.imageSource
         return (
             <TouchableOpacity style={styles.MainContainer} onPress={() => this.props.onPress()} >
                 <View style={styles.SubContainer} >
                     <View style={styles.ImageContainer} >
-                        <Image
-                            source={this.props.imageSource}
-                            style={{ width: Metrics.WIDTH * 0.132, height: Metrics.WIDTH * 0.132, resizeMode: "contain" }} />
+                        <ImageSource width={Metrics.WIDTH * 0.132}/>
                     </View>
                     <View style={styles.TextContainer} >
                         <Text style={styles.MainText}>{this.props.maintext}</Text>
@@ -54,12 +54,10 @@ const styles = StyleSheet.create({
     ImageContainer: {
         justifyContent: "center",
         flex: 0.2
-
     },
     TextContainer: {
         flex: 0.6,
         justifyContent: "center",
-        // alignItems: "center"
     },
     MainText: {
         fontFamily: Fonts.Bold,

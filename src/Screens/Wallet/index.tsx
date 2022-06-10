@@ -45,24 +45,24 @@ class Wallet extends Component<IProps, IState> {
                             </View>
                         </View>
                         <View style={styles.SubContainer3}>
-                            <Image source={Logo} style={styles.LogoImageStyle} />
+                            <Logo width={Metrics.WIDTH * 0.37} style={styles.LogoImageStyle} />
                         </View>
                     </View>
                     <View style={styles.SubContainer4}>
                         <TouchableOpacity style={styles.ImageContainer}>
-                            <Image source={Deposit} />
+                            <Deposit />
                             <Text style={styles.BottomContainerTextStyle}>{Translate("Common.Deposit")}</Text>
                         </TouchableOpacity>
                         <TouchableOpacity style={styles.ImageContainer}>
-                            <Image source={Withdraw} />
+                            <Withdraw />
                             <Text style={styles.BottomContainerTextStyle}>{Translate("Common.Withdraw")}</Text>
                         </TouchableOpacity>
                         <TouchableOpacity style={styles.ImageContainer}>
-                            <Image source={Buy} />
+                            <Buy />
                             <Text style={styles.BottomContainerTextStyle}>{Translate("Common.Buy")}</Text>
                         </TouchableOpacity>
                         <TouchableOpacity style={styles.ImageContainer}>
-                            <Image source={Stake} />
+                            <Stake />
                             <Text style={styles.BottomContainerTextStyle}>{Translate("Common.Stake")}</Text>
                         </TouchableOpacity>
                     </View>
@@ -109,8 +109,6 @@ const styles = StyleSheet.create({
         backgroundColor: Colors.white
     },
     LogoImageStyle: {
-        width: Metrics.WIDTH * 0.37,
-        resizeMode: "contain",
         opacity: 0.63
     },
     MarketHeading: {

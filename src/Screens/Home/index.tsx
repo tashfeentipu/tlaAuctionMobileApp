@@ -66,7 +66,7 @@ class Home extends Component<IProps, IState> {
                         </View>
                     </View>
                     <View style={styles.GradientSubContainer2} >
-                        <Image source={Logo} style={styles.Logo} />
+                        <Logo width={Metrics.WIDTH * 0.35} height={Metrics.WIDTH * 0.41} />
                     </View>
                 </LinearGradientComponent>
                 <View style={styles.StatusButtonsContainer} >
@@ -124,11 +124,6 @@ const styles = StyleSheet.create({
     HomeImagesContainer: {
         flex: 0.8,
         justifyContent: "space-between",
-    },
-    Logo: {
-        width: Metrics.WIDTH * 0.45,
-        height: Metrics.WIDTH * 0.41,
-        resizeMode: "contain"
     },
     PSPHeading1: {
         color: Colors.white,

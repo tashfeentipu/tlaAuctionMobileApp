@@ -1,10 +1,10 @@
 import HeaderAccountIcon from "./Account1.svg";
 import ConnectivityIcon from "./Connectivity.svg";
-import HomeIcon from "./Home.png";
+import HomeIcon from "./Home.svg";
 import AccountIcon from "./Account.svg";
-import RewardsIcon from "./Rewards.png";
-import WalletIcon from "./Wallet.png";
-import SettingsIcon from "./Settings.png";
+import RewardsIcon from "./Rewards.svg";
+import WalletIcon from "./Wallet.svg";
+import SettingsIcon from "./Settings.svg";
 import BackArrow from "./Back_Arrow.png";
 import ProfileImage from "./Profile.png";
 import EditIcon from "./Pen.png";
@@ -51,13 +51,13 @@ import VisibleEye from "./Visible_Eye.png"
 import Academy from "./Academy.svg"
 import PlayToEarn from "./PlayToEarn.svg"
 import YieldFarming from "./YieldFarming.svg"
-import Community_Discord from "./Community_Discord.png"
-import Community_Twitter from "./Community_Twitter.png"
-import Community_Website from "./Community_Website.png"
-import Community_Telegram from "./Community_Telegram.png"
-import Community_Medium from "./Community_Medium.png"
-import Community_Facebook from "./Community_Facebook.png"
-import Community_Instagram from "./Community_Instagram.png"
+import Community_Discord from "./Community_Discord.svg"
+import Community_Twitter from "./Community_Twitter.svg"
+import Community_Website from "./Community_Website.svg"
+import Community_Telegram from "./Community_Telegram.svg"
+import Community_Medium from "./Community_Medium.svg"
+import Community_Facebook from "./Community_Facebook.svg"
+import Community_Instagram from "./Community_Instagram.svg"
 import No_Transactions from "./No_Transactions.png"
 
 

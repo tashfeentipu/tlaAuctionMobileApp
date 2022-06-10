@@ -1,9 +1,10 @@
 import React, { Component } from "react";
-import { Image, ImageSourcePropType, StyleSheet, TouchableOpacity } from "react-native";
+import { StyleSheet, TouchableOpacity } from "react-native";
+import { SvgProps } from "react-native-svg";
 import { Metrics } from "../../Theme";
 
 interface IProps {
-    source: any,
+    source: React.FC<SvgProps>,
     onPress?: () => void
 }
 
