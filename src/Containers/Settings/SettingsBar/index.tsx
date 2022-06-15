@@ -1,12 +1,13 @@
 import React, { Component } from "react";
-import { View, Text, StyleSheet, Image, ImageSourcePropType, TouchableOpacity, Switch } from "react-native";
+import { Image, StyleSheet, Switch, Text, TouchableOpacity, View } from "react-native";
+import { SvgProps } from "react-native-svg";
 import { RightIcon } from "../../../Assets";
 import { ThemeContext } from "../../../Context/ThemeContext";
-import { Fonts, Colors, Metrics } from "../../../Theme";
+import { Colors, Fonts, Metrics } from "../../../Theme";
 import { IThemeContext } from "../../../Types/Theme";
 
 interface IProps {
-    source: ImageSourcePropType
+    source: React.FC<SvgProps>
     title: string
     noBorder?: boolean
     content?: string
@@ -28,8 +29,8 @@ class SettingsBar extends Component<IProps, IState> {
     }
     static contextType?: React.Context<IThemeContext> | undefined = ThemeContext;
     render() {
-        const { theme, switchTheme }: IThemeContext = this.context as IThemeContext
-
+        const { theme }: IThemeContext = this.context as IThemeContext
+        const ImageSource = this.props.source
         return (
             <TouchableOpacity
                 style={{
@@ -39,7 +40,7 @@ class SettingsBar extends Component<IProps, IState> {
                 onPress={this.props.onPress}
             >
                 <View style={{ flex: 0.15 }}  >
-                    <Image source={this.props.source} style={{ width: Metrics.WIDTH * 0.056, height: Metrics.WIDTH * 0.056, resizeMode: "contain" }} />
+                    <ImageSource width={Metrics.WIDTH * 0.056} height={Metrics.WIDTH * 0.056} />
                 </View>
                 <View style={{ flex: 0.55 }}>
                     <Text style={{ ...styles.TitleText, color: theme.text }}>{this.props.title}</Text>
