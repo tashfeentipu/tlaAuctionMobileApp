@@ -67,7 +67,7 @@ const styles = StyleSheet.create({
     Text1: {
         fontSize: Metrics.WIDTH * 0.04,
         fontFamily: Fonts.Regular,
-        color: Colors.pink2
+        color: Colors.indigo1
     },
     Text2: {
         fontSize: Metrics.WIDTH * 0.04,

@@ -26,7 +26,7 @@ class Walkthrough2 extends Component<IProps, IState> {
         const { theme }: IThemeContext = this.context as IThemeContext
         return (
             <View style={styles.MainContainer} >
-                <Walkthrough2_Image width={Metrics.WIDTH * 0.8} />
+                <Image source={Walkthrough2_Image} style={{ width: Metrics.WIDTH * 0.8, resizeMode: "contain" }} />
                 <View style={styles.SubContainer1}>
                     <Text style={styles.Label1}>{Translate("WalkThrough.Heading2")}</Text>
                     <Text style={styles.Label2}>{Translate("WalkThrough.SubHeading2")}</Text>

@@ -38,7 +38,7 @@ class SignUp extends Component<IProps, IState> {
             <ScrollView contentContainerStyle={styles.MainContainer} >
                 <LogonToggle toggle={false} navigation={this.props.navigation} />
                 <View>
-                    <Image source={Logo} style={{ width: Metrics.WIDTH * 0.55, height: Metrics.HEIGHT * 0.185, resizeMode: "contain" }} />
+                    <Logo width={Metrics.WIDTH * 0.55} height={ Metrics.HEIGHT * 0.185} />
                 </View>
                 <Formik
                     initialValues={{ [NAME]: "", [EMAIL]: "", [PASSWORD]: "" }}
@@ -71,8 +71,8 @@ class SignUp extends Component<IProps, IState> {
                         <ErrorText errorText={formikProps.errors[PASSWORD]} enable={formikProps.touched[PASSWORD]} />
                         <View style={styles.PPLabelContainer} >
                             <Text style={styles.PPLabel} >{Translate("SignUp.PrivacyPolicy")}</Text>
-                            <TouchableOpacity style={styles.SignInButtonContainer} onPress={formikProps.handleSubmit} >
-                                <Text style={styles.SignInButtonText}>
+                            <TouchableOpacity style={styles.SignUpButtonContainer} onPress={formikProps.handleSubmit} >
+                                <Text style={styles.SignUpButtonText}>
                                     {Translate("SignUp.SignUp")}
                                 </Text>
                             </TouchableOpacity>
@@ -103,15 +103,15 @@ const styles = StyleSheet.create({
         fontFamily: Fonts.Regular,
         color: Colors.black
     },
-    SignInButtonContainer: {
+    SignUpButtonContainer: {
         height: Metrics.HEIGHT * 0.06,
         width: Metrics.WIDTH * 0.3,
         borderRadius: Metrics.WIDTH * 0.2,
-        backgroundColor: Colors.pink2,
+        backgroundColor: Colors.indigo1,
         alignItems: "center",
         justifyContent: 'center'
     },
-    SignInButtonText: {
+    SignUpButtonText: {
         fontFamily: Fonts.Regular,
         color: Colors.white
     }

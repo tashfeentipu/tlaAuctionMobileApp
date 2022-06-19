@@ -69,7 +69,7 @@ class SignIn extends Component<IProps, IState> {
                         </View>
                         <View style={styles.FPLabelContainer}>
                             <Text style={styles.FPLabel}>{Translate("SignIn.ForgetPassword")}</Text>
-                            <TouchableOpacity style={styles.signInButtonContainer} onPress={formikProps.handleSubmit}>
+                            <TouchableOpacity style={{ ...styles.signInButtonContainer, backgroundColor: theme.primary, }} onPress={formikProps.handleSubmit}>
                                 <Text style={styles.signInButtonText}>
                                     {Translate("SignIn.SignIn")}
                                 </Text>
@@ -106,7 +106,6 @@ const styles = StyleSheet.create({
         height: Metrics.HEIGHT * 0.06,
         width: Metrics.WIDTH * 0.3,
         borderRadius: Metrics.WIDTH * 0.2,
-        backgroundColor: Colors.pink2,
         alignItems: "center",
         justifyContent: 'center'
     },

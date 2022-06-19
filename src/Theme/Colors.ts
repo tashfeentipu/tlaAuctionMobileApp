@@ -23,7 +23,7 @@ export const Colors = {
 }
 
 export const DefaultTheme: ITheme = {
-    primary: '#DC30B2',
+    primary: '#4C1C7D',
     secondary: "#4C1C7D",
     background: 'white',
     card: 'white',
