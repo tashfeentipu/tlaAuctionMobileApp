@@ -7,7 +7,7 @@ import { Colors, Fonts, Metrics } from "../../../Theme";
 import { IThemeContext } from "../../../Types/Theme";
 
 interface IProps {
-    source: React.FC<SvgProps>
+    source: any
     title: string
     noBorder?: boolean
     content?: string
@@ -31,6 +31,8 @@ class SettingsBar extends Component<IProps, IState> {
     render() {
         const { theme }: IThemeContext = this.context as IThemeContext
         const ImageSource = this.props.source
+        console.log(ImageSource);
+
         return (
             <TouchableOpacity
                 style={{
@@ -40,7 +42,7 @@ class SettingsBar extends Component<IProps, IState> {
                 onPress={this.props.onPress}
             >
                 <View style={{ flex: 0.15 }}  >
-                    <ImageSource width={Metrics.WIDTH * 0.056} height={Metrics.WIDTH * 0.056} />
+                    <Image source={ImageSource} style={{ width: Metrics.WIDTH * 0.056, height: Metrics.WIDTH * 0.056, resizeMode: "contain" }} />
                 </View>
                 <View style={{ flex: 0.55 }}>
                     <Text style={{ ...styles.TitleText, color: theme.text }}>{this.props.title}</Text>
