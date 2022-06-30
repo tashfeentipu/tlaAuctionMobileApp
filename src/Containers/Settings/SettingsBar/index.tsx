@@ -31,7 +31,6 @@ class SettingsBar extends Component<IProps, IState> {
     render() {
         const { theme }: IThemeContext = this.context as IThemeContext
         const ImageSource = this.props.source
-        console.log(ImageSource);
 
         return (
             <TouchableOpacity

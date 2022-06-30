@@ -44,9 +44,7 @@ class Wallet extends Component<IProps, IState> {
                                 <Text style={styles.BalanceText2}>$ 0.000</Text>
                             </View>
                         </View>
-                        <View style={styles.SubContainer3}>
-                            <Logo width={Metrics.WIDTH * 0.37} style={styles.LogoImageStyle} />
-                        </View>
+                        <Logo width={Metrics.WIDTH * 0.37} height={Metrics.WIDTH * 0.33} style={styles.LogoImageStyle} />
                     </View>
                     <View style={styles.SubContainer4}>
                         <TouchableOpacity style={styles.ImageContainer}>
@@ -100,8 +98,7 @@ const styles = StyleSheet.create({
         paddingHorizontal: Metrics.WIDTH * 0.03,
     },
     MarketContainer: {
-        marginTop: Metrics.HEIGHT * 0.05,
-        paddingTop: Metrics.HEIGHT * 0.04,
+        paddingTop: Metrics.HEIGHT * 0.01,
         paddingHorizontal: Metrics.WIDTH * 0.05,
         borderTopLeftRadius: Metrics.HEIGHT * 0.05,
         borderTopRightRadius: Metrics.HEIGHT * 0.05,
@@ -109,7 +106,7 @@ const styles = StyleSheet.create({
         backgroundColor: Colors.white
     },
     LogoImageStyle: {
-        opacity: 0.63
+        opacity: 0.63,
     },
     MarketHeading: {
         fontSize: Metrics.WIDTH * 0.06,
@@ -141,9 +138,7 @@ const styles = StyleSheet.create({
     },
     SubContainer2: {
         height: Metrics.HEIGHT * 0.15,
-        justifyContent: "space-between"
-    },
-    SubContainer3: {
+        justifyContent: "space-between",
     },
     BottomContainerTextStyle: {
         fontFamily: Fonts.Regular,
@@ -153,7 +148,7 @@ const styles = StyleSheet.create({
     SubContainer4: {
         flexDirection: "row",
         justifyContent: "space-between",
-        marginVertical: Metrics.HEIGHT * 0.05,
+        marginBottom: Metrics.HEIGHT * 0.03,
     },
     ImageContainer: {
         flexDirection: "row",

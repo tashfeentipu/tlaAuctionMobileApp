@@ -28,12 +28,13 @@ class Rewards extends Component<IProps, IState> {
         return (
             <ScrollView contentContainerStyle={styles.MainContentContainer} style={styles.MainContainer} >
                 <View style={styles.ImageContainer} >
-                    <Image source={Rewards_Icon} />
+                    <Image source={Rewards_Icon} style={styles.Rewards_Icon} />
                 </View>
                 <View>
                     <Text style={styles.Heading1}>{Translate("Rewards.Heading1")}</Text>
                     <Text style={styles.Heading2}>{Translate("Rewards.Heading2")}</Text>
-                    <Text style={styles.Heading3}>{Translate("Rewards.Heading3")}</Text>
+                    <Text style={styles.Heading3}>0</Text>
+                    <Text style={styles.Heading4}>{Translate("Rewards.Heading3")}</Text>
                 </View>
                 <View style={styles.TasksMainContainer} >
                     <View style={styles.TasksContainer1} >
@@ -56,7 +57,6 @@ class Rewards extends Component<IProps, IState> {
                         <PSP_Button ButtonText={Translate("Rewards.Reward2")} Text={Translate("Rewards.Text7")} />
                     </View>
                 </View>
-
             </ScrollView>
         );
     }
@@ -70,25 +70,31 @@ const styles = StyleSheet.create({
         alignItems: "center"
     },
     ImageContainer: {
-        marginVertical: Metrics.HEIGHT * 0.02
     },
     Heading1: {
         fontSize: Metrics.WIDTH * 0.05,
-        lineHeight: Metrics.HEIGHT * 0.08,
+        marginTop: Metrics.HEIGHT * 0.02,
         color: Colors.black,
         fontFamily: Fonts.Bold,
         textAlign: 'center'
     },
     Heading2: {
         fontSize: Metrics.WIDTH * 0.035,
-        lineHeight: Metrics.HEIGHT * 0.08,
+        marginBottom: Metrics.HEIGHT * 0.03,
         color: Colors.black,
         fontFamily: Fonts.Medium,
         textAlign: 'center'
     },
     Heading3: {
         fontSize: Metrics.WIDTH * 0.05,
-        lineHeight: Metrics.HEIGHT * 0.08,
+        lineHeight: Metrics.HEIGHT * 0.04,
+        fontFamily: Fonts.Bold,
+        fontWeight: "bold",
+        color: Colors.black,
+        textAlign: 'center'
+    },
+    Heading4: {
+        fontSize: Metrics.WIDTH * 0.05,
         fontFamily: Fonts.Bold,
         fontWeight: "bold",
         color: Colors.black,
@@ -98,13 +104,13 @@ const styles = StyleSheet.create({
         paddingVertical: Metrics.HEIGHT * 0.01,
         borderRadius: Metrics.WIDTH * 0.1,
         alignItems: "center",
-        flex: 0.55
+        flex: 0.3
     },
     ClaimContainer: {
         alignItems: "center",
         paddingVertical: Metrics.HEIGHT * 0.01,
         borderRadius: Metrics.WIDTH * 0.1,
-        flex: 0.35
+        flex: 0.25
     },
     TasksMainContainer: {
         alignItems: "center",
@@ -122,6 +128,10 @@ const styles = StyleSheet.create({
     TasksText: {
         color: Colors.white,
         fontFamily: Fonts.Medium
+    },
+    Rewards_Icon:{
+        width: Metrics.WIDTH * 0.493,
+        height: Metrics.WIDTH * 0.371
     }
 });
 
