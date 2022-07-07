@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { View, Text, StyleSheet } from "react-native";
+import PackagesItem from "../../Containers/Packages/packagesItem";
 
 interface IProps {
 
@@ -18,7 +19,7 @@ class Packages extends Component<IProps, IState> {
     render() {
         return (
             <View style={styles.MainContainer} >
-                <Text>Packages</Text>
+                <PackagesItem />
             </View>
         );
     }

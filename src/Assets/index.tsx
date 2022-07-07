@@ -59,6 +59,9 @@ import Community_Medium from "./Community_Medium.svg"
 import Community_Facebook from "./Community_Facebook.svg"
 import Community_Instagram from "./Community_Instagram.svg"
 import No_Transactions from "./No_Transactions.png"
+import TBA from "./TBA.svg"
+import Package1 from "./Package1.svg"
+import Package1_a from "./Package1_a.svg"
 
 
 export {
@@ -72,5 +75,6 @@ export {
     Plus, RightIcon, ActiveIcon, DisabledIcon, VisibleEye, Community_Facebook,
     Academy, PlayToEarn, YieldFarming, AppVersion, SignOut, BUSD,
     Community_Discord, Community_Medium, Community_Telegram, Community_Instagram,
-    Community_Website, Community_Twitter, No_Transactions
+    Community_Website, Community_Twitter, No_Transactions, Package1, Package1_a,
+    TBA
 }

@@ -1,6 +1,7 @@
 import React, { Component } from "react";
-import { StyleSheet, View } from "react-native";
-import Loader from "../../Components/Loader";
+import { StyleSheet,Text, View } from "react-native";
+import { TBA } from "../../Assets";
+import { Metrics } from "../../Theme";
 
 interface IProps {
 
@@ -19,7 +20,8 @@ class YieldFarming extends Component<IProps, IState> {
     render() {
         return (
             <View style={styles.MainContainer} >
-                <Loader />
+                <TBA />
+                <Text style={styles.MainText}>To Be Announced..</Text>
             </View>
         );
     }
@@ -30,6 +32,10 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center'
+    },
+    MainText: {
+        color: "black",
+        fontSize: Metrics.WIDTH * 0.06
     }
 });
 
