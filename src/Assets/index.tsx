@@ -49,6 +49,7 @@ import ActiveIcon from "./Active.png"
 import DisabledIcon from "./Disabled.svg"
 import VisibleEye from "./Visible_Eye.png"
 import Academy from "./Academy.svg"
+import Academy_Content_1 from "./Academy_Content_1.svg"
 import PlayToEarn from "./PlayToEarn.svg"
 import YieldFarming from "./YieldFarming.svg"
 import Community_Discord from "./Community_Discord.svg"
@@ -76,5 +77,5 @@ export {
     Academy, PlayToEarn, YieldFarming, AppVersion, SignOut, BUSD,
     Community_Discord, Community_Medium, Community_Telegram, Community_Instagram,
     Community_Website, Community_Twitter, No_Transactions, Package1, Package1_a,
-    TBA
+    TBA, Academy_Content_1
 }

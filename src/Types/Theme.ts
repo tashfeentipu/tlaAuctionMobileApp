@@ -8,6 +8,7 @@ export interface ITheme {
     notification: string,
     buttonTextColor: string,
     labelText: string
+    cardsBackground: string
 }
 
 export interface IThemeContext {
